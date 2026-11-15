@@ -1,0 +1,23 @@
+{
+  "regionId": "synthetic-mars",
+  "body": "mars",
+  "algorithmVersion": "synthetic-terrain-v1",
+  "scaleM": 30,
+  "meanSlopeDeg": 2,
+  "p90SlopeDeg": 4,
+  "roughnessM": 5,
+  "reliefM": 20,
+  "validFraction": 1,
+  "provenance": [
+    {
+      "sourceId": "synthetic-test-v1",
+      "name": "SIMULATED algorithm test fixture",
+      "url": null,
+      "version": "1",
+      "nativeResolutionM": 30,
+      "processingMethod": "Synthetic scalar values; no real study area or DEM.",
+      "evidenceType": "SIMULATED"
+    }
+  ],
+  "dataStatus": "READY"
+}

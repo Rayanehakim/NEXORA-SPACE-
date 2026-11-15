@@ -26,7 +26,7 @@ function demoDem() {
 }
 function resolveTerrain(input) {
   if (input == null) return { dem: demoDem(), simulated: true, error: null };
-  try { return { dem: validateDem(input), simulated: false, error: null }; }
+  try { const dem = validateDem(input); return { dem, simulated: dem.provenance.evidence_type === 'SIMULATED', error: null }; }
   catch (error) { return { dem: demoDem(), simulated: true, error: error instanceof Error ? error : Error(String(error)) }; }
 }
 function forwardRight(heading, forward, right, speed = 1) {
@@ -176,7 +176,7 @@ const limited = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
 const numeric = (x, digits = 1) => Number.isFinite(x) ? x.toFixed(digits) : '—';
 
 /** Standalone embeddable component: no router, global CSS, backend, or extra peer packages. */
-export default function EchoDroneSimulator({ terrain = null, locale = 'en', keyboard = 'focus', droneModelUrl = null, onScan, onTelemetry, onError, onReset, onMissionComplete }) {
+export default function EchoDroneSimulator({ terrain = /** @type {object|null} */ (null), locale = 'en', keyboard = 'focus', droneModelUrl = null, onScan, onTelemetry, onError, onReset, onMissionComplete }) {
   const rootRef = useRef(null);
   const mountRef = useRef(null);
   const engineRef = useRef(null);
