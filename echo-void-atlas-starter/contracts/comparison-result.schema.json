@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Comparison Result",
+  "type": "object",
+  "required": [
+    "targetId",
+    "earthSiteId",
+    "missionProfile",
+    "modelVersion",
+    "status",
+    "score",
+    "featureContributions",
+    "gaps",
+    "evidenceGaps",
+    "sourceIds"
+  ],
+  "properties": {
+    "targetId": {
+      "type": "string"
+    },
+    "earthSiteId": {
+      "type": "string"
+    },
+    "missionProfile": {
+      "enum": [
+        "terrain_mobility",
+        "geological_survey"
+      ]
+    },
+    "modelVersion": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "READY",
+        "INCOMPLETE_DATA"
+      ]
+    },
+    "score": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 100
+    },
+    "featureContributions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "feature",
+          "earthValue",
+          "targetValue",
+          "unit",
+          "weight",
+          "tolerance",
+          "distance",
+          "contribution"
+        ],
+        "properties": {
+          "feature": {
+            "enum": [
+              "meanSlopeDeg",
+              "p90SlopeDeg",
+              "roughnessM",
+              "reliefM"
+            ]
+          },
+          "earthValue": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "targetValue": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "unit": {
+            "enum": [
+              "deg",
+              "m"
+            ]
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "tolerance": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "distance": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "contribution": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "severity",
+          "claim",
+          "experimentImplication",
+          "evidenceType",
+          "sourceUrl"
+        ],
+        "properties": {
+          "category": {
+            "enum": [
+              "PHYSICAL",
+              "PLANETARY",
+              "EVIDENCE",
+              "OPERATIONAL"
+            ]
+          },
+          "severity": {
+            "enum": [
+              "LOW",
+              "MEDIUM",
+              "HIGH",
+              "UNKNOWN"
+            ]
+          },
+          "claim": {
+            "type": "string"
+          },
+          "experimentImplication": {
+            "type": "string"
+          },
+          "evidenceType": {
+            "enum": [
+              "MEASURED",
+              "LITERATURE",
+              "SIMULATED",
+              "UNKNOWN"
+            ]
+          },
+          "sourceUrl": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidenceGaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "INCOMPLETE_DATA"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "READY"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+.drone-local-backup/
+.planet-assets/
+node_modules/
+dist/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+
+# Original transfer context retained locally
+/ECHO_VOID_ATLAS_Starter_Kit.zip
+/myfile.txt

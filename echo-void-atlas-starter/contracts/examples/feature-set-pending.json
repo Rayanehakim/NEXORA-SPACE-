@@ -1,0 +1,13 @@
+{
+  "regionId": "earth-erfoud",
+  "body": "earth",
+  "algorithmVersion": "pending",
+  "scaleM": 30,
+  "meanSlopeDeg": null,
+  "p90SlopeDeg": null,
+  "roughnessM": null,
+  "reliefM": null,
+  "validFraction": 0,
+  "provenance": [],
+  "dataStatus": "INCOMPLETE_DATA"
+}

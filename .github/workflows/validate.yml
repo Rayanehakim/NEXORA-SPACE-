@@ -1,0 +1,24 @@
+name: Validate NEXORA
+on: [push, pull_request]
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: echo-void-atlas-starter/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: echo-void-atlas-starter/frontend/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run build
+      - run: node ../../tests/test.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nexora-static-site
+          path: echo-void-atlas-starter/frontend/dist

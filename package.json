@@ -1,0 +1,10 @@
+{
+  "name": "nexora-space",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix echo-void-atlas-starter/frontend run dev",
+    "build": "npm --prefix echo-void-atlas-starter/frontend run build",
+    "typecheck": "npm --prefix echo-void-atlas-starter/frontend run typecheck",
+    "test": "node tests/test.mjs && npm --prefix echo-void-atlas-starter/frontend test"
+  }
+}

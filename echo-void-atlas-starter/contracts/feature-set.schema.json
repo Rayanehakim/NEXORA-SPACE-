@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Feature Set",
+  "type": "object",
+  "required": [
+    "regionId",
+    "body",
+    "algorithmVersion",
+    "scaleM",
+    "meanSlopeDeg",
+    "p90SlopeDeg",
+    "roughnessM",
+    "reliefM",
+    "validFraction",
+    "provenance",
+    "dataStatus"
+  ],
+  "properties": {
+    "regionId": {
+      "type": "string"
+    },
+    "body": {
+      "enum": [
+        "earth",
+        "mars",
+        "moon"
+      ]
+    },
+    "algorithmVersion": {
+      "type": "string"
+    },
+    "scaleM": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "meanSlopeDeg": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "p90SlopeDeg": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "roughnessM": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "reliefM": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "validFraction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sourceId",
+          "name",
+          "url",
+          "version",
+          "nativeResolutionM",
+          "processingMethod",
+          "evidenceType"
+        ],
+        "properties": {
+          "sourceId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "nativeResolutionM": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "processingMethod": {
+            "type": "string"
+          },
+          "evidenceType": {
+            "enum": [
+              "MEASURED",
+              "LITERATURE",
+              "SIMULATED",
+              "UNKNOWN"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "dataStatus": {
+      "enum": [
+        "READY",
+        "INCOMPLETE_DATA"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
