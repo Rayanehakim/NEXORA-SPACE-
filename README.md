@@ -1,6 +1,21 @@
 # NEXORA SPACE — ECHO VOID ATLAS
 
-Research prototype for selecting Earth candidates, inspecting provisional planetary terrain evidence, and rehearsing Earth-based drone reconnaissance. Similarity scores remain unavailable until a reviewed measured comparison is released. The original root drone source and tests are retained.
+*Explore Earth. Understand other worlds. Plan with evidence.*
+
+NEXORA SPACE is an interactive planetary-analogue investigation platform that connects Earth observation, planetary topography, and simulated reconnaissance. It helps users explore terrestrial environments that may offer useful comparisons for studying the Moon and Mars—while making the limits of those comparisons visible.
+
+The project brings together four connected experiences:
+
+- **EXPLORE** — discover five diverse Earth candidate environments: Erfoud (Morocco), the Atacama Desert (Chile), Askja (Iceland), Haughton Crater (Canada), and the McMurdo Dry Valleys (Antarctica).
+- **ANALYZE** — investigate measurable terrain properties such as mean slope, 90th-percentile slope, surface roughness, and relief using terrestrial elevation data and planetary observations.
+- **RECON** — use **ECHO**, a Three.js virtual drone simulator, to rehearse Earth-based survey missions and visualize simulated reconnaissance coverage.
+- **REPORT** — bring selected sites, available evidence, data-quality limitations, and simulation information into traceable outputs.
+
+The platform investigates candidate Earth environments in relation to **Jezero Crater on Mars** and the **lunar south pole**. Its scientific workflow uses sources including NASADEM and NASA's Mars Orbiter Laser Altimeter (MOLA) data, with additional datasets identified for expanded analysis.
+
+**Scientific responsibility is central to the project:** a landscape that looks similar is not automatically a validated planetary analogue. NEXORA documents data coverage, resolution, processing assumptions, and uncertainty. It withholds unsupported similarity scores when validation checks are not met. ECHO is a virtual Earth-based reconnaissance simulation—not a real drone, a flight-ready lunar system, or a source of measured satellite data.
+
+NEXORA SPACE is an exploratory research prototype, not a certified landing-site selection or habitat-suitability system. Its goal is to make planetary-analogue investigation more transparent, reproducible, and accessible.
 
 ## Canonical layout
 
@@ -21,10 +36,10 @@ For scientific processing, use a separate environment:
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r science/gis/requirements.txt
-.\.venv\Scripts\python.exe -m unittest discover -s science/tests -v
-.\.venv\Scripts\python.exe -m unittest discover -s science/gis/tests -v
-.\.venv\Scripts\python.exe scripts/validate_contracts.py
+.\\.venv\\Scripts\\python.exe -m pip install -r science/gis/requirements.txt
+.\\.venv\\Scripts\\python.exe -m unittest discover -s science/tests -v
+.\\.venv\\Scripts\\python.exe -m unittest discover -s science/gis/tests -v
+.\\.venv\\Scripts\\python.exe scripts/validate_contracts.py
 ```
 
 ## Implemented
