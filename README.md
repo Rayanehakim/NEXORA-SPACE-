@@ -1,31 +1,46 @@
-# NEXORA SPACE / ECHO-VOID ATLAS
+# ECHO-VOID ATLAS — NEXORA SPACE
 
-React/Vite research prototype assembled from the supplied starter ZIP, with Task D integrated into main. Includes a planetary homepage, compact mission workflow, and destination-aware styling.
+**Shared starter for parallel vibecoding.** This is a scaffold with DEMO fixtures and honest pending-data states, **not** a completed NASA-science product.
 
-## Run on Windows
+## Quick start
 
-```powershell
-cd echo-void-atlas-starter/frontend
+```bash
+cd frontend
 npm install
 npm run dev
 ```
 
-From the repository root, `npm run dev`, `npm run typecheck`, `npm run build` and `npm test` are available after frontend dependency installation.
+Open the local URL shown by Vite. Routes: `/`, `/explore`, `/analysis`, `/simulation`, `/report`.
 
-## Implemented
+## Before contributors start
 
-- Interactive Leaflet/OpenStreetMap explorer with five candidates, marker selection, search, environment and data-status filters.
-- Shared planet, target, candidate and mission selection across routes.
-- Evidence availability, four analog-gap categories, and explicit missing measurements.
-- Original Task D 3D simulator integrated with mission results and reset handling.
-- Printable report and JSON download.
-- Versioned experimental Python scoring engine with analysis-plan validation, explainable contributions, four gap categories and 14 regression tests.
+1. Review `docs/DECISIONS.md` together and freeze scope, targets, metric definitions and interface version.
+2. Read `docs/AI_HANDOFF.md` and `docs/TASKS.md`.
+3. Create `integration` from `main`; each contributor branches off `integration`.
+4. Treat `frontend/src/types/contracts.ts` and `contracts/` as centrally owned and frozen.
+5. Each contributor must ship **a module working against sample fixtures**, not an entire app.
+6. Integration owner runs `npm run typecheck && npm run build` after each PR.
 
-Run Python tests from `echo-void-atlas-starter` using `python -m unittest discover -s science/tests`.
-CLI: `python -m science.scoring.cli EARTH.json TARGET.json --plan PLAN.json`. Install Python requirements from `science/scoring/requirements.txt`. See `science/scoring/README.md` for synthetic examples and scientific limits.
+## What this starter actually does
 
-## Evidence boundary
+- Working React + Vite + TypeScript shell, navigation, and planet/site/mission selection retained while navigating (in memory, not browser-storage persistence).
+- An initial global *textual site catalog* (not yet a Leaflet map), with candidate rationale and no fabricated real measurements.
+- All integration hooks/interfaces, placeholder views for science and simulation.
+- Mock comparison is marked **INCOMPLETE_DATA**, so fake scores are not displayed as real.
+- Procedural test height grid is clearly identified as **SIMULATED**; it does not represent NASA DEM pixels.
 
-No measured NASA rasters were supplied. No measured comparison, scientific ranking, or NASA-certified threshold is claimed. The geographic basemap is for orientation; candidate coordinates are approximate and basemap tiles require internet access. Simulator terrain is procedural and not representative of the selected site's measured geometry. The scoring configuration is illustrative and is not connected to frontend rankings. Real analysis requires validated source metadata, matched footprints, scale and processing. GIS extraction and a scientifically validated measured comparison remain outstanding.
+## Workstreams
 
-Task D originals are retained at `src/components/EchoDroneSimulator.jsx` and `tests/test.mjs`. The frontend integrates that component with a terrain adapter and explicit procedural-source labelling. The original ZIP and conversation remain intact.
+A shell/integration, B explorer, C scientific engine, D drone, E analysis/report UI, F NASA GIS processing, G QA/competition submission. See `docs/TASKS.md`.
+
+## Boundaries
+
+- Shared site/target ID across all layers.
+- Earth-based rotor drone only. It is **not** a lunar rotorcraft.
+- NASA measurements require actual downloaded/processed source and methodology.
+- Missing scientific data => `INCOMPLETE_DATA`, never invented similarity.
+- Python outputs are JSON consumed statically by the frontend, or via an optional API added **only after** the offline path works.
+
+This starter is derived from the team's draft ECHO-VOID ATLAS specification v1.0, November 14, 2026. Scientific decisions remain provisional until team approval.
+
+**Note:** Network-limited file generation environment prevented `npm install`; verify `npm run typecheck` and `npm run build` on your local machine before inviting contributors.

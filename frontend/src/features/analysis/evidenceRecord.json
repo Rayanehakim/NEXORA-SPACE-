@@ -1,0 +1,102 @@
+{
+  "recordVersion": "nexora-terrain-evidence-v1",
+  "status": "PROVISIONAL_QA",
+  "selection": {
+    "earthSiteId": "earth-erfoud",
+    "targetId": "mars-jezero"
+  },
+  "study": {
+    "earth": "Erfoud, Morocco",
+    "target": "Jezero Crater, Mars",
+    "squareKm": 32,
+    "gridResolutionM": 1000,
+    "cellCount": 1024,
+    "scenarios": 5
+  },
+  "counts": {
+    "observedNativeCells": 1847,
+    "totalNativeCells": 4761,
+    "zeroShotNativeCells": 2914,
+    "observedNativeFraction": 0.3879437093047679,
+    "shots": 3311,
+    "product": "MEGC44N000HB.IMG",
+    "sha256": "cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5"
+  },
+  "metrics": [
+    {
+      "id": "meanSlopeDeg",
+      "label": "Mean slope",
+      "unit": "\u00b0",
+      "earthBaseline": 0.4248913885810646,
+      "marsBaseline": 1.5739985392282134,
+      "earthRange": [
+        0.41321913665365595,
+        0.5209082639312056
+      ],
+      "marsRange": [
+        1.4669828047400724,
+        1.6988213555857365
+      ]
+    },
+    {
+      "id": "p90SlopeDeg",
+      "label": "P90 slope",
+      "unit": "\u00b0",
+      "earthBaseline": 0.9529640638948892,
+      "marsBaseline": 3.9257802172262224,
+      "earthRange": [
+        0.9529640638948892,
+        1.1262672073967814
+      ],
+      "marsRange": [
+        3.480592740111685,
+        4.468903219067452
+      ]
+    },
+    {
+      "id": "roughnessM",
+      "label": "Roughness",
+      "unit": "m",
+      "earthBaseline": 2.518645092686117,
+      "marsBaseline": 6.553897318660588,
+      "earthRange": [
+        2.419456432127004,
+        5.212671246502689
+      ],
+      "marsRange": [
+        5.851750478758371,
+        9.039552532400252
+      ]
+    },
+    {
+      "id": "reliefM",
+      "label": "Relief",
+      "unit": "m",
+      "earthBaseline": 316.92718505859375,
+      "marsBaseline": 1039.546875,
+      "earthRange": [
+        316.92718505859375,
+        331.0
+      ],
+      "marsRange": [
+        947.30029296875,
+        1110.1141357421875
+      ]
+    }
+  ],
+  "provenance": {
+    "earthElevation": "NASADEM_HGT_n31w005",
+    "marsTopography": "MEGT44N000HB.IMG",
+    "marsShotCounts": "MEGC44N000HB.IMG",
+    "earthUrl": "https://search.earthdata.nasa.gov/search?q=NASADEM_HGT",
+    "marsUrl": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+    "metadataStatus": "Original MOLA count label not independently verified; prior QA used a transcription of user-provided label."
+  },
+  "caveats": [
+    "38.8% describes native MOLA bins containing at least one recorded laser shot, NOT 1 km grid-cell coverage or validated surface accuracy.",
+    "The MOLA topography grid includes interpolated values in empty native observation bins.",
+    "Terrain roughness changes with resampling; metric ranges reflect five processing scenarios, NOT statistical confidence intervals.",
+    "Terrain features alone cannot establish geologic equivalence, water availability, thermal safety, radiation protection, or base feasibility.",
+    "No analog similarity score is released for these provisional measurements."
+  ]
+}

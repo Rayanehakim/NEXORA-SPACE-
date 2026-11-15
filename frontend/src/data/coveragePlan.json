@@ -1,0 +1,66 @@
+{
+  "version": "nexora-coverage-plan-v1",
+  "disclaimer": "Discovery plan only; catalog coordinates are approximate pins, not measured study boundaries or downloaded scenes.",
+  "earthSources": {
+    "earth-erfoud": {
+      "dataset": "NASADEM HGT V001",
+      "collectionUrl": "https://search.earthdata.nasa.gov/search?q=NASADEM_HGT",
+      "searchHint": "N31W005",
+      "note": "Existing 32 km trial is provisional; source-quality limitations remain."
+    },
+    "earth-atacama": {
+      "dataset": "NASADEM HGT V001",
+      "collectionUrl": "https://search.earthdata.nasa.gov/search?q=NASADEM_HGT",
+      "searchHint": "S25W070 (check exact study window)",
+      "note": "32 km Atacama–Jezero trial processed from NASADEM HGT S25W070; results provisional, not field validated."
+    },
+    "earth-askja": {
+      "dataset": "Copernicus DEM GLO-30 (ESA)",
+      "collectionUrl": "https://dataspace.copernicus.eu/",
+      "searchHint": "Askja, Iceland; ~65.03°N, 16.75°W",
+      "note": "Outside typical SRTM/NASADEM latitude coverage; inspect ESA product coverage."
+    },
+    "earth-haughton": {
+      "dataset": "Polar DEM via NASA Earthdata Search / alternate documented polar DEM",
+      "collectionUrl": "https://search.earthdata.nasa.gov/",
+      "searchHint": "Haughton, Canada; ~75.38°N, 89.67°W",
+      "note": "Polar data required; do not assume NASADEM covers this site."
+    },
+    "earth-mcmurdo": {
+      "dataset": "Antarctic DEM via NASA Earthdata Search / alternate documented polar DEM",
+      "collectionUrl": "https://search.earthdata.nasa.gov/",
+      "searchHint": "McMurdo Dry Valleys; ~77.50°S, 162.00°E",
+      "note": "Polar data required; inspect coverage and source licensing before selecting DEM."
+    }
+  },
+  "targetSources": {
+    "mars-jezero": {
+      "dataset": "MOLA MEGDR topography + count grid",
+      "collectionUrl": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "searchHint": "Jezero; 18.38°N, 77.58°E; MEGT/MEGC44N000HB",
+      "note": "MOLA native grid contains interpolated elevation bins; include count-quality analysis."
+    },
+    "moon-south-pole": {
+      "dataset": "LRO LOLA elevation (plus Diviner temperature context)",
+      "collectionUrl": "https://pds-geosciences.wustl.edu/missions/lro/",
+      "searchHint": "Moon south pole; select specific bounded latitude/longitude region and polar CRS",
+      "note": "Moon requires its own projection, DEM coverage checks, and Diviner as separate non-terrain evidence."
+    }
+  },
+  "processedPairs": [
+    {
+      "earthSiteId": "earth-erfoud",
+      "targetId": "mars-jezero",
+      "status": "PROVISIONAL_QA",
+      "evidenceFile": "src/features/analysis/evidenceRecord.json",
+      "scorePublished": false
+    },
+    {
+      "earthSiteId": "earth-atacama",
+      "targetId": "mars-jezero",
+      "status": "PROVISIONAL_QA",
+      "evidenceFile": "src/features/analysis/evidenceAtacama.json",
+      "scorePublished": false
+    }
+  ]
+}

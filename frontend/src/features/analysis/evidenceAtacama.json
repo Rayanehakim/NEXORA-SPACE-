@@ -1,0 +1,103 @@
+{
+  "recordVersion": "nexora-terrain-evidence-v1",
+  "status": "PROVISIONAL_QA",
+  "selection": {
+    "earthSiteId": "earth-atacama",
+    "targetId": "mars-jezero"
+  },
+  "study": {
+    "earth": "Atacama Desert, Chile",
+    "target": "Jezero Crater, Mars",
+    "squareKm": 32,
+    "gridResolutionM": 1000,
+    "cellCount": 1024,
+    "scenarios": 5
+  },
+  "counts": {
+    "observedNativeCells": 1847,
+    "totalNativeCells": 4761,
+    "zeroShotNativeCells": 2914,
+    "observedNativeFraction": 0.3879437093047679,
+    "shots": 3311,
+    "product": "MEGC44N000HB.IMG",
+    "sha256": "cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5"
+  },
+  "metrics": [
+    {
+      "id": "meanSlopeDeg",
+      "label": "Mean slope",
+      "unit": "\u00b0",
+      "earthBaseline": 4.20825827245722,
+      "marsBaseline": 1.5739985392282134,
+      "earthRange": [
+        4.155412282308112,
+        4.457826723608928
+      ],
+      "marsRange": [
+        1.5179081334087106,
+        1.66923879026573
+      ]
+    },
+    {
+      "id": "p90SlopeDeg",
+      "label": "P90 slope",
+      "unit": "\u00b0",
+      "earthBaseline": 7.772811219346036,
+      "marsBaseline": 3.9257802172262224,
+      "earthRange": [
+        7.6829060503898345,
+        8.534873794528435
+      ],
+      "marsRange": [
+        3.802760721754297,
+        4.271443529988371
+      ]
+    },
+    {
+      "id": "roughnessM",
+      "label": "Roughness",
+      "unit": "m",
+      "earthBaseline": 15.453770704881284,
+      "marsBaseline": 6.553897318660588,
+      "earthRange": [
+        15.340052374877434,
+        22.04044277634348
+      ],
+      "marsRange": [
+        6.1752713930196315,
+        9.039552532400252
+      ]
+    },
+    {
+      "id": "reliefM",
+      "label": "Relief",
+      "unit": "m",
+      "earthBaseline": 1843.17431640625,
+      "marsBaseline": 1039.546875,
+      "earthRange": [
+        1827.8765869140625,
+        1928.0
+      ],
+      "marsRange": [
+        997.1533203125,
+        1090.8863525390625
+      ]
+    }
+  ],
+  "provenance": {
+    "earthElevation": "NASADEM_HGT_s25w070",
+    "marsTopography": "MEGT44N000HB.IMG",
+    "marsShotCounts": "MEGC44N000HB.IMG",
+    "earthUrl": "https://search.earthdata.nasa.gov/search?q=NASADEM_HGT",
+    "marsUrl": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+    "metadataStatus": "Original MOLA count label not independently verified; prior QA used a transcription of user-provided label."
+  },
+  "caveats": [
+    "38.8% describes native MOLA bins containing at least one recorded laser shot, NOT 1 km grid-cell coverage or validated surface accuracy.",
+    "The MOLA topography grid includes interpolated values in empty native observation bins.",
+    "Terrain roughness changes with resampling; metric ranges reflect five processing scenarios, NOT statistical confidence intervals.",
+    "Terrain features alone cannot establish geologic equivalence, water availability, thermal safety, radiation protection, or base feasibility.",
+    "No analog similarity score is released for these provisional measurements.",
+    "Atacama study window is a catalog-centered demonstration region and is not a field-validated analog site."
+  ]
+}

@@ -1,0 +1,41 @@
+.analysis-dashboard{display:grid;gap:15px}.analysis-dashboard .analysis-overview{margin-bottom:0}.evidence-version{font-size:12px!important;margin-top:8px!important;color:#9db7cc!important}.evidence-sources{border-top:1px solid #263d51;margin-top:14px;padding-top:8px;overflow-wrap:anywhere}.evidence-sources p{color:#b6c6d7;font-size:14px}.gap-list .gap-implication{font-size:13px;color:#8fb4cf;margin-top:7px}.evidence-severity,.evidence-kind{font-size:11px;letter-spacing:.05em;color:#97b5cc}.evidence-severity{display:block;margin-top:5px}.evidence-kind{display:block;margin-top:7px}.gap-list a{color:#a8d8ef}.evidence-notes ul{margin:0;padding-left:21px;color:#b6c6d7;line-height:1.7;font-size:14px}.evidence-notes>p{color:#b6c6d7;margin:0;line-height:1.6}.analysis-dashboard .metric-table{min-width:465px}.analysis-dashboard .metric-table td:last-child{text-align:right}@media(max-width:620px){.analysis-dashboard .analysis-overview{flex-wrap:wrap}.analysis-dashboard .index-readout{text-align:left}}
+
+/* Compact evidence cards on presentation-sized desktop screens. */
+@media (min-width: 1050px) and (min-height: 650px) and (max-height: 1300px) {
+  .analysis-dashboard { gap: 9px; }
+  .analysis-dashboard .workspace-panel { padding: 12px 14px; }
+  .analysis-dashboard .analysis-layout { gap: 10px; }
+  .analysis-dashboard .analysis-overview h2 { font-size: 17px; margin: 5px 0; }
+  .analysis-dashboard .analysis-overview p { font-size: 12px; line-height: 1.45; }
+  .analysis-dashboard .index-readout strong { font-size: 32px; }
+  .analysis-dashboard .panel-heading { margin-bottom: 6px; }
+  .analysis-dashboard .workspace-panel h2 { font-size: 16px; }
+  .analysis-dashboard .metric-table { font-size: 12px; }
+  .analysis-dashboard .metric-table th, .analysis-dashboard .metric-table td { padding: 8px 5px; }
+  .analysis-dashboard .gap-list article { padding: 6px 0 6px 11px; }
+  .analysis-dashboard .gap-list p { font-size: 12px; line-height: 1.4; }
+  .analysis-dashboard .gap-list .gap-implication { font-size: 11px; margin-top: 3px; }
+  .analysis-dashboard .panel-caption, .analysis-dashboard .evidence-notes p { font-size: 11px; line-height: 1.4; }
+  .analysis-dashboard .evidence-notes ul { font-size: 12px; line-height: 1.4; }
+}
+
+/* Evidence QA is compact and visually distinct from a validated model score. */
+.terrain-evidence-qa{border:1px solid #3a5867!important;background:linear-gradient(135deg,#101f2d,#102637)}
+.terrain-evidence-qa .panel-heading{margin-bottom:8px}
+.qa-lead{display:grid;grid-template-columns:175px 1fr;gap:14px;align-items:center}
+.qa-number strong{display:block;font-size:34px;color:#8be0cb;line-height:1.05}
+.qa-number span{display:block;font-size:12px;color:#b6ccdb;margin-top:5px}
+.qa-context p{margin:3px 0 6px;font-size:12px;line-height:1.35;color:#c6d8e7}
+.qa-bar{height:9px;overflow:hidden;border-radius:20px;background:#52606a}
+.qa-bar span{display:block;height:100%;background:#59b9a6}
+.qa-metric-wrap{overflow-x:auto;margin-top:10px}
+.qa-metrics{width:100%;border-collapse:collapse;font-size:12px;text-align:left}
+.qa-metrics th,.qa-metrics td{padding:6px 8px;border-bottom:1px solid #2b4356}
+.qa-metrics th{font-weight:600;color:#b9d4e4}
+.qa-metrics td{color:#e3edf4}
+.qa-warning{margin:9px 0 4px;font-size:12px;line-height:1.45;color:#f5d5a8}
+.terrain-evidence-qa .panel-caption{font-size:11px;line-height:1.4;margin:5px 0;color:#afc6d4}
+.terrain-evidence-qa a{color:#9adcea}
+@media(max-width:650px){.qa-lead{grid-template-columns:1fr}.qa-metrics{min-width:620px}}
+@media(min-width:1050px) and (max-height:1300px){.terrain-evidence-qa{padding:10px 13px!important}.qa-lead{grid-template-columns:145px 1fr;gap:10px}.qa-number strong{font-size:29px}.qa-metric-wrap{margin-top:5px}.qa-metrics th,.qa-metrics td{padding:4px 6px}.qa-warning{margin:6px 0 3px;font-size:11px}}
+@media print{.terrain-evidence-qa{background:white!important;color:black!important}.terrain-evidence-qa *{color:black!important}}

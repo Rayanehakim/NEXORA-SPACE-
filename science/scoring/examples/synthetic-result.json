@@ -1,0 +1,91 @@
+{
+  "targetId": "synthetic-mars",
+  "earthSiteId": "synthetic-earth",
+  "missionProfile": "terrain_mobility",
+  "modelVersion": "experimental-terrain-v1.0.0",
+  "status": "READY",
+  "score": 100,
+  "featureContributions": [
+    {
+      "feature": "meanSlopeDeg",
+      "earthValue": 2,
+      "targetValue": 2,
+      "unit": "deg",
+      "weight": 0.35,
+      "tolerance": 10,
+      "distance": 0.0,
+      "contribution": 0.0
+    },
+    {
+      "feature": "p90SlopeDeg",
+      "earthValue": 4,
+      "targetValue": 4,
+      "unit": "deg",
+      "weight": 0.3,
+      "tolerance": 15,
+      "distance": 0.0,
+      "contribution": 0.0
+    },
+    {
+      "feature": "roughnessM",
+      "earthValue": 5,
+      "targetValue": 5,
+      "unit": "m",
+      "weight": 0.25,
+      "tolerance": 20,
+      "distance": 0.0,
+      "contribution": 0.0
+    },
+    {
+      "feature": "reliefM",
+      "earthValue": 20,
+      "targetValue": 20,
+      "unit": "m",
+      "weight": 0.1,
+      "tolerance": 100,
+      "distance": 0.0,
+      "contribution": 0.0
+    }
+  ],
+  "gaps": [
+    {
+      "category": "PHYSICAL",
+      "severity": "UNKNOWN",
+      "claim": "The four supplied terrain descriptors match within this model; material and obstacle properties remain unassessed.",
+      "experimentImplication": "Assess geology, material properties and obstacles separately.",
+      "evidenceType": "SIMULATED",
+      "sourceUrl": null
+    },
+    {
+      "category": "PLANETARY",
+      "severity": "UNKNOWN",
+      "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+      "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+      "evidenceType": "LITERATURE",
+      "sourceUrl": "https://science.nasa.gov/mars/facts/"
+    },
+    {
+      "category": "EVIDENCE",
+      "severity": "UNKNOWN",
+      "claim": "Inputs are simulated test evidence.",
+      "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+      "evidenceType": "UNKNOWN",
+      "sourceUrl": null
+    },
+    {
+      "category": "OPERATIONAL",
+      "severity": "UNKNOWN",
+      "claim": "Access, permits, communications and weather have not been assessed.",
+      "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+      "evidenceType": "UNKNOWN",
+      "sourceUrl": null
+    }
+  ],
+  "evidenceGaps": [
+    "SIMULATED inputs: numeric output is an algorithm demonstration, not a measured candidate result.",
+    "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+  ],
+  "sourceIds": [
+    "synthetic-test-v1"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "jobs": [
+    {
+      "earthSiteId": "earth-atacama",
+      "targetId": "mars-jezero",
+      "manifest": "REPLACE_WITH_REAL_MANIFEST.json"
+    },
+    {
+      "earthSiteId": "earth-erfoud",
+      "targetId": "moon-south-pole",
+      "manifest": "REPLACE_WITH_REAL_LUNAR_MANIFEST.json"
+    }
+  ]
+}
