@@ -1,5 +1,26 @@
 # Deployment preparation
 
+## Cloudflare Pages with GitHub
+
+Connect `Rayanehakim/NEXORA-SPACE-` through Cloudflare Pages' Git integration. Select **Pages**, not a Worker project or Direct Upload. Use these settings:
+
+| Setting | Value |
+| --- | --- |
+| Production branch | `main` |
+| Framework preset | None (custom command below) |
+| Root directory | Repository root / leave blank |
+| Build command | `npm --prefix frontend ci && npm test && npm run build` |
+| Build output directory | `frontend/dist` |
+| Node version | `22`, pinned by root `.node-version` |
+
+The build command installs the locked frontend dependencies, runs frontend and original drone regressions, then builds with the scientific-publication checks. The whole repository must be present; selecting only `frontend` would hide the shared evidence ledger and validator. Python scientific tests run separately in GitHub Actions. Cloudflare's native automatic deployments do not wait for that independent workflow, so check **Validate NEXORA** before promoting a release.
+
+First connection requires signing into Cloudflare and authorizing its GitHub integration for this repository. In Workers & Pages, create a Pages project, import the existing GitHub repository, apply the settings above and deploy. Choose a project name such as `nexora-space` if available. After successful setup, pushes to `main` rebuild production; branch previews are controlled in Pages settings.
+
+The site uses static assets and bundled terrain QA; no runtime API secrets or Python server are required. Original large rasters remain local and are not uploaded. The existing `frontend/public/_redirects` is copied into the published output for SPA navigation. After deployment, verify the homepage, planet images, map, `/explore`, `/analysis`, `/simulation` and `/report` directly and after refresh. Test the simulator and report download/printing in a real browser. Use the actual URL returned by Cloudflare; project-name availability is not assumed.
+
+Official references: [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/), [build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/), [Node version selection](https://developers.cloudflare.com/pages/configuration/build-image/).
+
 ## Build the intended application
 
 Use the complete repository, Node 22.13+ and the locked frontend dependencies:
