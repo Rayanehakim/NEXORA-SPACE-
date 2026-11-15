@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import type { MissionProfile, ReportProps, SimulationReport } from '../../types/contracts';
 import { parseComparison } from '../analysis/comparisonValidation';
 import { isExperimentalComparison } from '../analysis/experimental';
+import { gapAssessmentLabel } from '../analysis/gapLabels';
 import { fallbackGaps, formatMetric, isReadyComparison } from '../analysis';
 import './report.css';
 import { usePrintDetails } from './usePrintDetails';
@@ -67,7 +68,7 @@ export function MissionReport(props:ReportProps & {objective?:MissionProfile}) {
       {data?.evidenceGaps?.length ? <div className="selected-brief"><span className="eyebrow">DATA GAPS</span><ul className="report-limits">{data.evidenceGaps.map(x=><li key={x}>{x}</li>)}</ul></div> : null}
       <div className="selected-brief"><span className="eyebrow">DATA PROVENANCE</span><p>{data?.sourceIds?.length ? data.sourceIds.join(' · ') : imported ? 'Earth and planetary elevation and observation-quality files are documented in the imported terrain trial above. No approved scoring result is attached.' : provisional ? 'NASADEM Earth elevation and MOLA Mars topography/counts are documented in the provisional QA panel above. No validated scoring inputs are attached.' : 'No dataset sources attached to this mission comparison.'}</p></div>
     </aside></div>
-    <section className="workspace-panel report-gap-summary"><div className="panel-heading"><h2>Experimental design implications</h2><span className="data-chip">{gaps.length} GAPS</span></div><div className="report-gap-grid">{gaps.map((gap,index)=><article key={`${gap.category}-${index}`}><span className="eyebrow">{gap.category} · {gap.severity}</span><p>{gap.claim}</p><strong>{gap.experimentImplication}</strong></article>)}</div></section>
+    <section className="workspace-panel report-gap-summary"><div className="panel-heading"><h2>Experimental design implications</h2><span className="data-chip">{gaps.length} GAPS</span></div><div className="report-gap-grid">{gaps.map((gap,index)=><article key={`${gap.category}-${index}`}><span className="eyebrow">{gap.category} · {gapAssessmentLabel(gap)}</span><p>{gap.claim}</p><strong>{gap.experimentImplication}</strong></article>)}</div></section>
     <p className="panel-caption">Generated for research planning only. Inspect original source datasets and methods before relying on any quantitative comparison.</p>
   </div>;
 }

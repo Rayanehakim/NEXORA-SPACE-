@@ -4,6 +4,7 @@ import type { AnalysisProps, AnalogGap, ComparisonResult, FeatureContribution } 
 import './analysis.css';
 import { parseComparison } from './comparisonValidation';
 import { isExperimentalComparison } from './experimental';
+import { gapAssessmentLabel, gapEvidenceLabel } from './gapLabels';
 import { ImportedTerrainQuality, importedEvidenceForSelection } from './importedEvidence';
 
 const METRICS = [
@@ -76,7 +77,8 @@ export function AnalysisDashboard({target, site, comparison}: AnalysisProps) {
         {data?.sourceIds?.length ? <div className="evidence-sources"><h3>Source identifiers</h3><p>{data.sourceIds.join(' · ')}</p></div> : null}
       </section>}
       <section className="workspace-panel"><div className="panel-heading"><h2>Analog gap analysis</h2><span className="data-chip">{gaps.length} GAPS</span></div>
-        <div className="gap-list">{gaps.map((gap, i) => <article key={`${gap.category}-${i}`}><div><h3>{gap.category}</h3><span className="evidence-severity">{gap.severity}</span></div><div><p>{gap.claim}</p><p className="gap-implication"><strong>Field implication:</strong> {gap.experimentImplication}</p><span className="evidence-kind">Evidence: {gap.evidenceType}</span>{gap.sourceUrl && <p><a href={gap.sourceUrl} target="_blank" rel="noopener noreferrer">Source reference ↗</a></p>}</div></article>)}</div>
+        <p className="panel-caption">Assessment status describes remaining review and mission planning; it is separate from terrain data availability.</p>
+        <div className="gap-list">{gaps.map((gap, i) => <article key={`${gap.category}-${i}`}><div><h3>{gap.category}</h3><span className="evidence-severity">{gapAssessmentLabel(gap)}</span></div><div><p>{gap.claim}</p><p className="gap-implication"><strong>Field implication:</strong> {gap.experimentImplication}</p><span className="evidence-kind">Evidence: {gapEvidenceLabel(gap)}</span>{gap.sourceUrl && <p><a href={gap.sourceUrl} target="_blank" rel="noopener noreferrer">Source reference ↗</a></p>}</div></article>)}</div>
       </section>
     </div>
     <section className="workspace-panel evidence-notes"><div className="panel-heading"><h2>Evidence readiness</h2><span className="data-chip">{experimental ? 'SOURCE REVIEW PENDING' : data?.status ?? (imported ? 'TERRAIN QA AVAILABLE' : 'INCOMPLETE_DATA')}</span></div>

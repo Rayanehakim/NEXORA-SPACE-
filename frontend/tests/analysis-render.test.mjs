@@ -44,6 +44,8 @@ test('report renders survey observations, rejects objective mismatches, and down
   URL.createObjectURL=blob=>{saved=blob;return 'blob:test'};URL.revokeObjectURL=()=>{};window.HTMLAnchorElement.prototype.click=function(){clicked=true};
   try{
     assert.match(view.host.textContent,/90.0 \/ 100/);assert.match(view.host.textContent,/Logged observations/);
+    assert.doesNotMatch(view.host.querySelector('.report-gap-grid').textContent,/UNKNOWN/);
+    assert.match(view.host.querySelector('.report-gap-grid').textContent,/Severity not assessed|Review pending|Not assessed/);
     const download=[...view.host.querySelectorAll('button')].find(button=>button.textContent.includes('Download'));
     await act(async()=>download.click());assert.equal(clicked,true);
     const exported=JSON.parse(await saved.text());assert.equal(exported.comparison.score,90);assert.equal(exported.simulation.observations.length,1);
@@ -132,6 +134,8 @@ test('all 20 real mission selections load provisional scores through the page ho
       assert.ok(expected);assert.equal(view.host.querySelector('.index-readout strong').textContent,expected.score.toFixed(1));
       assert.match(view.host.textContent,/PROVISIONAL MODEL INDEX/);assert.match(view.host.textContent,/Independent source and scientific review remain pending/);
       assert.doesNotMatch(view.host.querySelector('.analysis-overview').textContent,/INCOMPLETE DATA|Index unavailable/);
+      const gapText=view.host.querySelector('.gap-list').textContent;
+      assert.doesNotMatch(gapText,/UNKNOWN/);assert.match(gapText,/Severity not assessed/);assert.match(gapText,/Review pending/);assert.match(gapText,/Not assessed/);
       const exported=makeMissionExport({site:selectedSite,target:selectedTarget,comparison:lastComparison,simulation:null},profile);
       assert.equal(exported.comparison.score,expected.score);assert.equal(exported.comparison.missionProfile,profile);
       assert.equal(exported.comparisonReview.status,'UNREVIEWED');assert.equal(exported.comparisonReview.scientificallyApproved,false);
