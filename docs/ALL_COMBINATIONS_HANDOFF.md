@@ -2,7 +2,11 @@
 
 All five Earth candidates (Erfoud, Atacama, Askja, Haughton and McMurdo) now have locally reproduced terrain trials against both Mars/Jezero and the lunar south pole. All ten use **5 km squares, 500 m cells, 10 × 10 prepared grids and a 1500 m roughness window**. Every pair has complete prepared elevation coverage in five scenarios: average baseline, bilinear, nearest, average shifted northeast and southwest by 250 m in each projected axis.
 
-Analysis and Report display the exact selected pair's slope, P90 slope, plane-detrended roughness, relief, processing ranges and native observation-quality evidence. Exports retain that same pair's QA. The old unequal-footprint trials remain historical artifacts and are superseded in the UI. No approved numerical compatibility score is published; experimental indices for both mission profiles are generated in ignored local review files.
+Analysis and Report display the exact selected pair's slope, P90 slope, plane-detrended roughness, relief, processing ranges and native observation-quality evidence. Exports retain that same pair's QA. The old unequal-footprint trials remain historical artifacts and are superseded in the UI. Both mission objectives now display **provisional model indices**, explicitly unreviewed; no scientifically approved score is claimed.
+
+The bundled `frontend/src/data/experimentalComparisons.json` contains all twenty Python results, an UNREVIEWED status, model identity and canonical input hashes. Regenerate it with `python -m science.gis.export_experimental`; verify exact recomputation with `python -m science.gis.export_experimental --check` (also run in CI). It uses the tracked baseline features/plans, so reproducing the model outputs does not require downloading the large rasters again. Canonical JSON hashes are independent of Windows versus Linux line endings.
+
+The loader first checks for a separately reviewed release. A missing file or HTML SPA fallback selects the exact bundled experimental result; corrupt JSON, invalid comparisons and server/network errors still fail closed. No score is calculated in the browser. JSON report exports mark bundled scores `comparisonReview.status: UNREVIEWED` and `scientificallyApproved: false`. Catalog READY describes processed feature availability, not scientific approval or availability of measured ECHO terrain.
 
 ## Sources now present
 

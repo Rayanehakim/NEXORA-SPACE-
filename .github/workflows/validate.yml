@@ -13,6 +13,7 @@ jobs:
       - run: python -m unittest discover -s science/gis/tests -v
       - run: python scripts/validate_contracts.py
       - run: python scripts/validate_release.py
+      - run: python -m science.gis.export_experimental --check
   frontend:
     needs: science
     runs-on: ubuntu-latest

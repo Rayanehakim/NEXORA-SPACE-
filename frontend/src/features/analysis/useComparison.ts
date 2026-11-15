@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { ComparisonResult, MissionProfile } from '../../types/contracts';
 import { parseComparison } from './comparisonValidation';
+import { experimentalComparison } from './experimental';
 
-export type ComparisonStatus = 'idle' | 'loading' | 'ready' | 'missing' | 'invalid' | 'error';
+export type ComparisonStatus = 'idle' | 'loading' | 'ready' | 'provisional' | 'missing' | 'invalid' | 'error';
 interface Loaded { key: string; status: ComparisonStatus; comparison: ComparisonResult | null }
 
 /** Distinguish absent evidence from loading/network/validation failure; never reuse stale results. */
@@ -21,7 +22,10 @@ export function useComparison(targetId: string, earthSiteId: string | null, prof
     async function load() {
       try {
         const response = await fetch(file, {signal: controller.signal});
-        if (response.status === 404 || (response.ok && response.headers.get('content-type')?.includes('text/html'))) { store('missing'); return; }
+        if (response.status === 404 || (response.ok && response.headers.get('content-type')?.includes('text/html'))) {
+          const experimental=experimentalComparison(targetId,earthSiteId!,profile);
+          store(experimental?'provisional':'missing',experimental); return;
+        }
         if (!response.ok) { store('error'); return; }
         let payload: unknown;
         try { payload = await response.json(); } catch { store('invalid'); return; }

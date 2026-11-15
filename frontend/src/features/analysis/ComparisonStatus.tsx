@@ -5,6 +5,7 @@ export function ComparisonStatus({status,retry}:{status:Status;retry:()=>void}) 
   const messages = {
     idle: 'Choose an Earth candidate and planetary target to inspect evidence.',
     loading: 'Checking comparison evidence for this mission…',
+    provisional: 'Provisional model index from locally processed terrain. Independent source and scientific review remain pending; this is not a safety or mission-success rating.',
     missing: 'No reviewed comparison has been published for this mission yet. Scores remain unavailable.',
     invalid: 'The comparison could not be verified. No score is shown.',
     error: 'Comparison evidence could not be loaded. No score is shown.'

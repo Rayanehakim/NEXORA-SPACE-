@@ -43,7 +43,7 @@ All ten Earth/planet pairs now have locally reproduced terrain QA from the suppl
 
 Run `python -m science.gis.local_catalog` with the original inputs at repository root to reproduce the complete catalog. Source identities, archive/label hashes, baseline features, scenario outputs and processing versions are tracked under `data/evidence/local-catalog/`. See [all-combinations handoff](docs/ALL_COMBINATIONS_HANDOFF.md).
 
-Independent source authenticity, study-window suitability and scientific review remain pending. No reviewed numerical comparison or measured drone terrain is published. ECHO uses labelled procedural demonstration geometry; its observations are simulated. Scientific model settings are experimental project choices, not NASA safety limits or success probabilities.
+All twenty station/target/objective selections show Python-computed **provisional model indices**. Regenerate the bundled results with `python -m science.gis.export_experimental`; CI checks them against tracked baseline inputs. Independent source authenticity, study-window suitability and scientific review remain pending. No scientifically approved comparison or measured drone terrain is published. ECHO uses labelled procedural demonstration geometry; its observations are simulated. Scientific model settings are experimental project choices, not NASA safety limits or success probabilities.
 
 `npm run build` checks the review ledger before compiling. Copying an unreviewed comparison or DEM into the public directory blocks the build. See `data/evidence/README.md` before releasing quantitative artifacts.
 

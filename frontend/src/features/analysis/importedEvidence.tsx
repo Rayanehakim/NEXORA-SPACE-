@@ -13,7 +13,7 @@ export function ImportedTerrainQuality({earthSiteId,targetId}:{earthSiteId:strin
   const observed=lunar?quality.positiveCountFraction:quality.nativeObservedCellFraction;
   const value=(n:number)=>n.toLocaleString(undefined,{maximumFractionDigits:2});
   return <details className="workspace-panel terrain-evidence-qa imported-terrain-qa" aria-label={`Locally processed ${evidence.earthName} and ${evidence.targetName} terrain QA`}>
-    <summary><span><strong>Imported terrain trial · {evidence.earthName} ↔ {evidence.targetName}</strong><span className="qa-review-note">Locally reproduced · independent source-release and scientific review pending</span></span><span className="data-chip">PROVISIONAL · NO SCORE</span></summary>
+    <summary><span><strong>Imported terrain trial · {evidence.earthName} ↔ {evidence.targetName}</strong><span className="qa-review-note">Locally reproduced · independent source-release and scientific review pending</span></span><span className="data-chip">PROVISIONAL EVIDENCE</span></summary>
     <p className="qa-warning">Locally computed terrain descriptors for the selected pair. These proposed study windows are not validated analog or landing sites, and no approved compatibility score is published.</p>
     <div className="imported-quality-grid">
       <div><strong>{value(evidence.study.footprintWidthM/1000)} × {value(evidence.study.footprintWidthM/1000)} km</strong><span>Matched projected study footprints</span></div>

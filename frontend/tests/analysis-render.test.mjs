@@ -14,6 +14,7 @@ const {AnalysisDashboard}=await import(moduleUrl(resolve('src/features/analysis/
 const {MissionReport,makeMissionExport}=await import(moduleUrl(resolve('src/features/report/index.tsx')));
 const {useComparison}=await import(moduleUrl(resolve('src/features/analysis/useComparison.ts')));
 const {ComparisonStatus}=await import(moduleUrl(resolve('src/features/analysis/ComparisonStatus.tsx')));
+const {experimentalComparison}=await import(moduleUrl(resolve('src/features/analysis/experimental.ts')));
 const {sites,targets}=await import(moduleUrl(resolve('src/data/fixtures/catalog.ts')));
 const site=sites.find(site=>site.id==='earth-erfoud'),target=targets.find(target=>target.id==='mars-jezero');
 const ready=()=>({targetId:target.id,earthSiteId:site.id,missionProfile:'terrain_mobility',modelVersion:'test-v1',status:'READY',score:90,
@@ -54,13 +55,13 @@ test('report renders survey observations, rejects objective mismatches, and down
     assert.match(view.host.textContent,/No ECHO reconnaissance recorded/);assert.doesNotMatch(view.host.textContent,/90.0 \/ 100/);
   }finally{URL.createObjectURL=originalCreate;URL.revokeObjectURL=originalRevoke;window.HTMLAnchorElement.prototype.click=originalClick;await view.close()}
 });
-function Probe({targetId=target.id,siteId=site.id}){const state=useComparison(targetId,siteId,'terrain_mobility');return React.createElement('div',null,React.createElement('output',null,`${state.status}:${state.comparison?.score??'none'}`),React.createElement(ComparisonStatus,{status:state.status,retry:state.retry}));}
+function Probe({targetId=target.id,siteId=site.id,profile='terrain_mobility'}){const state=useComparison(targetId,siteId,profile);return React.createElement('div',null,React.createElement('output',null,`${state.status}:${state.comparison?.score??'none'}`),React.createElement(ComparisonStatus,{status:state.status,retry:state.retry}));}
 test('comparison loading distinguishes missing, invalid, server/network failure and supports retry',async()=>{
   const originalFetch=globalThis.fetch;let respond;globalThis.fetch=()=>new Promise(resolve=>{respond=resolve});
   const view=await mount(React.createElement(Probe));
   try{
     assert.match(view.host.textContent,/loading:none/);
-    await act(async()=>respond(new Response('',{status:404})));assert.match(view.host.textContent,/missing:none/);
+    await act(async()=>respond(new Response('',{status:404})));assert.match(view.host.textContent,/provisional:[0-9]/);
     globalThis.fetch=async()=>new Response('{bad json',{status:200});
     await view.render(React.createElement(Probe,{siteId:'earth-atacama'}));assert.match(view.host.textContent,/invalid:none/);
     globalThis.fetch=async()=>new Response('',{status:503});
@@ -76,7 +77,7 @@ test('a stale comparison response cannot leak into another mission selection',as
   try{
     await view.render(React.createElement(Probe,{siteId:'earth-atacama'}));assert.equal(requests[0].signal.aborted,true);
     await act(async()=>requests[0].resolve(new Response(JSON.stringify(ready()))));assert.match(view.host.textContent,/loading:none/);
-    await act(async()=>requests[1].resolve(new Response('',{status:404})));assert.match(view.host.textContent,/missing:none/);
+    await act(async()=>requests[1].resolve(new Response('',{status:404})));assert.match(view.host.textContent,/provisional:[0-9]/);
   }finally{globalThis.fetch=originalFetch;await view.close()}
 });
 
@@ -114,6 +115,30 @@ test('all ten selections keep evidence and JSON export scoped to their exact Ear
       }
     }
   }finally{await view.close()}
+});
+
+test('all 20 real mission selections load provisional scores through the page hook and preserve review status in exports',async()=>{
+  const originalFetch=globalThis.fetch;let lastComparison;
+  globalThis.fetch=async()=>new Response('<html>SPA fallback</html>',{headers:{'content-type':'text/html'}});
+  function Live({selectedSite=sites[0],selectedTarget=targets[0],profile='terrain_mobility'}){
+    const state=useComparison(selectedTarget.id,selectedSite.id,profile);lastComparison=state.comparison;
+    return React.createElement('div',null,React.createElement(ComparisonStatus,{status:state.status,retry:state.retry}),React.createElement(AnalysisDashboard,{site:selectedSite,target:selectedTarget,comparison:state.comparison}));
+  }
+  const view=await mount(React.createElement(Live));
+  try{
+    for(const selectedSite of sites)for(const selectedTarget of targets)for(const profile of ['terrain_mobility','geological_survey']){
+      await view.render(React.createElement(Live,{selectedSite,selectedTarget,profile}));
+      const expected=experimentalComparison(selectedTarget.id,selectedSite.id,profile);
+      assert.ok(expected);assert.equal(view.host.querySelector('.index-readout strong').textContent,expected.score.toFixed(1));
+      assert.match(view.host.textContent,/PROVISIONAL MODEL INDEX/);assert.match(view.host.textContent,/Independent source and scientific review remain pending/);
+      assert.doesNotMatch(view.host.querySelector('.analysis-overview').textContent,/INCOMPLETE DATA|Index unavailable/);
+      const exported=makeMissionExport({site:selectedSite,target:selectedTarget,comparison:lastComparison,simulation:null},profile);
+      assert.equal(exported.comparison.score,expected.score);assert.equal(exported.comparison.missionProfile,profile);
+      assert.equal(exported.comparisonReview.status,'UNREVIEWED');assert.equal(exported.comparisonReview.scientificallyApproved,false);
+    }
+    globalThis.fetch=async()=>new Response('',{status:404});
+    await view.render(React.createElement(Probe,{siteId:'unknown-site'}));assert.match(view.host.textContent,/missing:none/);
+  }finally{globalThis.fetch=originalFetch;await view.close()}
 });
 
 after(()=>dom.window.close());

@@ -2,6 +2,7 @@ import { EvidenceQuality, evidenceForSelection } from '../analysis/evidence';
 import { Link } from 'react-router-dom';
 import type { MissionProfile, ReportProps, SimulationReport } from '../../types/contracts';
 import { parseComparison } from '../analysis/comparisonValidation';
+import { isExperimentalComparison } from '../analysis/experimental';
 import { fallbackGaps, formatMetric, isReadyComparison } from '../analysis';
 import './report.css';
 import { usePrintDetails } from './usePrintDetails';
@@ -15,11 +16,13 @@ export function makeMissionExport({target,site,comparison,simulation}: ReportPro
     selection:{targetId:target?.id ?? null,targetName:target?.name ?? null,planet:target?.body ?? null,
       siteId:site?.id ?? null,siteName:site?.name ?? null,objective},
     comparison: evidence ?? {status:'INCOMPLETE_DATA',score:null,featureContributions:[],gaps:fallbackGaps(target?.body ?? 'mars'),evidenceGaps:['No validated comparison result for the selected pair'],sourceIds:[]},
+    comparisonReview:{status:isExperimentalComparison(evidence)?'UNREVIEWED':'NOT_DECLARED',scientificallyApproved:false},
     simulation:usableSimulation,
     terrainEvidenceQA: importedEvidenceForSelection(site?.id,target?.id) ? null : evidenceForSelection(site?.id,target?.id),
     importedTerrainQA: importedEvidenceForSelection(site?.id,target?.id),
     disclosures:[
       'Experimental similarity index, where available, is not planetary equivalence or mission success probability.',
+      ...(isExperimentalComparison(evidence)?['Displayed provisional model score is computed by Python from measured baseline descriptors; independent source and scientific review are pending.']:[]),
       'ECHO flight, coverage and observations are simulated, not measured terrain evidence.',
       'Planetary environmental conditions and real flight certification are not reproduced.',
       ...(!importedEvidenceForSelection(site?.id,target?.id) && evidenceForSelection(site?.id,target?.id) ? ['Provisional QA values are a prior snapshot; original source-label verification and reproducibility remain pending.'] : []),
@@ -52,7 +55,7 @@ export function MissionReport(props:ReportProps & {objective?:MissionProfile}) {
   const provisional = imported ? null : evidenceForSelection(site?.id, target?.id);
   const gaps = data?.gaps?.length ? data.gaps : fallbackGaps(target?.body ?? 'mars');
   return <div className="mission-report">
-    <div className="report-toolbar"><span className="data-chip">{ready ? 'EXPERIMENTAL SCIENCE' : 'INCOMPLETE EVIDENCE'}</span><div className="report-buttons"><button type="button" className="button" onClick={()=>exportMissionJson(report)}>Download JSON ↓</button><button type="button" className="button button-secondary" onClick={()=>window.print()}>Print report</button></div></div>
+    <div className="report-toolbar"><span className="data-chip">{ready ? 'PROVISIONAL MODEL INDEX' : imported ? 'TERRAIN QA AVAILABLE' : 'INCOMPLETE EVIDENCE'}</span><div className="report-buttons"><button type="button" className="button" onClick={()=>exportMissionJson(report)}>Download JSON ↓</button><button type="button" className="button button-secondary" onClick={()=>window.print()}>Print report</button></div></div>
     <EvidenceQuality evidence={provisional} />
     <ImportedTerrainQuality earthSiteId={site?.id} targetId={target?.id}/>
     <div className="report-layout"><article className="workspace-panel"><div className="panel-heading"><h2>Mission summary</h2><span className="data-chip">PROTOTYPE</span></div>

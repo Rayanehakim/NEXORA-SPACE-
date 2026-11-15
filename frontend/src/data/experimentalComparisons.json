@@ -1,0 +1,2012 @@
+{
+  "version": "nexora-experimental-comparisons-v1",
+  "reviewStatus": "UNREVIEWED",
+  "scientificallyApproved": false,
+  "disclosure": "Experimental model indices from locally reproduced measured terrain. Independent source/scientific review pending; not suitability, safety or mission-success probabilities.",
+  "hashMethod": "sorted-compact-ascii-json-sha256",
+  "modelCanonicalSha256": "49ba2fc7a3ee3845b411c5d1055fa38d5c0868f416e70dc81bcbac39d93bc8e0",
+  "inputs": [
+    {
+      "earthSiteId": "earth-atacama",
+      "targetId": "mars-jezero",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-atacama--mars-jezero/earth-features.json",
+          "canonicalSha256": "1578ecfe6dcfc896c14e89e59a91c616428dfbd9e69c43d0ea0f6e568c77db8b"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-atacama--mars-jezero/target-features.json",
+          "canonicalSha256": "95d666ec763a01862e0a5fed8d5fb1acb11abef971c224a105026397e5389d82"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-atacama--mars-jezero/analysis-plan.json",
+          "canonicalSha256": "9e9aa57b83919a0dd8ca1858ae78894f970fc9e58ccafb33a412384811f9b33e"
+        }
+      }
+    },
+    {
+      "earthSiteId": "earth-atacama",
+      "targetId": "moon-south-pole",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-atacama--moon-south-pole/earth-features.json",
+          "canonicalSha256": "1578ecfe6dcfc896c14e89e59a91c616428dfbd9e69c43d0ea0f6e568c77db8b"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-atacama--moon-south-pole/target-features.json",
+          "canonicalSha256": "19fcfeb3e7b14300c6293e502fb63a6028fa83c645a37d2181c08326bbf54e54"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-atacama--moon-south-pole/analysis-plan.json",
+          "canonicalSha256": "3670ef7e9d764b6c143ded0a9a2521b3ab434e474a777b589ca019706951b6bb"
+        }
+      }
+    },
+    {
+      "earthSiteId": "earth-erfoud",
+      "targetId": "mars-jezero",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-erfoud--mars-jezero/earth-features.json",
+          "canonicalSha256": "f27f2ef1f00d74353737075b9540daf04c0f4aeb2f56878e5b5510cf2a692acb"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-erfoud--mars-jezero/target-features.json",
+          "canonicalSha256": "95d666ec763a01862e0a5fed8d5fb1acb11abef971c224a105026397e5389d82"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-erfoud--mars-jezero/analysis-plan.json",
+          "canonicalSha256": "9598d9d207b28c824812dadf982c4055ba16309d0729e29eea37e644a42f2420"
+        }
+      }
+    },
+    {
+      "earthSiteId": "earth-erfoud",
+      "targetId": "moon-south-pole",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-erfoud--moon-south-pole/earth-features.json",
+          "canonicalSha256": "f27f2ef1f00d74353737075b9540daf04c0f4aeb2f56878e5b5510cf2a692acb"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-erfoud--moon-south-pole/target-features.json",
+          "canonicalSha256": "19fcfeb3e7b14300c6293e502fb63a6028fa83c645a37d2181c08326bbf54e54"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-erfoud--moon-south-pole/analysis-plan.json",
+          "canonicalSha256": "b6a620097c24e886687c159ab0a8d2ddf071e80624178803584698a773f34563"
+        }
+      }
+    },
+    {
+      "earthSiteId": "earth-askja",
+      "targetId": "mars-jezero",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-askja--mars-jezero/earth-features.json",
+          "canonicalSha256": "ccf0d23403ee2c25983064fc32cfa58dd93a784f81476967a00eae2384fef5a8"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-askja--mars-jezero/target-features.json",
+          "canonicalSha256": "95d666ec763a01862e0a5fed8d5fb1acb11abef971c224a105026397e5389d82"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-askja--mars-jezero/analysis-plan.json",
+          "canonicalSha256": "a8a9ac4bccd28af1548c1926023508b49160f76940fd015ae3226195b88a4e04"
+        }
+      }
+    },
+    {
+      "earthSiteId": "earth-askja",
+      "targetId": "moon-south-pole",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-askja--moon-south-pole/earth-features.json",
+          "canonicalSha256": "ccf0d23403ee2c25983064fc32cfa58dd93a784f81476967a00eae2384fef5a8"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-askja--moon-south-pole/target-features.json",
+          "canonicalSha256": "19fcfeb3e7b14300c6293e502fb63a6028fa83c645a37d2181c08326bbf54e54"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-askja--moon-south-pole/analysis-plan.json",
+          "canonicalSha256": "24e5e6163de15ea3b804b437512d3d050ae155c78cd961eb9d576f2ab1dcb22b"
+        }
+      }
+    },
+    {
+      "earthSiteId": "earth-haughton",
+      "targetId": "mars-jezero",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-haughton--mars-jezero/earth-features.json",
+          "canonicalSha256": "16d82a2d411803fe7a64f57129e706efe7e344fecdd5c2bd07038f35d5463d92"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-haughton--mars-jezero/target-features.json",
+          "canonicalSha256": "95d666ec763a01862e0a5fed8d5fb1acb11abef971c224a105026397e5389d82"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-haughton--mars-jezero/analysis-plan.json",
+          "canonicalSha256": "ec0e2a64b783d1d1d43c96f548b62a1913addd58f2e6d3f1100c8845e3a24460"
+        }
+      }
+    },
+    {
+      "earthSiteId": "earth-haughton",
+      "targetId": "moon-south-pole",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-haughton--moon-south-pole/earth-features.json",
+          "canonicalSha256": "16d82a2d411803fe7a64f57129e706efe7e344fecdd5c2bd07038f35d5463d92"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-haughton--moon-south-pole/target-features.json",
+          "canonicalSha256": "19fcfeb3e7b14300c6293e502fb63a6028fa83c645a37d2181c08326bbf54e54"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-haughton--moon-south-pole/analysis-plan.json",
+          "canonicalSha256": "c17de598bdfe3fb7e4f66e949f546426051f573136ae4e9aaad66f03215cc689"
+        }
+      }
+    },
+    {
+      "earthSiteId": "earth-mcmurdo",
+      "targetId": "mars-jezero",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-mcmurdo--mars-jezero/earth-features.json",
+          "canonicalSha256": "1423167b1359bc26da83429ca74807ff768b073db3a0684a1d2f30269245b085"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-mcmurdo--mars-jezero/target-features.json",
+          "canonicalSha256": "95d666ec763a01862e0a5fed8d5fb1acb11abef971c224a105026397e5389d82"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-mcmurdo--mars-jezero/analysis-plan.json",
+          "canonicalSha256": "f13c633b05db0919db6e360d245789408478bcc8f00394ba0387715e93036e66"
+        }
+      }
+    },
+    {
+      "earthSiteId": "earth-mcmurdo",
+      "targetId": "moon-south-pole",
+      "files": {
+        "earth": {
+          "path": "data/evidence/local-catalog/earth-mcmurdo--moon-south-pole/earth-features.json",
+          "canonicalSha256": "1423167b1359bc26da83429ca74807ff768b073db3a0684a1d2f30269245b085"
+        },
+        "target": {
+          "path": "data/evidence/local-catalog/earth-mcmurdo--moon-south-pole/target-features.json",
+          "canonicalSha256": "19fcfeb3e7b14300c6293e502fb63a6028fa83c645a37d2181c08326bbf54e54"
+        },
+        "plan": {
+          "path": "data/evidence/local-catalog/earth-mcmurdo--moon-south-pole/analysis-plan.json",
+          "canonicalSha256": "d77791d620196a49227e931bd42cafea2fbbfb223ba4f8da7b5f4e95e8416383"
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-atacama",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 40.77756235,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 8.14878516355822,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 0.7534851146044794,
+          "contribution": 0.26371979011156776
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 11.06208057708606,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 0.6670570547015003,
+          "contribution": 0.2001171164104501
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 3.6208550126390264,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 0.11354987990907672,
+          "contribution": 0.02838746997726918
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 728.078125,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.1
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "megt44n000hb.img",
+        "s25w070.hgt"
+      ]
+    },
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-atacama",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 41.38233639,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 8.14878516355822,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 0.7534851146044794,
+          "contribution": 0.1130227671906719
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 11.06208057708606,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 0.6670570547015003,
+          "contribution": 0.13341141094030007
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 3.6208550126390264,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 0.11354987990907672,
+          "contribution": 0.03974245796817685
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 728.078125,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.3
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "megt44n000hb.img",
+        "s25w070.hgt"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-atacama",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 50.88338792,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 8.14878516355822,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 0.4456849587282344,
+          "contribution": 0.15598973555488202
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 11.06208057708606,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 0.5078124196983971,
+          "contribution": 0.1523437259095191
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 3.6208550126390264,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 0.3313306374822219,
+          "contribution": 0.08283265937055548
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 728.078125,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.1
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "LDEM_80S_80MPP_ADJ.tiff",
+        "s25w070.hgt"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-atacama",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 41.56190491,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 8.14878516355822,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 0.4456849587282344,
+          "contribution": 0.06685274380923516
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 11.06208057708606,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 0.5078124196983971,
+          "contribution": 0.10156248393967943
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 3.6208550126390264,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 0.3313306374822219,
+          "contribution": 0.11596572311877766
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 728.078125,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.3
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "LDEM_80S_80MPP_ADJ.tiff",
+        "s25w070.hgt"
+      ]
+    },
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-erfoud",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 83.66074987,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 0.8985188611831255,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 0.02845848436697007,
+          "contribution": 0.009960469528439524
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 2.8218386004413833,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 0.11770758959185525,
+          "contribution": 0.03531227687755657
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 4.3090862401777885,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 0.14796144128601482,
+          "contribution": 0.036990360321503706
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 128.359619140625,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 0.8112939453125,
+          "contribution": 0.08112939453125001
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "megt44n000hb.img",
+        "n31w005.hgt"
+      ]
+    },
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-erfoud",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 67.70150214,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 0.8985188611831255,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 0.02845848436697007,
+          "contribution": 0.0042687726550455106
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 2.8218386004413833,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 0.11770758959185525,
+          "contribution": 0.02354151791837105
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 4.3090862401777885,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 0.14796144128601482,
+          "contribution": 0.051786504450105186
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 128.359619140625,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 0.8112939453125,
+          "contribution": 0.24338818359374997
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "megt44n000hb.img",
+        "n31w005.hgt"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-erfoud",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 17.5770231,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 0.8985188611831255,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 1.0,
+          "contribution": 0.35
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 2.8218386004413833,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 1.0,
+          "contribution": 0.3
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 4.3090862401777885,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 0.29691907610528384,
+          "contribution": 0.07422976902632096
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 128.359619140625,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.1
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "LDEM_80S_80MPP_ADJ.tiff",
+        "n31w005.hgt"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-erfoud",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 24.60783234,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 0.8985188611831255,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 1.0,
+          "contribution": 0.15
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 2.8218386004413833,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 1.0,
+          "contribution": 0.2
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 4.3090862401777885,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 0.29691907610528384,
+          "contribution": 0.10392167663684934
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 128.359619140625,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.3
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "LDEM_80S_80MPP_ADJ.tiff",
+        "n31w005.hgt"
+      ]
+    },
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-askja",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 29.98930745,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 4.60590674187026,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 0.39919727243568354,
+          "contribution": 0.13971904535248922
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 15.282709459781039,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 0.9484323135478322,
+          "contribution": 0.28452969406434964
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 15.418512302099852,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 0.703432744382118,
+          "contribution": 0.1758581860955295
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 334.3079833984375,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.1
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5270/ESA-c5d3d65"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+        "megt44n000hb.img"
+      ]
+    },
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-askja",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 20.42324859,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 4.60590674187026,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 0.39919727243568354,
+          "contribution": 0.05987959086535253
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 15.282709459781039,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 0.9484323135478322,
+          "contribution": 0.18968646270956646
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 15.418512302099852,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 0.703432744382118,
+          "contribution": 0.24620146053374128
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 334.3079833984375,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.3
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5270/ESA-c5d3d65"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+        "megt44n000hb.img"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-askja",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 48.74403147,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 4.60590674187026,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 0.7999728008970303,
+          "contribution": 0.27999048031396057
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 15.282709459781039,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 0.22643716085206525,
+          "contribution": 0.06793114825561958
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 15.418512302099852,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 0.25855222699081937,
+          "contribution": 0.06463805674770484
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 334.3079833984375,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.1
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5270/ESA-c5d3d65"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+        "LDEM_80S_80MPP_ADJ.tiff"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-askja",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 44.42233682,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 4.60590674187026,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 0.7999728008970303,
+          "contribution": 0.11999592013455454
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 15.282709459781039,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 0.22643716085206525,
+          "contribution": 0.045287432170413054
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 15.418512302099852,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 0.25855222699081937,
+          "contribution": 0.09049327944678677
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 334.3079833984375,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.3
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://doi.org/10.5270/ESA-c5d3d65"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+        "LDEM_80S_80MPP_ADJ.tiff"
+      ]
+    },
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-haughton",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 81.85380384,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 1.411693313303004,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 0.07977592957895793,
+          "contribution": 0.027921575352635276
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 2.3746733447724444,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 0.08789657254725931,
+          "contribution": 0.026368971764177792
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 7.19913880679969,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 0.29246406961710986,
+          "contribution": 0.07311601740427746
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 101.2856216430664,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 0.5405539703369141,
+          "contribution": 0.054055397033691416
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "29_29_32m_v4.1_dem.tif",
+        "megt44n000hb.img"
+      ]
+    },
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-haughton",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 70.59256806,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 1.411693313303004,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 0.07977592957895793,
+          "contribution": 0.011966389436843689
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 2.3746733447724444,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 0.08789657254725931,
+          "contribution": 0.017579314509451865
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 7.19913880679969,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 0.29246406961710986,
+          "contribution": 0.10236242436598844
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 101.2856216430664,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 0.5405539703369141,
+          "contribution": 0.16216619110107422
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "29_29_32m_v4.1_dem.tif",
+        "megt44n000hb.img"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-haughton",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 21.18958881,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 1.411693313303004,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 1.0,
+          "contribution": 0.35
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 2.3746733447724444,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 1.0,
+          "contribution": 0.3
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 7.19913880679969,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 0.15241644777418878,
+          "contribution": 0.038104111943547195
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 101.2856216430664,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.1
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "29_29_32m_v4.1_dem.tif",
+        "LDEM_80S_80MPP_ADJ.tiff"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-haughton",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 29.66542433,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 1.411693313303004,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 1.0,
+          "contribution": 0.15
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 2.3746733447724444,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 1.0,
+          "contribution": 0.2
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 7.19913880679969,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 0.15241644777418878,
+          "contribution": 0.05334575672096607
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 101.2856216430664,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.3
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "29_29_32m_v4.1_dem.tif",
+        "LDEM_80S_80MPP_ADJ.tiff"
+      ]
+    },
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-mcmurdo",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 0,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 15.867219334054067,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 1.0,
+          "contribution": 0.35
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 23.993211971561145,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 1.0,
+          "contribution": 0.3
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 26.286380131817943,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 1.0,
+          "contribution": 0.25
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 1341.6715621948242,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.1
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://www.pgc.umn.edu/data/rema/"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "18_35_32m_v2.0_dem.tif",
+        "megt44n000hb.img"
+      ]
+    },
+    {
+      "targetId": "mars-jezero",
+      "earthSiteId": "earth-mcmurdo",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 0,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 15.867219334054067,
+          "targetValue": 0.6139340175134248,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 1.0,
+          "contribution": 0.15
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 23.993211971561145,
+          "targetValue": 1.0562247565635547,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 1.0,
+          "contribution": 0.2
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 26.286380131817943,
+          "targetValue": 1.349857414457492,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 1.0,
+          "contribution": 0.35
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 1341.6715621948242,
+          "targetValue": 47.230224609375,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.3
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://www.pgc.umn.edu/data/rema/"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "Mars has a thin atmosphere and different gravity from Earth.",
+          "experimentImplication": "Earth terrain rehearsal does not reproduce Mars flight or mobility conditions.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "18_35_32m_v2.0_dem.tif",
+        "megt44n000hb.img"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-mcmurdo",
+      "missionProfile": "terrain_mobility",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 47.9079233,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 15.867219334054067,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.35,
+          "tolerance": 10,
+          "distance": 0.3261584583213503,
+          "contribution": 0.1141554604124726
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 23.993211971561145,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.3,
+          "tolerance": 15,
+          "distance": 0.3542630065999418,
+          "contribution": 0.10627890197998253
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 26.286380131817943,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.25,
+          "tolerance": 20,
+          "distance": 0.801945618476724,
+          "contribution": 0.200486404619181
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 1341.6715621948242,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.1,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.1
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://www.pgc.umn.edu/data/rema/"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "18_35_32m_v2.0_dem.tif",
+        "LDEM_80S_80MPP_ADJ.tiff"
+      ]
+    },
+    {
+      "targetId": "moon-south-pole",
+      "earthSiteId": "earth-mcmurdo",
+      "missionProfile": "geological_survey",
+      "modelVersion": "experimental-terrain-v1.0.0",
+      "status": "READY",
+      "score": 29.95426635,
+      "featureContributions": [
+        {
+          "feature": "meanSlopeDeg",
+          "earthValue": 15.867219334054067,
+          "targetValue": 12.605634750840563,
+          "unit": "deg",
+          "weight": 0.15,
+          "tolerance": 10,
+          "distance": 0.3261584583213503,
+          "contribution": 0.04892376874820255
+        },
+        {
+          "feature": "p90SlopeDeg",
+          "earthValue": 23.993211971561145,
+          "targetValue": 18.679266872562017,
+          "unit": "deg",
+          "weight": 0.2,
+          "tolerance": 15,
+          "distance": 0.3542630065999418,
+          "contribution": 0.07085260131998837
+        },
+        {
+          "feature": "roughnessM",
+          "earthValue": 26.286380131817943,
+          "targetValue": 10.247467762283465,
+          "unit": "m",
+          "weight": 0.35,
+          "tolerance": 20,
+          "distance": 0.801945618476724,
+          "contribution": 0.28068096646685337
+        },
+        {
+          "feature": "reliefM",
+          "earthValue": 1341.6715621948242,
+          "targetValue": 1206.6634216308594,
+          "unit": "m",
+          "weight": 0.3,
+          "tolerance": 100,
+          "distance": 1.0,
+          "contribution": 0.3
+        }
+      ],
+      "gaps": [
+        {
+          "category": "PHYSICAL",
+          "severity": "UNKNOWN",
+          "claim": "Differences in comparable descriptors: meanSlopeDeg, p90SlopeDeg, roughnessM, reliefM.",
+          "experimentImplication": "Assess geology, material properties and obstacles separately.",
+          "evidenceType": "MEASURED",
+          "sourceUrl": "https://www.pgc.umn.edu/data/rema/"
+        },
+        {
+          "category": "PLANETARY",
+          "severity": "UNKNOWN",
+          "claim": "The Moon has a very thin exosphere and different gravity from Earth.",
+          "experimentImplication": "Earth field rehearsal does not validate lunar operations; conventional rotorcraft cannot fly in lunar vacuum.",
+          "evidenceType": "LITERATURE",
+          "sourceUrl": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "category": "EVIDENCE",
+          "severity": "UNKNOWN",
+          "claim": "Source metadata and compatibility declarations require independent scientific review.",
+          "experimentImplication": "Model weights and tolerances are experimental; an index is not a probability or proof of equivalence.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        },
+        {
+          "category": "OPERATIONAL",
+          "severity": "UNKNOWN",
+          "claim": "Access, permits, communications and weather have not been assessed.",
+          "experimentImplication": "Conduct a separate field and mission feasibility assessment.",
+          "evidenceType": "UNKNOWN",
+          "sourceUrl": null
+        }
+      ],
+      "evidenceGaps": [
+        "Experimental model settings are not calibrated NASA thresholds; review independently before scientific use."
+      ],
+      "sourceIds": [
+        "18_35_32m_v2.0_dem.tif",
+        "LDEM_80S_80MPP_ADJ.tiff"
+      ]
+    }
+  ]
+}

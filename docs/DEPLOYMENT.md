@@ -55,6 +55,8 @@ Local Python checks on Windows:
 
 A prototype can have an empty release ledger, no scores and procedural ECHO terrain. Provisional QA must stay visibly unverified. Do not mark the prototype as a measured scoring release.
 
+The app also supports explicitly unreviewed experimental indices bundled from Python under `frontend/src/data/experimentalComparisons.json`. These are distinct from approved public comparison assets: they display provisional labels and export an UNREVIEWED status. CI recomputes every bundled result from tracked measured descriptors using `python -m science.gis.export_experimental --check`. The public artifact review gate remains intact; a missing reviewed release can use a matching experimental result, while invalid or failed responses cannot silently substitute one.
+
 Before publishing a measured score, independently verify original product labels, versions, projection/body parameters and source quality; regenerate outputs with the corrected geographic bounds; preserve exact source/prepared hashes, manifests and sensitivity/count audits; review model suitability; and add the approved immutable artifacts to `data/evidence/releases.json`. Full instructions are in `data/evidence/README.md`. The software approval gate does not perform independent scientific review or authenticate a human reviewer's identity.
 
 ## Browser and staging checks still requiring verification
