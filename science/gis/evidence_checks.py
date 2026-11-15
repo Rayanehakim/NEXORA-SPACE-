@@ -121,11 +121,13 @@ def analyze_counts(img_path, lbl_path, mars_metric_tif):
 
 def descriptors_for_grid(path, cell_m, roughness_window_m):
     with rasterio.open(path) as ds:
-        z = ds.read(1,masked=True).filled(np.nan)
+        z = ds.read(1,masked=True).astype(np.float64).filled(np.nan)
     return extract_descriptors(z, cell_m, roughness_window_m)
 
 
-def analyze_sensitivity(earth_dem, mars_dem, target_dir, cell_m=1000, pixels=32, roughness_cells=3):
+def analyze_sensitivity(earth_dem, mars_dem, target_dir, cell_m=1000, pixels=32, roughness_cells=3,
+                        earth_lat=31.42, earth_lon=-4.24, mars_lat=18.38, mars_lon=77.58,
+                        earth_crs='EPSG:32630'):
     """Reproject raw inputs at common scale using alternate kernels and footprint shifts."""
     target_dir = Path(target_dir)
     target_dir.mkdir(parents=True, exist_ok=True)
@@ -139,13 +141,13 @@ def analyze_sensitivity(earth_dem, mars_dem, target_dir, cell_m=1000, pixels=32,
     metrics={}
     for name,kernel,north_m,east_m in scenarios:
         record={'kernel':kernel.name, 'centerOffsetMetres':[east_m,north_m]}
-        for body,path,lat,lon in [('earth',earth_dem,31.42,-4.24),('mars',mars_dem,18.38,77.58)]:
+        for body,path,lat,lon in [('earth',earth_dem,earth_lat,earth_lon),('mars',mars_dem,mars_lat,mars_lon)]:
             radius_m = 3396000. if body == 'mars' else 6371000.
             metres_per_degree = math.pi * radius_m / 180.
             dlat = north_m / metres_per_degree
             dlon = east_m / (metres_per_degree * math.cos(math.radians(lat)))
             out=target_dir / f'{name}-{body}.tif'
-            info=prepare_one(path,out,body,lat+dlat,lon+dlon,cell_m,pixels,interpolation=kernel)
+            info=prepare_one(path,out,body,lat+dlat,lon+dlon,cell_m,pixels,interpolation=kernel,earth_output_crs=earth_crs)
             values=descriptors_for_grid(out,cell_m,cell_m*roughness_cells)
             record[body]={'validFraction':values['validFraction'], 'metrics':{k:v for k,v in values.items() if k!='validFraction'},
                           'preparedSha256':info['outputSha256']}
@@ -160,6 +162,7 @@ def analyze_sensitivity(earth_dem, mars_dem, target_dir, cell_m=1000, pixels=32,
                                   'baseline':metrics['baseline-bilinear'][body]['metrics'][field]}
     return {'status':'PROVISIONAL_SENSITIVITY_ONLY','method':'Five 32km windows: bilinear, average, nearest; bilinear shifted ±500m north/east on both bodies using approximate local spherical angle conversion. Native source resolution not increased.',
       'inputHashes':{'earth':digest(earth_dem),'mars':digest(mars_dem)},'cellMetres':cell_m,'pixels':pixels,
+      'selection':{'earthCenter':[earth_lon,earth_lat],'marsCenter':[mars_lon,mars_lat],'earthCrs':earth_crs},
       'scenarios':metrics,'metricSpread':spread,
       'warning':'Descriptor changes under these scenarios do not certify a planetary analog score. Source observation coverage and geological context must be reviewed separately.'}
 
@@ -169,10 +172,15 @@ def main():
     sub=p.add_subparsers(dest='mode',required=True)
     a=sub.add_parser('counts');a.add_argument('--counts-img',required=True);a.add_argument('--counts-lbl',required=True);a.add_argument('--mars-metric',required=True)
     s=sub.add_parser('sensitivity');s.add_argument('--earth-dem',required=True);s.add_argument('--mars-dem',required=True);s.add_argument('--output-grids-dir',required=True)
+    s.add_argument('--earth-lat',type=float,default=31.42);s.add_argument('--earth-lon',type=float,default=-4.24)
+    s.add_argument('--mars-lat',type=float,default=18.38);s.add_argument('--mars-lon',type=float,default=77.58)
+    s.add_argument('--earth-crs',default='EPSG:32630')
     for q in (a,s):q.add_argument('--output',required=True)
     args=p.parse_args()
     if args.mode=='counts':result=analyze_counts(args.counts_img,args.counts_lbl,args.mars_metric)
-    else:result=analyze_sensitivity(args.earth_dem,args.mars_dem,args.output_grids_dir)
+    else:result=analyze_sensitivity(args.earth_dem,args.mars_dem,args.output_grids_dir,
+                                  earth_lat=args.earth_lat,earth_lon=args.earth_lon,
+                                  mars_lat=args.mars_lat,mars_lon=args.mars_lon,earth_crs=args.earth_crs)
     Path(args.output).parent.mkdir(parents=True,exist_ok=True)
     Path(args.output).write_text(json.dumps(result,indent=2)+'\n')
     print('Wrote QA report:',args.output,'status:',result['status'])

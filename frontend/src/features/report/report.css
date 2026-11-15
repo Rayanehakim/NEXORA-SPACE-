@@ -1,4 +1,4 @@
-.mission-report{display:grid;gap:15px}.report-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.report-buttons{display:flex;gap:8px;flex-wrap:wrap}.mission-report .report-layout{margin:0}.report-id{max-width:250px;overflow-wrap:anywhere}.report-gap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.report-gap-grid article{border:1px solid #263d51;background:#0b1a29;padding:13px;border-radius:6px}.report-gap-grid .eyebrow{color:#9ec0d8;font-size:12px}.report-gap-grid p{color:#c4d4e4;font-size:14px;line-height:1.6}.report-gap-grid strong{color:#9fc7df;font-weight:500;font-size:13px;line-height:1.6}.mission-report .survey-stats{flex-wrap:wrap;gap:18px}.mission-report .survey-stats strong{font-size:23px}.mission-report .panel-caption{margin-top:10px}@media(max-width:620px){.report-gap-grid{grid-template-columns:1fr}}@media print{.report-toolbar,.report-buttons{display:none}.report-gap-grid article{background:white;color:black}.report-gap-grid p,.report-gap-grid strong,.report-gap-grid .eyebrow{color:black}.mission-report{display:block}.mission-report .workspace-panel{margin-bottom:15px}}
+.mission-report{display:grid;gap:15px}.report-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.report-buttons{display:flex;gap:8px;flex-wrap:wrap}.mission-report .report-layout{margin:0}.report-id{max-width:250px;overflow-wrap:anywhere}.report-gap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.report-gap-grid article{border:1px solid #263d51;background:#0b1a29;padding:13px;border-radius:6px}.report-gap-grid .eyebrow{color:#9ec0d8;font-size:14px}.report-gap-grid p{color:#c4d4e4;font-size:15px;line-height:1.6}.report-gap-grid strong{color:#9fc7df;font-weight:500;font-size:14px;line-height:1.6}.mission-report .survey-stats{flex-wrap:wrap;gap:18px}.mission-report .survey-stats strong{font-size:23px}.mission-report .panel-caption{margin-top:10px}@media(max-width:620px){.report-gap-grid{grid-template-columns:1fr}}@media print{.report-toolbar,.report-buttons{display:none}.report-gap-grid article{background:white;color:black}.report-gap-grid p,.report-gap-grid strong,.report-gap-grid .eyebrow{color:black}.mission-report{display:block}.mission-report .workspace-panel{margin-bottom:15px}}
 
 /* 30-second live-demo density: retain all evidence, avoid long vertical scrolling. */
 @media (min-width: 1050px) and (min-height: 650px) and (max-height: 1300px) {
@@ -8,24 +8,24 @@
   .mission-report .workspace-panel { padding: 12px 14px; }
   .mission-report .panel-heading { margin-bottom: 7px; }
   .mission-report .workspace-panel h2 { font-size: 16px; }
-  .mission-report .workspace-panel h3 { font-size: 14px; margin: 7px 0 4px; }
+  .mission-report .workspace-panel h3 { font-size:15px; margin: 7px 0 4px; }
   .mission-report .report-pair { margin: 6px 0 8px !important; font-size: 17px !important; }
-  .mission-report .report-facts { margin: 0 0 9px; font-size: 12px; }
+  .mission-report .report-facts { margin: 0 0 9px; font-size:14px; }
   .mission-report .report-facts>div { padding: 5px 0; }
   .mission-report .survey-stats { gap: 25px; }
-  .mission-report .survey-stats p { margin: 4px 0; font-size: 11px; }
+  .mission-report .survey-stats p { margin: 4px 0; font-size:14px; }
   .mission-report .survey-stats strong { font-size: 20px; }
-  .mission-report .panel-caption { font-size: 11px; line-height: 1.35; margin-top: 6px; }
-  .mission-report .report-limits { font-size: 12px; line-height: 1.45; padding-left: 15px; }
+  .mission-report .panel-caption { font-size:14px; line-height: 1.35; margin-top: 6px; }
+  .mission-report .report-limits { font-size:14px; line-height: 1.45; padding-left: 15px; }
   .mission-report .report-limits li { padding: 2px 0; }
   .mission-report .selected-brief { margin-top: 8px; padding-top: 7px; }
-  .mission-report .selected-brief p { font-size: 12px; line-height: 1.35; }
+  .mission-report .selected-brief p { font-size:14px; line-height: 1.35; }
   .mission-report .report-gap-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
   .mission-report .report-gap-grid article { padding: 9px; }
-  .mission-report .report-gap-grid .eyebrow { font-size: 10px; }
-  .mission-report .report-gap-grid p { font-size: 11px; line-height: 1.4; margin: 7px 0; }
-  .mission-report .report-gap-grid strong { font-size: 11px; line-height: 1.4; }
-  .mission-report .report-id { max-width: 200px; font-size: 11px; }
+  .mission-report .report-gap-grid .eyebrow { font-size:14px; }
+  .mission-report .report-gap-grid p { font-size:14px; line-height: 1.4; margin: 7px 0; }
+  .mission-report .report-gap-grid strong { font-size:14px; line-height: 1.4; }
+  .mission-report .report-id { max-width: 200px; font-size:14px; }
 }
 @media (min-width: 1050px) and (max-height: 1300px) {
   .report-page .page-heading { margin-bottom: 9px; }

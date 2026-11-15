@@ -2,9 +2,10 @@
   "name": "nexora-space",
   "private": true,
   "scripts": {
-    "dev": "npm --prefix echo-void-atlas-starter/frontend run dev",
-    "build": "npm --prefix echo-void-atlas-starter/frontend run build",
-    "typecheck": "npm --prefix echo-void-atlas-starter/frontend run typecheck",
-    "test": "node tests/test.mjs && npm --prefix echo-void-atlas-starter/frontend test"
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "typecheck": "npm --prefix frontend run typecheck",
+    "test": "node tests/test.mjs && npm --prefix frontend test",
+    "test:science": "python -m unittest discover -s science/tests -v && python -m unittest discover -s science/gis/tests -v && python scripts/validate_contracts.py"
   }
 }

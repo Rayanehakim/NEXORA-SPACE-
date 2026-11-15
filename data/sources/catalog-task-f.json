@@ -1,0 +1,10 @@
+{
+  "version": "nexora-source-acquisition-v1",
+  "notice": "Source references retained for reproduction. Listing a product does not verify acquisition or authorize a measured similarity score.",
+  "sources": [
+    {"sourceId":"NASADEM_HGT_n31w005","role":"earth-erfoud elevation","collection":"NASADEM_HGT.001","referenceUrl":"https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001","verification":"ORIGINAL_GRANULE_AND_AUDIT_PENDING"},
+    {"sourceId":"NASADEM_HGT_s25w070","role":"earth-atacama elevation","collection":"NASADEM_HGT.001","referenceUrl":"https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001","verification":"ORIGINAL_GRANULE_AND_SOURCE_CLASS_AUDIT_PENDING"},
+    {"sourceId":"MEGT44N000HB.IMG","role":"Jezero Mars topography","referenceUrl":"https://pds-geosciences.wustl.edu/missions/mgs/megdr.html","verification":"ORIGINAL_PRODUCT_LABEL_AND_PROCESSING_HASHES_PENDING"},
+    {"sourceId":"MEGC44N000HB.IMG","role":"Jezero native shot counts","referenceUrl":"https://pds-geosciences.wustl.edu/missions/mgs/megdr.html","verification":"INDEPENDENT_DETACHED_LABEL_VERIFICATION_PENDING","reportedSnapshotSha256":"cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5"}
+  ]
+}

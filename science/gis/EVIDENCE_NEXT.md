@@ -24,7 +24,7 @@ previous topography input uses the matching PDS3 MEGT tile. Keep both labels.
 
 ## 2. Analyze counts once downloaded
 
-From the `echo-void-atlas-starter` folder:
+From the repository root:
 
 ```bash
 python3 -m science.gis.evidence_checks counts \

@@ -88,7 +88,7 @@ def read_metric_geotiff(path):
                 and transform.a > 0 and transform.e < 0 and math.isclose(transform.a, -transform.e, rel_tol=1e-7)):
             raise ValueError('Raster must be north-up with square metric pixels; reproject offline first')
         z = raster.read(1, masked=True)
-        data = z.filled(np.nan).astype(float)
+        data = z.astype(np.float64).filled(np.nan)
         if not np.isfinite(data).any():
             raise ValueError('No valid terrain samples')
         if data.size > 262144:

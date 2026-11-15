@@ -4,7 +4,7 @@ This code **implements the raster-descriptor stage**, not automated NASA downloa
 
 ## Ubuntu prerequisites
 
-From `echo-void-atlas-starter`:
+From the repository root:
 
 ```bash
 python3 -m pip install -r science/gis/requirements.txt

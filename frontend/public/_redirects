@@ -1,0 +1,2 @@
+# SPA fallback for hosts supporting Netlify/Cloudflare Pages redirect syntax.
+/* /index.html 200

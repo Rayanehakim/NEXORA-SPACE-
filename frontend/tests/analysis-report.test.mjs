@@ -9,13 +9,13 @@ const js = ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.ESN
 const {parseComparison} = await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
 const features = ['meanSlopeDeg','p90SlopeDeg','roughnessM','reliefM'];
 const valid = () => ({
-  targetId:'mars-jezero',earthSiteId:'earth-erfoud',missionProfile:'terrain_mobility',modelVersion:'test-model',status:'READY',score:81,
+  targetId:'mars-jezero',earthSiteId:'earth-erfoud',missionProfile:'terrain_mobility',modelVersion:'test-model',status:'READY',score:90,
   featureContributions:features.map((feature)=>({feature,earthValue:1,targetValue:2,unit:feature.endsWith('Deg')?'deg':'m',weight:.25,tolerance:10,distance:.1,contribution:.025})),
-  gaps:[],evidenceGaps:[],sourceIds:['earth-dem','mars-dem'],
+  gaps:['PHYSICAL','PLANETARY','EVIDENCE','OPERATIONAL'].map(category=>({category,severity:'UNKNOWN',claim:'Test claim',experimentImplication:'Test implication',evidenceType:'UNKNOWN',sourceUrl:null})),evidenceGaps:[],sourceIds:['earth-dem','mars-dem'],
 });
 const parse=x=>parseComparison(x,'mars-jezero','earth-erfoud','terrain_mobility');
 test('valid comparison is accepted for its exact mission selection',()=>{
-  assert.equal(parse(valid()).score,81);
+  assert.equal(parse(valid()).score,90);
   assert.equal(parseComparison(valid(),'moon-south-pole','earth-erfoud','terrain_mobility'),null);
   assert.equal(parseComparison(valid(),'mars-jezero','earth-erfoud','geological_survey'),null);
 });
@@ -34,4 +34,24 @@ test('incomplete result can contain explicit null metrics but never a score',()=
 test('malformed gap and feature records are rejected',()=>{
   assert.equal(parse({...valid(),gaps:[{category:'FAKE'}]}),null);
   assert.equal(parse({...valid(),featureContributions:[{...valid().featureContributions[0],earthValue:Infinity},...valid().featureContributions.slice(1)]}),null);
+});
+
+test('reject invalid weights, losses, distances, units, physical ranges and score inconsistencies',()=>{
+  for(const patch of [{weight:4},{weight:-.1},{distance:-2},{distance:null},{contribution:-.5},{contribution:.5},{earthValue:-1},{earthValue:91},{unit:'m'},{distance:.9}]) {
+    const input=valid();input.featureContributions[0]={...input.featureContributions[0],...patch};
+    assert.equal(parse(input),null,JSON.stringify(patch));
+  }
+  assert.equal(parse({...valid(),score:81}),null);
+  assert.equal(parse({...valid(),gaps:[]}),null);
+  assert.equal(parse({...valid(),modelVersion:''}),null);
+  const duplicate=valid();duplicate.featureContributions[3]=duplicate.featureContributions[0];assert.equal(parse(duplicate),null);
+  const badSum=valid();badSum.featureContributions.forEach(row=>{row.weight=.2;row.contribution=.02});badSum.score=92;assert.equal(parse(badSum),null);
+});
+
+test('valid zero measurements and saturated losses remain valid; unsafe source links do not',()=>{
+  const input=valid();input.featureContributions.forEach(row=>{row.earthValue=0;row.targetValue=0;row.distance=0;row.contribution=0});input.score=100;
+  assert.equal(parse(input)?.score,100);
+  input.featureContributions.forEach(row=>{row.targetValue=20;row.distance=1;row.contribution=.25});input.score=0;
+  assert.equal(parse(input)?.score,0);
+  input.gaps[0].sourceUrl='javascript:alert(1)';assert.equal(parse(input),null);
 });

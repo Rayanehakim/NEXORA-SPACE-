@@ -57,3 +57,36 @@ class PreparePairTests(unittest.TestCase):
         source = self.raster('small.tif', 'EPSG:32630', 500000, 3000000)
         report = prepare_one(source, self.dir/'missing.tif', 'earth', 31.42, -4.24, 1000, 32)
         self.assertEqual(report['validFraction'], 0.0)
+
+    def test_bounds_are_inverse_projected_from_actual_earth_and_mars_footprints(self):
+        from rasterio.warp import transform, transform_bounds
+        for body, lat, lon, projected, geographic in [
+            ('earth',31.42,-4.24,'EPSG:32630','EPSG:4326'),
+            ('mars',18.38,77.58,MARS_OUTPUT_CRS,'+proj=longlat +R=3396000 +no_defs')]:
+            with self.subTest(body=body):
+                x,y=transform(geographic,projected,[lon],[lat])
+                source=self.raster(body+'-bounds.tif',projected,x[0],y[0])
+                output=self.dir/(body+'-bounded.tif')
+                report=prepare_one(source,output,body,lat,lon,1000,32)
+                with rasterio.open(output) as ds:
+                    expected=transform_bounds(ds.crs,geographic,*ds.bounds,densify_pts=21)
+                bounds=report['boundsLonLat']
+                for name,value in zip(('west','south','east','north'),expected):
+                    self.assertAlmostEqual(bounds[name],value,places=9)
+                if body=='mars':
+                    self.assertGreater(bounds['north']-bounds['south'],.53)
+
+    def test_sensitivity_accepts_atacama_center_and_southern_projection(self):
+        from rasterio.warp import transform
+        from science.gis.evidence_checks import analyze_sensitivity
+        x,y=transform('EPSG:4326','EPSG:32719',[-69.25],[-24.5])
+        earth=self.raster('atacama.tif','EPSG:32719',x[0],y[0])
+        x,y=transform('+proj=longlat +R=3396000 +no_defs',MARS_OUTPUT_CRS,[77.58],[18.38])
+        mars=self.raster('mars-sensitivity.tif',MARS_OUTPUT_CRS,x[0],y[0])
+        result=analyze_sensitivity(earth,mars,self.dir/'scenarios',pixels=9,
+                                   earth_lat=-24.5,earth_lon=-69.25,earth_crs='EPSG:32719')
+        self.assertEqual(result['selection']['earthCenter'],[-69.25,-24.5])
+        self.assertEqual(len(result['scenarios']),5)
+        with rasterio.open(self.dir/'scenarios/baseline-bilinear-earth.tif') as ds:
+            self.assertEqual(ds.crs.to_epsg(),32719)
+        self.assertEqual(result['status'],'PROVISIONAL_SENSITIVITY_ONLY')

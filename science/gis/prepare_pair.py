@@ -15,7 +15,7 @@ import rasterio
 from rasterio.crs import CRS
 from rasterio.enums import Resampling
 from rasterio.transform import from_origin
-from rasterio.warp import reproject, transform as transform_points
+from rasterio.warp import reproject, transform as transform_points, transform_bounds
 
 EARTH_OUTPUT_CRS = 'EPSG:32630'  # Erfoud UTM zone 30N; never apply to Mars
 MARS_RADIUS_M = 3396000  # PDS3 MEGT44N000HB.LBL map-projection sphere, 3396.0 km
@@ -97,15 +97,19 @@ def prepare_one(path, output, body, latitude, longitude, cell_m, pixels,
                            compress='deflate') as dst:
             dst.write(dest, 1)
         valid = np.isfinite(dest) & (dest != nodata)
+        # Derive geographic bounds from the actual projected footprint on each body.
+        # Earth metres-per-degree approximations are not valid on Mars.
+        left, bottom, right, top = rasterio.transform.array_bounds(pixels, pixels, dst_transform)
+        west, south, east, north = transform_bounds(target, src_point, left, bottom, right, top, densify_pts=21)
+        if not all(math.isfinite(value) for value in (west, south, east, north)) or west >= east or south >= north:
+            raise ValueError('Output footprint crosses the antimeridian or has invalid geographic bounds; split the window first')
         return dict(input=str(path.resolve()), sha256=sha256(path), output=str(output.resolve()),
                     outputSha256=sha256(output), sourceCrs=str(src.crs),
                     outputCrs=target.to_string(), sourceNodata=src.nodata,
                     sourceUnits=src.units, validFraction=float(valid.mean()),
                     outputGridCellM=cell_m, centerLonLat=[longitude, latitude],
                     widthM=width, gridPixels=pixels,
-                    boundsLonLat=dict(west=longitude-width/(2*(111320*math.cos(math.radians(latitude)))),
-                                      east=longitude+width/(2*(111320*math.cos(math.radians(latitude)))),
-                                      south=latitude-width/(2*111320), north=latitude+width/(2*111320)))
+                    boundsLonLat=dict(west=west, east=east, south=south, north=north))
 
 
 def run(args):

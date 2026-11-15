@@ -1,0 +1,20 @@
+{
+  "version": "nexora-provisional-review-v1",
+  "scorePublicationApproved": false,
+  "pairs": [
+    {
+      "earthSiteId": "earth-erfoud",
+      "targetId": "mars-jezero",
+      "snapshot": "frontend/src/features/analysis/evidenceRecord.json",
+      "status": "NOT_REPRODUCED",
+      "missing": ["Original product and label verification", "Prepared raster manifests and hashes", "Source-class audit artifacts", "Five-scenario sensitivity outputs", "Independent study-window review"]
+    },
+    {
+      "earthSiteId": "earth-atacama",
+      "targetId": "mars-jezero",
+      "snapshot": "frontend/src/features/analysis/evidenceAtacama.json",
+      "status": "NOT_REPRODUCED",
+      "missing": ["Original product and label verification", "Prepared raster manifests and hashes", "Atacama source-class audit", "Five-scenario sensitivity outputs using the Atacama center and southern CRS", "Independent study-window review"]
+    }
+  ]
+}

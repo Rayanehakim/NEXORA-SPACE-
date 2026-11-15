@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const r=JSON.parse(await readFile('src/features/analysis/evidenceAtacama.json','utf8'));
-test('Atacama QA is measured and pair-scoped, but never contains a similarity index',()=>{
+test('Atacama QA is provisional and pair-scoped, but never contains a similarity index',()=>{
   assert.equal(r.status,'PROVISIONAL_QA');
   assert.deepEqual(r.selection,{earthSiteId:'earth-atacama',targetId:'mars-jezero'});
   assert.ok(!('score' in r));

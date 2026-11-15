@@ -2,6 +2,7 @@ import { EvidenceCoverage } from './coverage';
 import { EvidenceQuality, evidenceForSelection } from './evidence';
 import type { AnalysisProps, AnalogGap, ComparisonResult, FeatureContribution } from '../../types/contracts';
 import './analysis.css';
+import { parseComparison } from './comparisonValidation';
 
 const METRICS = [
   ['meanSlopeDeg', 'Mean slope', 'deg'],
@@ -16,7 +17,7 @@ const PLANET_GAPS = {
 };
 
 export function isReadyComparison(value: ComparisonResult | null): boolean {
-  return value !== null && value.status === 'READY' && value.score !== null && Number.isFinite(value.score) && value.score >= 0 && value.score <= 100;
+  return value !== null && value.status === 'READY' && parseComparison(value, value.targetId, value.earthSiteId, value.missionProfile) !== null;
 }
 
 export function formatMetric(value: number | null | undefined, unit: string): string {
@@ -26,7 +27,7 @@ export function formatMetric(value: number | null | undefined, unit: string): st
 export function fallbackGaps(body: 'mars' | 'moon'): AnalogGap[] {
   return [
     {category:'PHYSICAL',severity:'UNKNOWN',claim:'Terrain mismatch is not yet quantified for a matched pair of bounded regions.',experimentImplication:'Process compatible elevation datasets at the same effective scale.',evidenceType:'UNKNOWN',sourceUrl:null},
-    {category:'PLANETARY',severity:'HIGH',claim:PLANET_GAPS[body],experimentImplication:'Treat Earth operations as a rehearsal, not planetary flight validation.',evidenceType:'LITERATURE',sourceUrl:null},
+    {category:'PLANETARY',severity:'UNKNOWN',claim:PLANET_GAPS[body],experimentImplication:'Treat Earth operations as a rehearsal, not planetary flight validation.',evidenceType:'LITERATURE',sourceUrl:`https://science.nasa.gov/${body}/facts/`},
     {category:'EVIDENCE',severity:'HIGH',claim:'No validated pair of terrain feature sets is available for this selection.',experimentImplication:'Do not calculate an analog ranking from missing measurements.',evidenceType:'UNKNOWN',sourceUrl:null},
     {category:'OPERATIONAL',severity:'UNKNOWN',claim:'Permissions, weather, accessibility, and communications have not been evaluated.',experimentImplication:'Complete a separate location-specific operational assessment.',evidenceType:'UNKNOWN',sourceUrl:null},
   ];
@@ -34,7 +35,7 @@ export function fallbackGaps(body: 'mars' | 'moon'): AnalogGap[] {
 
 function Contributions({ rows }: {rows: FeatureContribution[]}) {
   return <div className="metric-table-wrap"><table className="metric-table">
-    <thead><tr><th scope="col">Terrain metric</th><th scope="col">Earth</th><th scope="col">Target</th><th scope="col">Contribution</th></tr></thead>
+    <thead><tr><th scope="col">Terrain metric</th><th scope="col">Earth</th><th scope="col">Target</th><th scope="col">Index loss</th></tr></thead>
     <tbody>{METRICS.map(([key, label, unit]) => {
       const row = rows.find(item => item.feature === key);
       return <tr key={key}><th scope="row">{label}</th><td>{formatMetric(row?.earthValue,unit)}</td><td>{formatMetric(row?.targetValue,unit)}</td><td>{row?.contribution === null || row?.contribution === undefined ? '—' : `${(row.contribution*100).toFixed(1)} pts`}</td></tr>;
@@ -43,8 +44,7 @@ function Contributions({ rows }: {rows: FeatureContribution[]}) {
 }
 
 export function AnalysisDashboard({target, site, comparison}: AnalysisProps) {
-  const valid = comparison !== null && comparison.targetId === target?.id && comparison.earthSiteId === site?.id;
-  const data = valid ? comparison : null;
+  const data = comparison && target && site ? parseComparison(comparison,target.id,site.id,comparison.missionProfile) : null;
   const ready = isReadyComparison(data);
   const provisional = evidenceForSelection(site?.id, target?.id);
   const gaps = data?.gaps?.length ? data.gaps : fallbackGaps(target?.body ?? 'mars');
@@ -57,15 +57,16 @@ export function AnalysisDashboard({target, site, comparison}: AnalysisProps) {
       <div className="index-readout" aria-label="Scientific similarity index"><strong>{ready ? data!.score!.toFixed(1) : '—'}</strong><span>{ready ? 'Experimental index / 100' : 'Index unavailable'}</span></div>
     </section>
     <EvidenceQuality evidence={provisional} />
-    <EvidenceCoverage earthSiteId={site?.id} targetId={target?.id} />
+    <details className="supporting-evidence"><summary>Dataset acquisition plan</summary><EvidenceCoverage earthSiteId={site?.id} targetId={target?.id} /></details>
     <div className="analysis-layout">
       {provisional && !ready ? <section className="workspace-panel model-status" aria-label="Model validation status">
         <div className="panel-heading"><h2>Scientific interpretation</h2><span className="data-chip">NO INDEX</span></div>
-        <p>The NASA terrain measurements are shown once above. Their processing and observation-coverage limitations prevent a validated analog ranking at this stage.</p>
+        <p>The provisional terrain snapshot is available in the expandable QA panel above. Its source verification, processing and observation-coverage limitations prevent a validated analog ranking at this stage.</p>
         <p className="panel-caption">The scoring engine remains unchanged. Direct MOLA observations occur in only {(provisional.counts.observedNativeFraction*100).toFixed(1)}% of native bins; derived metrics vary with resampling.</p>
       </section> : <section className="workspace-panel"><div className="panel-heading"><h2>Terrain comparison</h2><span className="data-chip">{ready ? 'MODEL OUTPUT' : 'NOT SCORED'}</span></div>
         {ready ? <Contributions rows={data?.featureContributions ?? []} /> : <p>No measured terrain pair is available for this selection. Select an Earth–planet pair with processed elevation data to inspect its provisional NASA terrain measurements.</p>}
-        <p className="panel-caption">{ready ? 'These contributions come from the validated scientific model; the index is experimental, not planetary equivalence.' : 'No score is generated from incomplete evidence or simulated drone observations.'}</p>
+        <p className="panel-caption">{ready ? 'Index loss is the number of points subtracted from 100. The model is experimental, not scientifically certified or a measure of planetary equivalence.' : 'No score is generated from incomplete evidence or simulated drone observations.'}</p>
+        {ready && <details className="model-details"><summary>Weights and comparison tolerances</summary><div className="metric-table-wrap"><table className="metric-table"><thead><tr><th scope="col">Feature</th><th scope="col">Weight</th><th scope="col">Tolerance</th><th scope="col">Distance</th></tr></thead><tbody>{data!.featureContributions.map(row=><tr key={row.feature}><th scope="row">{METRICS.find(item=>item[0]===row.feature)?.[1]}</th><td>{(row.weight*100).toFixed(0)}%</td><td>{formatMetric(row.tolerance,row.unit)}</td><td>{row.distance?.toFixed(3)??'Unavailable'}</td></tr>)}</tbody></table></div><p className="panel-caption">Project-defined experimental settings, not NASA thresholds. Values and losses are supplied by the Python model; the website does not generate scores.</p></details>}
         {data?.sourceIds?.length ? <div className="evidence-sources"><h3>Source identifiers</h3><p>{data.sourceIds.join(' · ')}</p></div> : null}
       </section>}
       <section className="workspace-panel"><div className="panel-heading"><h2>Analog gap analysis</h2><span className="data-chip">{gaps.length} GAPS</span></div>
@@ -73,7 +74,7 @@ export function AnalysisDashboard({target, site, comparison}: AnalysisProps) {
       </section>
     </div>
     <section className="workspace-panel evidence-notes"><div className="panel-heading"><h2>Evidence readiness</h2><span className="data-chip">{data?.status ?? 'INCOMPLETE_DATA'}</span></div>
-      {data?.evidenceGaps?.length ? <ul>{data.evidenceGaps.map((gap, index)=><li key={`${index}-${gap}`}>{gap}</li>)}</ul> : <p>{provisional ? 'NASA-derived terrain measurements are available above for this pair, but quality review has not established a validated model comparison. The analog ranking remains disabled.' : 'No validated Earth–planet comparison is loaded. Scientific ranking remains disabled until comparable evidence is available.'}</p>}
+      {data?.evidenceGaps?.length ? <ul>{data.evidenceGaps.map((gap, index)=><li key={`${index}-${gap}`}>{gap}</li>)}</ul> : <p>{provisional ? 'A provisional processing snapshot is retained for this pair. Source verification and reproducibility are pending; the analog ranking remains disabled.' : 'No validated Earth–planet comparison is loaded. Scientific ranking remains disabled until comparable evidence is available.'}</p>}
       <p className="panel-caption">ECHO drone telemetry and scans are simulated operational outputs; they are not scientific terrain measurements and do not enter the index.</p>
     </section>
   </div>;

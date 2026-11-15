@@ -16,6 +16,12 @@ data/raw/
 *.hdf
 *.h5
 *.zip
+.venv/
+.python-deps/
+.drone-local-backup/
+.planet-assets/
+*.tsbuildinfo
+/myfile.txt
 !submission/*.zip
 node_modules/
 dist/

@@ -3,35 +3,35 @@ on: [push, pull_request]
 jobs:
   science:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: echo-void-atlas-starter
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install -r science/scoring/requirements.txt
+      - run: python -m pip install -r science/gis/requirements.txt
       - run: python -m unittest discover -s science/tests -v
+      - run: python -m unittest discover -s science/gis/tests -v
       - run: python scripts/validate_contracts.py
+      - run: python scripts/validate_release.py
   frontend:
+    needs: science
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: echo-void-atlas-starter/frontend
+        working-directory: frontend
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: echo-void-atlas-starter/frontend/package-lock.json
+          cache-dependency-path: frontend/package-lock.json
       - run: npm ci
       - run: npm test
       - run: npm run typecheck
       - run: npm run build
-      - run: node ../../tests/test.mjs
+      - run: node ../tests/test.mjs
       - uses: actions/upload-artifact@v4
         with:
           name: nexora-static-site
-          path: echo-void-atlas-starter/frontend/dist
+          path: frontend/dist

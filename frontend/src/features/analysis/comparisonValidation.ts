@@ -1,26 +1,58 @@
 import type { ComparisonResult, MissionProfile } from '../../types/contracts';
-const FEATURES = ['meanSlopeDeg','p90SlopeDeg','roughnessM','reliefM'];
-const GAPS = ['PHYSICAL','PLANETARY','EVIDENCE','OPERATIONAL'];
-const EVIDENCE = ['MEASURED','LITERATURE','SIMULATED','UNKNOWN'];
-const isRecord = (x: unknown): x is Record<string, unknown> => typeof x === 'object' && x !== null && !Array.isArray(x);
-const finiteOrNull = (x:unknown) => x === null || (typeof x === 'number' && Number.isFinite(x));
 
-/** Validate external comparison JSON before treating it as scientific evidence. */
-export function parseComparison(input: unknown, targetId:string, earthSiteId:string, profile:MissionProfile): ComparisonResult | null {
-  if (!isRecord(input) || input.targetId !== targetId || input.earthSiteId !== earthSiteId || input.missionProfile !== profile || !['READY','INCOMPLETE_DATA'].includes(String(input.status)) ||
-    typeof input.modelVersion !== 'string' || !finiteOrNull(input.score) || !Array.isArray(input.featureContributions) ||
-    !Array.isArray(input.gaps) || !Array.isArray(input.evidenceGaps) || !input.evidenceGaps.every((x:unknown)=>typeof x === 'string') ||
-    !Array.isArray(input.sourceIds) || !input.sourceIds.every((x:unknown)=>typeof x === 'string')) return null;
-  if (!input.featureContributions.every((x:unknown) => isRecord(x) && FEATURES.includes(String(x.feature)) && finiteOrNull(x.earthValue) && finiteOrNull(x.targetValue) &&
-    (x.unit === 'm' || x.unit === 'deg') && typeof x.weight === 'number' && Number.isFinite(x.weight) && x.weight >= 0 &&
-    typeof x.tolerance === 'number' && x.tolerance > 0 && Number.isFinite(x.tolerance) && finiteOrNull(x.distance) && finiteOrNull(x.contribution))) return null;
-  if (!input.gaps.every((x:unknown) => isRecord(x) && GAPS.includes(String(x.category)) && ['LOW','MEDIUM','HIGH','UNKNOWN'].includes(String(x.severity)) &&
-    typeof x.claim === 'string' && typeof x.experimentImplication === 'string' && EVIDENCE.includes(String(x.evidenceType)) && (x.sourceUrl === null || typeof x.sourceUrl === 'string'))) return null;
+const FEATURES = ['meanSlopeDeg', 'p90SlopeDeg', 'roughnessM', 'reliefM'];
+const GAPS = ['PHYSICAL', 'PLANETARY', 'EVIDENCE', 'OPERATIONAL'];
+const EVIDENCE = ['MEASURED', 'LITERATURE', 'SIMULATED', 'UNKNOWN'];
+const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === 'object' && value !== null && !Array.isArray(value);
+const finite = (value: unknown): value is number => typeof value === 'number' && Number.isFinite(value);
+const text = (value: unknown): value is string => typeof value === 'string' && value.trim().length > 0;
+const close = (a: number, b: number) => Math.abs(a - b) <= 1e-7;
+const fraction = (value: unknown): value is number => finite(value) && value >= 0 && value <= 1;
+const optionalUrl = (value: unknown) => {
+  if (value === null) return true;
+  if (!text(value)) return false;
+  try { return ['http:', 'https:'].includes(new URL(value).protocol); } catch { return false; }
+};
+
+/** Validate supplied model arithmetic; never generate or substitute a browser score. */
+export function parseComparison(input: unknown, targetId: string, earthSiteId: string, profile: MissionProfile): ComparisonResult | null {
+  if (!isRecord(input) || !text(targetId) || !text(earthSiteId) || !['terrain_mobility', 'geological_survey'].includes(profile) ||
+      input.targetId !== targetId || input.earthSiteId !== earthSiteId || input.missionProfile !== profile ||
+      !['READY', 'INCOMPLETE_DATA'].includes(String(input.status)) || !text(input.modelVersion) ||
+      !Array.isArray(input.featureContributions) || !Array.isArray(input.gaps) ||
+      !Array.isArray(input.evidenceGaps) || !input.evidenceGaps.every(text) ||
+      !Array.isArray(input.sourceIds) || !input.sourceIds.every(text) || new Set(input.sourceIds).size !== input.sourceIds.length) return null;
+
+  const seen = new Set<string>();
+  let weightTotal = 0;
+  let lossTotal = 0;
+  for (const row of input.featureContributions) {
+    if (!isRecord(row) || !text(row.feature) || !FEATURES.includes(row.feature) || seen.has(row.feature)) return null;
+    seen.add(row.feature);
+    const slope = row.feature.endsWith('Deg');
+    const validValue = (value: unknown) => value === null || (finite(value) && value >= 0 && (!slope || value <= 90));
+    if (row.unit !== (slope ? 'deg' : 'm') || !validValue(row.earthValue) || !validValue(row.targetValue) ||
+        !fraction(row.weight) || !finite(row.tolerance) || row.tolerance <= 0) return null;
+    weightTotal += row.weight;
+    if (row.distance === null && row.contribution === null) {
+      if (input.status === 'READY') return null;
+      continue;
+    }
+    if (!finite(row.earthValue) || !finite(row.targetValue) || !fraction(row.distance) || !fraction(row.contribution) ||
+        !close(row.distance, Math.min(1, Math.abs(row.earthValue - row.targetValue) / row.tolerance)) ||
+        !close(row.contribution, row.weight * row.distance)) return null;
+    lossTotal += row.contribution;
+  }
+  const gapCategories = new Set<string>();
+  for (const gap of input.gaps) {
+    if (!isRecord(gap) || !GAPS.includes(String(gap.category)) || !['LOW', 'MEDIUM', 'HIGH', 'UNKNOWN'].includes(String(gap.severity)) ||
+        !text(gap.claim) || !text(gap.experimentImplication) || !EVIDENCE.includes(String(gap.evidenceType)) || !optionalUrl(gap.sourceUrl)) return null;
+    gapCategories.add(String(gap.category));
+  }
   if (input.status === 'READY') {
-    if (typeof input.score !== 'number' || input.score < 0 || input.score > 100 || input.featureContributions.length !== 4 || input.sourceIds.length === 0 ||
-      !FEATURES.every(key=>(input.featureContributions as Record<string,unknown>[]).some((x:Record<string,unknown>)=>x.feature===key && typeof x.earthValue==='number' && typeof x.targetValue==='number' && typeof x.contribution==='number')) ||
-      input.featureContributions.some((x:Record<string,unknown>)=>x.earthValue===null || x.targetValue===null || x.contribution===null)) return null;
+    if (seen.size !== FEATURES.length || !close(weightTotal, 1) || !finite(input.score) || input.score < 0 || input.score > 100 ||
+        !close(input.score, 100 * (1 - lossTotal)) || !input.sourceIds.length ||
+        !GAPS.every(category => gapCategories.has(category))) return null;
   } else if (input.score !== null) return null;
   return input as unknown as ComparisonResult;
 }
-

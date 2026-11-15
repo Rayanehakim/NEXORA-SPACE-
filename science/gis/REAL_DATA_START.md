@@ -13,7 +13,7 @@ The archive products are **not shipped** in this project. Original data can be l
 
 Open each actual DEM and inspect the CRS, geographic footprint, nodata, raster dtype, height units and the PDS product label. For MOLA, **the planetary radius/datum and longitude direction matter**. Do **not** assign WGS84 / `EPSG:4326` to Mars. Some PDS `.img` files require GIS-aware conversion and assignment of the documented *Mars* geographic CRS using the official PDS `.lbl` / `.xml` before rasterio can read a geographic extent. The preparation utility **will refuse an unreferenced Mars file**, rather than guessing its georeferencing.
 
-Quick inspection (from repository `echo-void-atlas-starter`, after `pip install -r science/gis/requirements.txt`):
+Quick inspection (from repository root, after `pip install -r science/gis/requirements.txt`):
 
 ```bash
 python3 - <<'PY'

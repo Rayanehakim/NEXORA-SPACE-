@@ -34,7 +34,7 @@ test('provisional QA suppresses duplicate unavailable metric table and report re
   const analysis=await readFile(join(process.cwd(),'src/features/analysis/index.tsx'),'utf8');
   const report=await readFile(join(process.cwd(),'src/features/report/index.tsx'),'utf8');
   assert.match(analysis,/provisional && !ready \?/);
-  assert.match(analysis,/The NASA terrain measurements are shown once above/);
+  assert.match(analysis,/provisional terrain snapshot is available/);
   assert.match(analysis,/ready \? <Contributions/);
   assert.match(report,/provisional \? 'NASADEM Earth elevation and MOLA Mars topography\/counts/);
   assert.match(report,/Provisional NASA terrain QA/);

@@ -107,6 +107,21 @@ class GISTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             extract_descriptors(np.full((9, 9), np.nan), 30, 90)
 
+    def test_integer_nodata_cast_before_nan_fill(self):
+        from science.gis.pipeline import read_metric_geotiff
+        from science.gis.evidence_checks import descriptors_for_grid
+        data=np.ones((9,9),dtype='int16');data[4,4]=-9999
+        path=self.root/'integer-nodata.tif'
+        with rasterio.open(path,'w',driver='GTiff',width=9,height=9,count=1,dtype='int16',
+                           crs='EPSG:32630',transform=from_origin(500000,3500000,30,30),nodata=-9999) as ds:
+            ds.write(data,1)
+        grid,cell,_,_=read_metric_geotiff(path)
+        self.assertTrue(np.isnan(grid[4,4]))
+        self.assertEqual(grid.dtype,np.float64)
+        metrics=descriptors_for_grid(path,cell,90)
+        self.assertAlmostEqual(metrics['validFraction'],80/81)
+        self.assertEqual(metrics['reliefM'],0)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -27,7 +27,7 @@ If a file is missing or invalid, the UI shows **INCOMPLETE DATA** and no numeric
 
 ## Run on Windows
 
-From `echo-void-atlas-starter/frontend`, with Node 22+:
+From `frontend`, with Node 22+:
 
 ```
 npm ci

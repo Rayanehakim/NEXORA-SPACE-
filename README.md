@@ -1,46 +1,50 @@
-# ECHO-VOID ATLAS — NEXORA SPACE
+# NEXORA SPACE — ECHO VOID ATLAS
 
-**Shared starter for parallel vibecoding.** This is a scaffold with DEMO fixtures and honest pending-data states, **not** a completed NASA-science product.
+Research prototype for selecting Earth candidates, inspecting provisional planetary terrain evidence, and rehearsing Earth-based drone reconnaissance. Similarity scores remain unavailable until a reviewed measured comparison is released. The original root drone source and tests are retained.
 
-## Quick start
+## Canonical layout
 
-```bash
-cd frontend
-npm install
+There is one application: `frontend/`, with `science/`, `contracts/`, `data/`, `docs/` and `submission/` at repository root. The duplicate `echo-void-atlas-starter/` source tree has been retired; it remains in Git history. Root commands and GitHub Actions now target these canonical folders.
+
+## Run on Windows
+
+Use Node 22.13 or newer (Node 24 is suitable):
+
+```powershell
+npm --prefix frontend ci
 npm run dev
 ```
 
-Open the local URL shown by Vite. Routes: `/`, `/explore`, `/analysis`, `/simulation`, `/report`.
+Open the printed localhost URL. Root commands: `npm test`, `npm run typecheck`, `npm run build`. Static output is `frontend/dist`. Keep the whole repository available during build; the frontend's prebuild uses the shared release checker.
 
-## Before contributors start
+For scientific processing, use a separate environment:
 
-1. Review `docs/DECISIONS.md` together and freeze scope, targets, metric definitions and interface version.
-2. Read `docs/AI_HANDOFF.md` and `docs/TASKS.md`.
-3. Create `integration` from `main`; each contributor branches off `integration`.
-4. Treat `frontend/src/types/contracts.ts` and `contracts/` as centrally owned and frozen.
-5. Each contributor must ship **a module working against sample fixtures**, not an entire app.
-6. Integration owner runs `npm run typecheck && npm run build` after each PR.
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r science/gis/requirements.txt
+.\.venv\Scripts\python.exe -m unittest discover -s science/tests -v
+.\.venv\Scripts\python.exe -m unittest discover -s science/gis/tests -v
+.\.venv\Scripts\python.exe scripts/validate_contracts.py
+```
 
-## What this starter actually does
+## Implemented
 
-- Working React + Vite + TypeScript shell, navigation, and planet/site/mission selection retained while navigating (in memory, not browser-storage persistence).
-- An initial global *textual site catalog* (not yet a Leaflet map), with candidate rationale and no fabricated real measurements.
-- All integration hooks/interfaces, placeholder views for science and simulation.
-- Mock comparison is marked **INCOMPLETE_DATA**, so fake scores are not displayed as real.
-- Procedural test height grid is clearly identified as **SIMULATED**; it does not represent NASA DEM pixels.
+- Planetary homepage; Mars/Moon selection and compact shared mission settings.
+- Interactive geographic Explorer with exact-ID selection, search and filters.
+- Experimental Python terrain scoring and gap analysis, with missing-data gates.
+- GIS preparation, descriptor extraction, native MOLA count QA and site-specific resampling sensitivity tools.
+- Analysis/report modules with loading, missing, invalid and network-error states, consistent JSON export and printable evidence.
+- ECHO terrain validation, simulated scanning and completed mission reports. The viewport remains 480 pixels high.
+- Reviewed-artifact publication checks and CI covering both frontend and GIS/scoring code.
 
-## Workstreams
+## Evidence boundaries
 
-A shell/integration, B explorer, C scientific engine, D drone, E analysis/report UI, F NASA GIS processing, G QA/competition submission. See `docs/TASKS.md`.
+The Erfoud–Jezero and Atacama–Jezero QA values are prior provisional snapshots. Original source-label verification, complete processing artifacts and independent reproduction are still pending. Neither snapshot is approved for similarity scoring. Source references are tracked in `data/sources/catalog-task-f.json`; missing evidence is recorded under `data/evidence/`.
 
-## Boundaries
+No reviewed comparison or measured drone terrain is currently published. ECHO uses the same labelled procedural demonstration geometry for each selected site's mission. Scientific model settings are experimental project choices, not NASA safety limits or mission success probabilities.
 
-- Shared site/target ID across all layers.
-- Earth-based rotor drone only. It is **not** a lunar rotorcraft.
-- NASA measurements require actual downloaded/processed source and methodology.
-- Missing scientific data => `INCOMPLETE_DATA`, never invented similarity.
-- Python outputs are JSON consumed statically by the frontend, or via an optional API added **only after** the offline path works.
+`npm run build` checks the review ledger before compiling. Copying an unreviewed comparison or DEM into the public directory blocks the build. See `data/evidence/README.md` before releasing quantitative artifacts.
 
-This starter is derived from the team's draft ECHO-VOID ATLAS specification v1.0, November 14, 2026. Scientific decisions remain provisional until team approval.
+## Deployment and remaining work
 
-**Note:** Network-limited file generation environment prevented `npm install`; verify `npm run typecheck` and `npm run build` on your local machine before inviting contributors.
+See `docs/DEPLOYMENT.md` for build paths, SPA deep links, staging checks and the distinction between a provisional prototype and a reviewed scoring release. No deployment is performed by the build workflow. Human browser/WebGL/print verification, source-data review and final competition submission remain separate gates.

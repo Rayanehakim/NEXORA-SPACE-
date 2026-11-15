@@ -1,12 +1,13 @@
 import { EvidenceQuality, evidenceForSelection } from '../analysis/evidence';
 import { Link } from 'react-router-dom';
-import type { ReportProps, SimulationReport } from '../../types/contracts';
+import type { MissionProfile, ReportProps, SimulationReport } from '../../types/contracts';
+import { parseComparison } from '../analysis/comparisonValidation';
 import { fallbackGaps, formatMetric, isReadyComparison } from '../analysis';
 import './report.css';
+import { usePrintDetails } from './usePrintDetails';
 
-export function makeMissionExport({target,site,comparison,simulation}: ReportProps, objective: string) {
-  const matched = comparison !== null && comparison.targetId === target?.id && comparison.earthSiteId === site?.id;
-  const evidence = matched ? comparison : null;
+export function makeMissionExport({target,site,comparison,simulation}: ReportProps, objective: MissionProfile) {
+  const evidence = comparison && target && site ? parseComparison(comparison,target.id,site.id,objective) : null;
   const usableSimulation = simulation?.simulated === true && simulation.earthSiteId === site?.id ? simulation : null;
   return {
     format:'nexora-mission-brief-v1', generatedAt:new Date().toISOString(),
@@ -19,6 +20,7 @@ export function makeMissionExport({target,site,comparison,simulation}: ReportPro
       'Experimental similarity index, where available, is not planetary equivalence or mission success probability.',
       'ECHO flight, coverage and observations are simulated, not measured terrain evidence.',
       'Planetary environmental conditions and real flight certification are not reproduced.',
+      ...(evidenceForSelection(site?.id,target?.id) ? ['Provisional QA values are a prior snapshot; original source-label verification and reproducibility remain pending.'] : []),
       ...(site?.dataStatus !== 'READY' || target?.dataStatus !== 'READY' ? ['Site or target catalog currently lacks processed validated terrain data.'] : []),
     ],
   };
@@ -37,11 +39,11 @@ function SurveyDetails({simulation}: {simulation:SimulationReport | null}) {
     <p className="panel-caption">Coverage, route and observations are generated in the simulator. No physical sample or rover performance is inferred.</p></>;
 }
 
-export function MissionReport(props:ReportProps & {objective?:string}) {
+export function MissionReport(props:ReportProps & {objective?:MissionProfile}) {
+  usePrintDetails();
   const {target,site,comparison,simulation,objective='terrain_mobility'}=props;
   const report = makeMissionExport({target,site,comparison,simulation},objective);
-  const valid = comparison !== null && comparison.targetId === target?.id && comparison.earthSiteId === site?.id;
-  const data = valid ? comparison : null;
+  const data = comparison && target && site ? parseComparison(comparison,target.id,site.id,objective) : null;
   const ready = isReadyComparison(data);
   const provisional = evidenceForSelection(site?.id, target?.id);
   const gaps = data?.gaps?.length ? data.gaps : fallbackGaps(target?.body ?? 'mars');
