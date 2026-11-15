@@ -1,0 +1,36 @@
+{
+  "version": "analysis-plan-v1",
+  "definitionsVersion": "terrain-descriptors-v1",
+  "regions": [
+    {
+      "regionId": "earth-mcmurdo",
+      "body": "earth",
+      "bounds": {
+        "west": 161.86427056278353,
+        "south": -77.52934288295867,
+        "east": 162.13540256847975,
+        "north": -77.47064066934658
+      },
+      "crs": "EPSG:3031",
+      "horizontalUnit": "m",
+      "footprintWidthM": 5120.0,
+      "footprintHeightM": 5120.0,
+      "roughnessWindowM": 960
+    },
+    {
+      "regionId": "moon-south-pole",
+      "body": "moon",
+      "bounds": {
+        "west": -3.4128068070297592,
+        "south": -88.58440972249346,
+        "east": 3.4128068070297592,
+        "north": -88.4133448705697
+      },
+      "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+      "horizontalUnit": "m",
+      "footprintWidthM": 5120.0,
+      "footprintHeightM": 5120.0,
+      "roughnessWindowM": 960
+    }
+  ]
+}

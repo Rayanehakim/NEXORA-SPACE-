@@ -1,20 +1,190 @@
 {
   "version": "nexora-provisional-review-v1",
   "scorePublicationApproved": false,
-  "pairs": [
+  "supersededTrials": [
     {
       "earthSiteId": "earth-erfoud",
       "targetId": "mars-jezero",
       "snapshot": "frontend/src/features/analysis/evidenceRecord.json",
       "status": "NOT_REPRODUCED",
-      "missing": ["Original product and label verification", "Prepared raster manifests and hashes", "Source-class audit artifacts", "Five-scenario sensitivity outputs", "Independent study-window review"]
+      "missing": [
+        "Original product and label verification",
+        "Prepared raster manifests and hashes",
+        "Source-class audit artifacts",
+        "Five-scenario sensitivity outputs",
+        "Independent study-window review"
+      ]
     },
     {
       "earthSiteId": "earth-atacama",
       "targetId": "mars-jezero",
       "snapshot": "frontend/src/features/analysis/evidenceAtacama.json",
       "status": "NOT_REPRODUCED",
-      "missing": ["Original product and label verification", "Prepared raster manifests and hashes", "Atacama source-class audit", "Five-scenario sensitivity outputs using the Atacama center and southern CRS", "Independent study-window review"]
+      "missing": [
+        "Original product and label verification",
+        "Prepared raster manifests and hashes",
+        "Atacama source-class audit",
+        "Five-scenario sensitivity outputs using the Atacama center and southern CRS",
+        "Independent study-window review"
+      ]
+    },
+    {
+      "earthSiteId": "earth-askja",
+      "targetId": "moon-south-pole",
+      "snapshot": "frontend/src/data/importedTerrainEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/askja-moon-trial/",
+      "missing": [
+        "Original release version and independent product/label verification",
+        "Independent study-window and geological review",
+        "Scientific review and explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-haughton",
+      "targetId": "moon-south-pole",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "snapshot": "frontend/src/data/earth-haughton-moon-evidence.json",
+      "artifacts": "data/evidence/earth-haughton-moon-trial/",
+      "missing": [
+        "Independent original archive verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-mcmurdo",
+      "targetId": "moon-south-pole",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "snapshot": "frontend/src/data/earth-mcmurdo-moon-evidence.json",
+      "artifacts": "data/evidence/earth-mcmurdo-moon-trial/",
+      "missing": [
+        "Independent original archive verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "earthSiteId": "earth-erfoud",
+      "targetId": "mars-jezero",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-erfoud--mars-jezero/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-erfoud",
+      "targetId": "moon-south-pole",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-erfoud--moon-south-pole/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-atacama",
+      "targetId": "mars-jezero",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-atacama--mars-jezero/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-atacama",
+      "targetId": "moon-south-pole",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-atacama--moon-south-pole/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-askja",
+      "targetId": "mars-jezero",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-askja--mars-jezero/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-askja",
+      "targetId": "moon-south-pole",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-askja--moon-south-pole/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-haughton",
+      "targetId": "mars-jezero",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-haughton--mars-jezero/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-haughton",
+      "targetId": "moon-south-pole",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-haughton--moon-south-pole/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-mcmurdo",
+      "targetId": "mars-jezero",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-mcmurdo--mars-jezero/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
+    },
+    {
+      "earthSiteId": "earth-mcmurdo",
+      "targetId": "moon-south-pole",
+      "snapshot": "frontend/src/data/localCatalogEvidence.json",
+      "status": "LOCALLY_REPRODUCED_REVIEW_PENDING",
+      "artifacts": "data/evidence/local-catalog/earth-mcmurdo--moon-south-pole/",
+      "missing": [
+        "Independent original archive/product verification",
+        "Independent study-window and terrain science review",
+        "Explicit score-publication approval"
+      ]
     }
   ]
 }

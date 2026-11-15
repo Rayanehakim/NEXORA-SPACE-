@@ -1,0 +1,643 @@
+{
+  "archives": [
+    {
+      "filename": "NASADEM_HGT_n31w005.zip",
+      "sha256": "0e87a4b515a5cd51bfddcd555a8226e95fb11bedac9f4dd1103772103d806c08",
+      "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "independentlyVerified": false
+    },
+    {
+      "filename": "NASADEM_HGT_s25w070.zip",
+      "sha256": "900ad34ea8fd8e72afae599e236b39d5bae2d74e2b4a80980106fa3cd90a1244",
+      "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "independentlyVerified": false
+    },
+    {
+      "filename": "29_29_32m_v4.1.tar.gz",
+      "sha256": "f24af6080cdda948617a2accd12d539b492789946c3e868a9a21cd5384b77683",
+      "metadataSha256": "3aa5d40813b8598a08841ea39f8ef06d962bca2d611e7a486b1d2b4565589351",
+      "versionFromMetadata": "4.1",
+      "independentlyVerified": false
+    },
+    {
+      "filename": "18_35_32m_v2.0.tar.gz",
+      "sha256": "1d7bd63765170a2fa143e336f780282038d0f7c44e672dc3b3864aba67316d34",
+      "metadataSha256": "340227c94ec411043f9de60e51cf90a6578682e69baeb169c45c8c5f2b13b622",
+      "versionFromMetadata": "2.0",
+      "independentlyVerified": false
+    }
+  ],
+  "labels": [
+    {
+      "filename": "megt44n000hb.txt",
+      "sha256": "bc624a238ba6d71a770a09f959ead96f1c144970fae435b8ca5e26208b42eec5",
+      "reportedVersion": "2.0",
+      "sourceUrl": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "independentlyVerified": false
+    },
+    {
+      "filename": "megc44n000hb.txt",
+      "sha256": "e7bde6960c05e9fc48ff6417ee3e2b12ed271af16ea85294a775a6948d890a1e",
+      "reportedVersion": "2.0",
+      "sourceUrl": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "independentlyVerified": false
+    }
+  ],
+  "sources": {
+    "earth-erfoud": {
+      "records": [
+        {
+          "role": "earthElevation",
+          "filename": "n31w005.hgt",
+          "sha256": "4ab73847aec15250194d3db11855b5bc0f11b8b07ec31bc1b6dd855b300adab9",
+          "sizeBytes": 25934402,
+          "width": 3601,
+          "height": 3601,
+          "dtype": "int16",
+          "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+          "bounds": [
+            -5.0001388888888885,
+            30.999861111111112,
+            -3.9998611111111106,
+            32.00013888888889
+          ],
+          "transform": [
+            0.0002777777777777778,
+            0.0,
+            -5.0001388888888885,
+            0.0,
+            -0.0002777777777777778,
+            32.00013888888889
+          ],
+          "nodata": -32768.0,
+          "embeddedUnits": "m",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "earthnum",
+          "filename": "n31w005.num",
+          "sha256": "10304da5e2ebe06e658ae257a8d721c36a378cea810afa06f886fe711f2a3e03",
+          "sizeBytes": 12967201,
+          "width": 3601,
+          "height": 3601,
+          "dtype": "uint8",
+          "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+          "bounds": [
+            -5.0001388888888885,
+            30.999861111111112,
+            -3.9998611111111106,
+            32.00013888888889
+          ],
+          "transform": [
+            0.0002777777777777778,
+            0.0,
+            -5.0001388888888885,
+            0.0,
+            -0.0002777777777777778,
+            32.00013888888889
+          ],
+          "nodata": null,
+          "embeddedUnits": null,
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "earthswb",
+          "filename": "n31w005.swb",
+          "sha256": "d5fd1560bb919d5d26c3c802a5b252aa1c7a364998885d3459e72dfe8dee2796",
+          "sizeBytes": 12967201,
+          "width": 3601,
+          "height": 3601,
+          "dtype": "uint8",
+          "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+          "bounds": [
+            -5.0001388888888885,
+            30.999861111111112,
+            -3.9998611111111106,
+            32.00013888888889
+          ],
+          "transform": [
+            0.0002777777777777778,
+            0.0,
+            -5.0001388888888885,
+            0.0,
+            -0.0002777777777777778,
+            32.00013888888889
+          ],
+          "nodata": null,
+          "embeddedUnits": null,
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+          "releaseVersionVerified": false
+        }
+      ],
+      "native": 31,
+      "name": "NASADEM HGT V001",
+      "url": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "version": "V001 supplied archive; independent verification pending",
+      "credit": "NASADEM HGT V001, NASA/USGS, NASA LP DAAC. https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+    },
+    "earth-atacama": {
+      "records": [
+        {
+          "role": "earthElevation",
+          "filename": "s25w070.hgt",
+          "sha256": "23c81aeedf2bdb8e537a28a002722ddbe377da698bad1f372e61d1b12b81ff27",
+          "sizeBytes": 25934402,
+          "width": 3601,
+          "height": 3601,
+          "dtype": "int16",
+          "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+          "bounds": [
+            -70.00013888888888,
+            -25.00013888888889,
+            -68.9998611111111,
+            -23.999861111111112
+          ],
+          "transform": [
+            0.0002777777777777778,
+            0.0,
+            -70.00013888888888,
+            0.0,
+            -0.0002777777777777778,
+            -23.999861111111112
+          ],
+          "nodata": -32768.0,
+          "embeddedUnits": "m",
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "earthnum",
+          "filename": "s25w070.num",
+          "sha256": "e0524a7bf07c54f947648cf320009161156834fe7e4636c7af55efd6e89d280f",
+          "sizeBytes": 12967201,
+          "width": 3601,
+          "height": 3601,
+          "dtype": "uint8",
+          "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+          "bounds": [
+            -70.00013888888888,
+            -25.00013888888889,
+            -68.9998611111111,
+            -23.999861111111112
+          ],
+          "transform": [
+            0.0002777777777777778,
+            0.0,
+            -70.00013888888888,
+            0.0,
+            -0.0002777777777777778,
+            -23.999861111111112
+          ],
+          "nodata": null,
+          "embeddedUnits": null,
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "earthswb",
+          "filename": "s25w070.swb",
+          "sha256": "a5566df5920e147ae1f50a45ceca1f0b86333b4cc9c62dcfedd65b7a13a9036f",
+          "sizeBytes": 12967201,
+          "width": 3601,
+          "height": 3601,
+          "dtype": "uint8",
+          "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+          "bounds": [
+            -70.00013888888888,
+            -25.00013888888889,
+            -68.9998611111111,
+            -23.999861111111112
+          ],
+          "transform": [
+            0.0002777777777777778,
+            0.0,
+            -70.00013888888888,
+            0.0,
+            -0.0002777777777777778,
+            -23.999861111111112
+          ],
+          "nodata": null,
+          "embeddedUnits": null,
+          "sourceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+          "releaseVersionVerified": false
+        }
+      ],
+      "native": 31,
+      "name": "NASADEM HGT V001",
+      "url": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "version": "V001 supplied archive; independent verification pending",
+      "credit": "NASADEM HGT V001, NASA/USGS, NASA LP DAAC. https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+    },
+    "earth-askja": {
+      "records": [
+        {
+          "role": "earthSouth",
+          "filename": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+          "sha256": "ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4",
+          "sizeBytes": 19059689,
+          "width": 1800,
+          "height": 3600,
+          "dtype": "float32",
+          "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+          "bounds": [
+            -17.00027777777778,
+            64.00013888888888,
+            -16.00027777777778,
+            65.00013888888888
+          ],
+          "transform": [
+            0.0005555555555555556,
+            0.0,
+            -17.00027777777778,
+            0.0,
+            -0.0002777777777777778,
+            65.00013888888888
+          ],
+          "nodata": null,
+          "embeddedUnits": null,
+          "sourceUrl": "https://doi.org/10.5270/ESA-c5d3d65",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "earthNorth",
+          "filename": "Copernicus_DSM_COG_10_N65_00_W017_00_DEM.tif",
+          "sha256": "1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+          "sizeBytes": 20729649,
+          "width": 1800,
+          "height": 3600,
+          "dtype": "float32",
+          "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+          "bounds": [
+            -17.00027777777778,
+            65.00013888888888,
+            -16.00027777777778,
+            66.00013888888888
+          ],
+          "transform": [
+            0.0005555555555555556,
+            0.0,
+            -17.00027777777778,
+            0.0,
+            -0.0002777777777777778,
+            66.00013888888888
+          ],
+          "nodata": null,
+          "embeddedUnits": null,
+          "sourceUrl": "https://doi.org/10.5270/ESA-c5d3d65",
+          "releaseVersionVerified": false
+        }
+      ],
+      "native": 32,
+      "name": "Copernicus GLO-30 surface model",
+      "url": "https://doi.org/10.5270/ESA-c5d3d65",
+      "version": "Supplied tiles; original release unverified",
+      "credit": "produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved"
+    },
+    "earth-haughton": {
+      "records": [
+        {
+          "role": "earthElevation",
+          "filename": "29_29_32m_v4.1_dem.tif",
+          "sha256": "3cdffa35db2ef7dcf55e127d110e1ae3bb734c275d81a79e7846a2e475b9f9e7",
+          "sizeBytes": 28511743,
+          "width": 3131,
+          "height": 3131,
+          "dtype": "float32",
+          "crs": "PROJCS[\"WGS 84 / NSIDC Sea Ice Polar Stereographic North\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",70],PARAMETER[\"central_meridian\",-45],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",SOUTH],AXIS[\"Northing\",SOUTH],AUTHORITY[\"EPSG\",\"3413\"]]",
+          "bounds": [
+            -1200096.0,
+            -1200096.0,
+            -1099904.0,
+            -1099904.0
+          ],
+          "transform": [
+            32.0,
+            0.0,
+            -1200096.0,
+            0.0,
+            -32.0,
+            -1099904.0
+          ],
+          "nodata": -9999.0,
+          "embeddedUnits": null,
+          "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "earthCount",
+          "filename": "29_29_32m_v4.1_count.tif",
+          "sha256": "a5b63053cae834e8de5b4eb503f0c49da7f9986b7564759ccc8878fe6ce27739",
+          "sizeBytes": 1389191,
+          "width": 3131,
+          "height": 3131,
+          "dtype": "uint8",
+          "crs": "PROJCS[\"WGS 84 / NSIDC Sea Ice Polar Stereographic North\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",70],PARAMETER[\"central_meridian\",-45],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",SOUTH],AXIS[\"Northing\",SOUTH],AUTHORITY[\"EPSG\",\"3413\"]]",
+          "bounds": [
+            -1200096.0,
+            -1200096.0,
+            -1099904.0,
+            -1099904.0
+          ],
+          "transform": [
+            32.0,
+            0.0,
+            -1200096.0,
+            0.0,
+            -32.0,
+            -1099904.0
+          ],
+          "nodata": 0.0,
+          "embeddedUnits": null,
+          "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "earthMad",
+          "filename": "29_29_32m_v4.1_mad.tif",
+          "sha256": "b1d8833bebb9c01d1f09c0f59d57ef08eec9f7fa0d39b05aca5e67a3b38d3082",
+          "sizeBytes": 21389455,
+          "width": 3131,
+          "height": 3131,
+          "dtype": "float32",
+          "crs": "PROJCS[\"WGS 84 / NSIDC Sea Ice Polar Stereographic North\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",70],PARAMETER[\"central_meridian\",-45],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",SOUTH],AXIS[\"Northing\",SOUTH],AUTHORITY[\"EPSG\",\"3413\"]]",
+          "bounds": [
+            -1200096.0,
+            -1200096.0,
+            -1099904.0,
+            -1099904.0
+          ],
+          "transform": [
+            32.0,
+            0.0,
+            -1200096.0,
+            0.0,
+            -32.0,
+            -1099904.0
+          ],
+          "nodata": -9999.0,
+          "embeddedUnits": null,
+          "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/",
+          "releaseVersionVerified": false
+        }
+      ],
+      "native": 32,
+      "name": "ArcticDEM surface mosaic",
+      "url": "https://www.pgc.umn.edu/data/arcticdem/",
+      "version": "Metadata-reported 4.1; original archive unverified",
+      "credit": "ArcticDEM DEMs, Polar Geospatial Center, University of Minnesota, NGA/NSF; CC BY 4.0. Modified by reprojection, resampling and terrain-descriptor extraction. https://www.pgc.umn.edu/data/arcticdem/"
+    },
+    "earth-mcmurdo": {
+      "records": [
+        {
+          "role": "earthElevation",
+          "filename": "18_35_32m_v2.0_dem.tif",
+          "sha256": "b54c3fec2e5dc056ce2bd2614e758ccd89dac7bffdd36d07e3c5aa996f900b4b",
+          "sizeBytes": 33726199,
+          "width": 3131,
+          "height": 3131,
+          "dtype": "float32",
+          "crs": "PROJCS[\"WGS 84 / Antarctic Polar Stereographic\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-71],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"3031\"]]",
+          "bounds": [
+            399904.0,
+            -1300096.0,
+            500096.0,
+            -1199904.0
+          ],
+          "transform": [
+            32.0,
+            0.0,
+            399904.0,
+            0.0,
+            -32.0,
+            -1199904.0
+          ],
+          "nodata": -9999.0,
+          "embeddedUnits": null,
+          "sourceUrl": "https://www.pgc.umn.edu/data/rema/",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "earthCount",
+          "filename": "18_35_32m_v2.0_count.tif",
+          "sha256": "1fa7d5be8efb3a21307c743ee8e6628573c34cd173dcc418bb4ad983ddcd2c8b",
+          "sizeBytes": 2304507,
+          "width": 3131,
+          "height": 3131,
+          "dtype": "uint8",
+          "crs": "PROJCS[\"WGS 84 / Antarctic Polar Stereographic\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-71],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"3031\"]]",
+          "bounds": [
+            399904.0,
+            -1300096.0,
+            500096.0,
+            -1199904.0
+          ],
+          "transform": [
+            32.0,
+            0.0,
+            399904.0,
+            0.0,
+            -32.0,
+            -1199904.0
+          ],
+          "nodata": 0.0,
+          "embeddedUnits": null,
+          "sourceUrl": "https://www.pgc.umn.edu/data/rema/",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "earthMad",
+          "filename": "18_35_32m_v2.0_mad.tif",
+          "sha256": "f29b50e225a39bb5d784b6fd261b594fda5dad5c6cb70a8120bce1272bea3428",
+          "sizeBytes": 54132032,
+          "width": 3131,
+          "height": 3131,
+          "dtype": "float32",
+          "crs": "PROJCS[\"WGS 84 / Antarctic Polar Stereographic\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-71],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"3031\"]]",
+          "bounds": [
+            399904.0,
+            -1300096.0,
+            500096.0,
+            -1199904.0
+          ],
+          "transform": [
+            32.0,
+            0.0,
+            399904.0,
+            0.0,
+            -32.0,
+            -1199904.0
+          ],
+          "nodata": -9999.0,
+          "embeddedUnits": null,
+          "sourceUrl": "https://www.pgc.umn.edu/data/rema/",
+          "releaseVersionVerified": false
+        }
+      ],
+      "native": 32,
+      "name": "REMA surface mosaic",
+      "url": "https://www.pgc.umn.edu/data/rema/",
+      "version": "Metadata-reported 2.0; original archive unverified",
+      "credit": "REMA DEMs, Polar Geospatial Center, University of Minnesota, NGA/NSF; CC BY 4.0. Modified by reprojection, resampling and terrain-descriptor extraction. https://www.pgc.umn.edu/data/rema/"
+    },
+    "mars-jezero": {
+      "records": [
+        {
+          "role": "targetElevation",
+          "filename": "megt44n000hb.img",
+          "sha256": "14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36",
+          "sizeBytes": 129761280,
+          "width": 11520,
+          "height": 5632,
+          "dtype": "int16",
+          "crs": "GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH]]",
+          "bounds": [
+            0.0,
+            0.0,
+            90.0,
+            44.0
+          ],
+          "transform": [
+            0.0078125,
+            0.0,
+            0.0,
+            0.0,
+            -0.0078125,
+            44.0
+          ],
+          "nodata": null,
+          "embeddedUnits": null,
+          "sourceUrl": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "targetCounts",
+          "filename": "megc44n000hb.img",
+          "sha256": "cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+          "sizeBytes": 64880640,
+          "width": 11520,
+          "height": 5632,
+          "dtype": "uint8",
+          "crs": "GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",3396000,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH]]",
+          "bounds": [
+            0.0,
+            0.0,
+            90.0,
+            44.0
+          ],
+          "transform": [
+            0.0078125,
+            0.0,
+            0.0,
+            0.0,
+            -0.0078125,
+            44.0
+          ],
+          "nodata": null,
+          "embeddedUnits": null,
+          "sourceUrl": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+          "releaseVersionVerified": false
+        }
+      ],
+      "native": 463.05766716974557,
+      "name": "MOLA MEGDR topography",
+      "url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "version": "PDS3 label-reported 2.0; independent verification pending",
+      "credit": "NASA MGS MOLA / PDS Geosciences Node. https://pds-geosciences.wustl.edu/missions/mgs/megdr.html"
+    },
+    "moon-south-pole": {
+      "records": [
+        {
+          "role": "moonElevation",
+          "filename": "LDEM_80S_80MPP_ADJ.tiff",
+          "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+          "sizeBytes": 189158392,
+          "width": 7600,
+          "height": 7600,
+          "dtype": "float32",
+          "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+          "bounds": [
+            -304000.0,
+            -304000.0,
+            304000.0,
+            304000.0
+          ],
+          "transform": [
+            80.0,
+            0.0,
+            -304000.0,
+            0.0,
+            -80.0,
+            304000.0
+          ],
+          "nodata": "NaN",
+          "embeddedUnits": null,
+          "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "moonCounts",
+          "filename": "LDEC_80S_80MPP_ADJ.tiff",
+          "sha256": "7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8",
+          "sizeBytes": 115657642,
+          "width": 7600,
+          "height": 7600,
+          "dtype": "float32",
+          "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+          "bounds": [
+            -304000.0,
+            -304000.0,
+            304000.0,
+            304000.0
+          ],
+          "transform": [
+            80.0,
+            0.0,
+            -304000.0,
+            0.0,
+            -80.0,
+            304000.0
+          ],
+          "nodata": "NaN",
+          "embeddedUnits": null,
+          "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+          "releaseVersionVerified": false
+        },
+        {
+          "role": "moonEffectiveResolution",
+          "filename": "LDEM_80S_80MPP_ADJ_EFFRES.tiff",
+          "sha256": "7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+          "sizeBytes": 250228467,
+          "width": 7600,
+          "height": 7600,
+          "dtype": "float32",
+          "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+          "bounds": [
+            -304000.0,
+            -304000.0,
+            304000.0,
+            304000.0
+          ],
+          "transform": [
+            80.0,
+            0.0,
+            -304000.0,
+            0.0,
+            -80.0,
+            304000.0
+          ],
+          "nodata": "NaN",
+          "embeddedUnits": null,
+          "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+          "releaseVersionVerified": false
+        }
+      ],
+      "native": 80,
+      "name": "LOLA adjusted polar elevation",
+      "url": "https://pgda.gsfc.nasa.gov/products/90",
+      "version": "Supplied files; original release unverified",
+      "credit": "NASA GSFC PGDA, Barker et al. (2023), https://doi.org/10.3847/psj/acf3e1"
+    }
+  }
+}

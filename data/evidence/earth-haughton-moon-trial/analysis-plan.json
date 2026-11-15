@@ -1,0 +1,36 @@
+{
+  "version": "analysis-plan-v1",
+  "definitionsVersion": "terrain-descriptors-v1",
+  "regions": [
+    {
+      "regionId": "earth-haughton",
+      "body": "earth",
+      "bounds": {
+        "west": -89.80029246378756,
+        "south": 75.34710067007993,
+        "east": -89.53971094916258,
+        "north": 75.41290165664358
+      },
+      "crs": "EPSG:3413",
+      "horizontalUnit": "m",
+      "footprintWidthM": 5120.0,
+      "footprintHeightM": 5120.0,
+      "roughnessWindowM": 960
+    },
+    {
+      "regionId": "moon-south-pole",
+      "body": "moon",
+      "bounds": {
+        "west": -3.4128068070297592,
+        "south": -88.58440972249346,
+        "east": 3.4128068070297592,
+        "north": -88.4133448705697
+      },
+      "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+      "horizontalUnit": "m",
+      "footprintWidthM": 5120.0,
+      "footprintHeightM": 5120.0,
+      "roughnessWindowM": 960
+    }
+  ]
+}

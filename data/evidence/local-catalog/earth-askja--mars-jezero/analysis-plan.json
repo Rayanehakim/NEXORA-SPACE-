@@ -1,0 +1,36 @@
+{
+  "version": "analysis-plan-v1",
+  "definitionsVersion": "terrain-descriptors-v1",
+  "regions": [
+    {
+      "regionId": "earth-askja",
+      "body": "earth",
+      "bounds": {
+        "west": -16.804563373434796,
+        "south": 65.00694875747972,
+        "east": -16.695525597247254,
+        "north": 65.0530336059402
+      },
+      "crs": "EPSG:32628",
+      "horizontalUnit": "m",
+      "footprintWidthM": 5000.0,
+      "footprintHeightM": 5000.0,
+      "roughnessWindowM": 1500
+    },
+    {
+      "regionId": "mars-jezero",
+      "body": "mars",
+      "bounds": {
+        "west": 77.53555375338146,
+        "south": 18.337821128155856,
+        "east": 77.62444624661853,
+        "north": 18.422178871844142
+      },
+      "crs": "+proj=eqc +lat_ts=18.38 +lon_0=77.58 +R=3396000 +units=m +no_defs",
+      "horizontalUnit": "m",
+      "footprintWidthM": 5000.0,
+      "footprintHeightM": 5000.0,
+      "roughnessWindowM": 1500
+    }
+  ]
+}

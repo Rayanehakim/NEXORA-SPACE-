@@ -1,10 +1,139 @@
 {
   "version": "nexora-source-acquisition-v1",
-  "notice": "Source references retained for reproduction. Listing a product does not verify acquisition or authorize a measured similarity score.",
+  "notice": "Source files are locally processed and hashed; original archive authenticity and independent source review remain pending.",
   "sources": [
-    {"sourceId":"NASADEM_HGT_n31w005","role":"earth-erfoud elevation","collection":"NASADEM_HGT.001","referenceUrl":"https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001","verification":"ORIGINAL_GRANULE_AND_AUDIT_PENDING"},
-    {"sourceId":"NASADEM_HGT_s25w070","role":"earth-atacama elevation","collection":"NASADEM_HGT.001","referenceUrl":"https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001","verification":"ORIGINAL_GRANULE_AND_SOURCE_CLASS_AUDIT_PENDING"},
-    {"sourceId":"MEGT44N000HB.IMG","role":"Jezero Mars topography","referenceUrl":"https://pds-geosciences.wustl.edu/missions/mgs/megdr.html","verification":"ORIGINAL_PRODUCT_LABEL_AND_PROCESSING_HASHES_PENDING"},
-    {"sourceId":"MEGC44N000HB.IMG","role":"Jezero native shot counts","referenceUrl":"https://pds-geosciences.wustl.edu/missions/mgs/megdr.html","verification":"INDEPENDENT_DETACHED_LABEL_VERIFICATION_PENDING","reportedSnapshotSha256":"cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5"}
+    {
+      "sourceId": "n31w005.hgt",
+      "role": "earthElevation",
+      "referenceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "sha256": "4ab73847aec15250194d3db11855b5bc0f11b8b07ec31bc1b6dd855b300adab9",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "n31w005.num",
+      "role": "earthnum",
+      "referenceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "sha256": "10304da5e2ebe06e658ae257a8d721c36a378cea810afa06f886fe711f2a3e03",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "n31w005.swb",
+      "role": "earthswb",
+      "referenceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "sha256": "d5fd1560bb919d5d26c3c802a5b252aa1c7a364998885d3459e72dfe8dee2796",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "megt44n000hb.img",
+      "role": "targetElevation",
+      "referenceUrl": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "sha256": "14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "megc44n000hb.img",
+      "role": "targetCounts",
+      "referenceUrl": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "sha256": "cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+      "role": "moonElevation",
+      "referenceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+      "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "LDEC_80S_80MPP_ADJ.tiff",
+      "role": "moonCounts",
+      "referenceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+      "sha256": "7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "LDEM_80S_80MPP_ADJ_EFFRES.tiff",
+      "role": "moonEffectiveResolution",
+      "referenceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+      "sha256": "7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "s25w070.hgt",
+      "role": "earthElevation",
+      "referenceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "sha256": "23c81aeedf2bdb8e537a28a002722ddbe377da698bad1f372e61d1b12b81ff27",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "s25w070.num",
+      "role": "earthnum",
+      "referenceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "sha256": "e0524a7bf07c54f947648cf320009161156834fe7e4636c7af55efd6e89d280f",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "s25w070.swb",
+      "role": "earthswb",
+      "referenceUrl": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "sha256": "a5566df5920e147ae1f50a45ceca1f0b86333b4cc9c62dcfedd65b7a13a9036f",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+      "role": "earthSouth",
+      "referenceUrl": "https://doi.org/10.5270/ESA-c5d3d65",
+      "sha256": "ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "Copernicus_DSM_COG_10_N65_00_W017_00_DEM.tif",
+      "role": "earthNorth",
+      "referenceUrl": "https://doi.org/10.5270/ESA-c5d3d65",
+      "sha256": "1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "29_29_32m_v4.1_dem.tif",
+      "role": "earthElevation",
+      "referenceUrl": "https://www.pgc.umn.edu/data/arcticdem/",
+      "sha256": "3cdffa35db2ef7dcf55e127d110e1ae3bb734c275d81a79e7846a2e475b9f9e7",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "29_29_32m_v4.1_count.tif",
+      "role": "earthCount",
+      "referenceUrl": "https://www.pgc.umn.edu/data/arcticdem/",
+      "sha256": "a5b63053cae834e8de5b4eb503f0c49da7f9986b7564759ccc8878fe6ce27739",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "29_29_32m_v4.1_mad.tif",
+      "role": "earthMad",
+      "referenceUrl": "https://www.pgc.umn.edu/data/arcticdem/",
+      "sha256": "b1d8833bebb9c01d1f09c0f59d57ef08eec9f7fa0d39b05aca5e67a3b38d3082",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "18_35_32m_v2.0_dem.tif",
+      "role": "earthElevation",
+      "referenceUrl": "https://www.pgc.umn.edu/data/rema/",
+      "sha256": "b54c3fec2e5dc056ce2bd2614e758ccd89dac7bffdd36d07e3c5aa996f900b4b",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "18_35_32m_v2.0_count.tif",
+      "role": "earthCount",
+      "referenceUrl": "https://www.pgc.umn.edu/data/rema/",
+      "sha256": "1fa7d5be8efb3a21307c743ee8e6628573c34cd173dcc418bb4ad983ddcd2c8b",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    },
+    {
+      "sourceId": "18_35_32m_v2.0_mad.tif",
+      "role": "earthMad",
+      "referenceUrl": "https://www.pgc.umn.edu/data/rema/",
+      "sha256": "f29b50e225a39bb5d784b6fd261b594fda5dad5c6cb70a8120bce1272bea3428",
+      "verification": "LOCALLY_PROCESSED_RELEASE_REVIEW_PENDING"
+    }
   ]
 }

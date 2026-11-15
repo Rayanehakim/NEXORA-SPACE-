@@ -39,9 +39,11 @@ python -m venv .venv
 
 ## Evidence boundaries
 
-The Erfoud–Jezero and Atacama–Jezero QA values are prior provisional snapshots. Original source-label verification, complete processing artifacts and independent reproduction are still pending. Neither snapshot is approved for similarity scoring. Source references are tracked in `data/sources/catalog-task-f.json`; missing evidence is recorded under `data/evidence/`.
+All ten Earth/planet pairs now have locally reproduced terrain QA from the supplied NASADEM, Copernicus, ArcticDEM, REMA, MOLA and LOLA files. The current trials share 5 km footprints, 500 m cells and 1500 m roughness windows, with five processing scenarios each. Analysis and Report select the exact matching evidence and retain it in JSON exports. Earlier unequal-footprint snapshots remain historical records and are superseded in the UI.
 
-No reviewed comparison or measured drone terrain is currently published. ECHO uses the same labelled procedural demonstration geometry for each selected site's mission. Scientific model settings are experimental project choices, not NASA safety limits or mission success probabilities.
+Run `python -m science.gis.local_catalog` with the original inputs at repository root to reproduce the complete catalog. Source identities, archive/label hashes, baseline features, scenario outputs and processing versions are tracked under `data/evidence/local-catalog/`. See [all-combinations handoff](docs/ALL_COMBINATIONS_HANDOFF.md).
+
+Independent source authenticity, study-window suitability and scientific review remain pending. No reviewed numerical comparison or measured drone terrain is published. ECHO uses labelled procedural demonstration geometry; its observations are simulated. Scientific model settings are experimental project choices, not NASA safety limits or success probabilities.
 
 `npm run build` checks the review ledger before compiling. Copying an unreviewed comparison or DEM into the public directory blocks the build. See `data/evidence/README.md` before releasing quantitative artifacts.
 

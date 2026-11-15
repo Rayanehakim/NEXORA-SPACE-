@@ -1,0 +1,593 @@
+[
+  {
+    "name": "average",
+    "kernel": "average",
+    "offsetM": [
+      0,
+      0
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-atacama",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 8.14878516355822,
+        "p90SlopeDeg": 11.06208057708606,
+        "roughnessM": 3.6208550126390264,
+        "reliefM": 728.078125,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "s25w070.hgt",
+            "name": "NASADEM HGT V001",
+            "url": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+            "version": "V001 supplied archive; independent verification pending",
+            "nativeResolutionM": 31.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=7be4270e4806f25d4026ec8b38cee1b05050d63af4fff71e35bfdb26719480e7; raster bounds (472171.3864, 7287891.7743, 477171.3864, 7292891.7743); resampling=average; input SHA256=23c81aeedf2bdb8e537a28a002722ddbe377da698bad1f372e61d1b12b81ff27,e0524a7bf07c54f947648cf320009161156834fe7e4636c7af55efd6e89d280f,a5566df5920e147ae1f50a45ceca1f0b86333b4cc9c62dcfedd65b7a13a9036f",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 12.605634750840563,
+        "p90SlopeDeg": 18.679266872562017,
+        "roughnessM": 10.247467762283465,
+        "reliefM": 1206.6634216308594,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=f0049878d850f6f36846d9767e7401cd6e01dcbaf2c4f04a67a1c21c2e315648; raster bounds (-2500.0, 42987.6237, 2500.0, 47987.6237); resampling=average; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32719",
+        "bounds": {
+          "west": -69.27472452332029,
+          "south": -24.522617867131668,
+          "east": -69.2252842903501,
+          "north": -24.47737811784723
+        },
+        "projectedBounds": [
+          472171.38644368434,
+          7287891.774321514,
+          477171.38644368434,
+          7292891.774321514
+        ],
+        "sha256": "7be4270e4806f25d4026ec8b38cee1b05050d63af4fff71e35bfdb26719480e7",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -3.32836005861209,
+          "south": -88.58243135168352,
+          "east": 3.32836005861209,
+          "north": -88.41542451420447
+        },
+        "projectedBounds": [
+          -2500.0,
+          42987.62372638483,
+          2500.0,
+          47987.62372638483
+        ],
+        "sha256": "f0049878d850f6f36846d9767e7401cd6e01dcbaf2c4f04a67a1c21c2e315648",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 59149.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 28.97617530822754,
+        "p99": 44.8882619857787
+      }
+    },
+    "earthQuality": {
+      "numClassesAtPreparedCenters": {
+        "2": 99,
+        "3": 1
+      },
+      "swbClassesAtPreparedCenters": {
+        "0": 100
+      },
+      "interpretation": "Nearest source classification samples at prepared-cell centers; not counts of independent ground observations. Class decoding/independent source audit remains pending."
+    }
+  },
+  {
+    "name": "bilinear",
+    "kernel": "bilinear",
+    "offsetM": [
+      0,
+      0
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-atacama",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 8.154426150472316,
+        "p90SlopeDeg": 10.911680946659322,
+        "roughnessM": 3.345466199989909,
+        "reliefM": 727.55419921875,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "s25w070.hgt",
+            "name": "NASADEM HGT V001",
+            "url": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+            "version": "V001 supplied archive; independent verification pending",
+            "nativeResolutionM": 31.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=a3c682f8c72953e657efa09a8c49d4c27b6a5b26b8610b22f4e2cd0483d6166f; raster bounds (472171.3864, 7287891.7743, 477171.3864, 7292891.7743); resampling=bilinear; input SHA256=23c81aeedf2bdb8e537a28a002722ddbe377da698bad1f372e61d1b12b81ff27,e0524a7bf07c54f947648cf320009161156834fe7e4636c7af55efd6e89d280f,a5566df5920e147ae1f50a45ceca1f0b86333b4cc9c62dcfedd65b7a13a9036f",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 12.592086621874914,
+        "p90SlopeDeg": 18.674591504273863,
+        "roughnessM": 9.473361638931895,
+        "reliefM": 1203.7123718261719,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=3da10672bc5013d9bf3648122b0230c34e8abf9c73df846e637d880beecf97bd; raster bounds (-2500.0, 42987.6237, 2500.0, 47987.6237); resampling=bilinear; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32719",
+        "bounds": {
+          "west": -69.27472452332029,
+          "south": -24.522617867131668,
+          "east": -69.2252842903501,
+          "north": -24.47737811784723
+        },
+        "projectedBounds": [
+          472171.38644368434,
+          7287891.774321514,
+          477171.38644368434,
+          7292891.774321514
+        ],
+        "sha256": "a3c682f8c72953e657efa09a8c49d4c27b6a5b26b8610b22f4e2cd0483d6166f",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -3.32836005861209,
+          "south": -88.58243135168352,
+          "east": 3.32836005861209,
+          "north": -88.41542451420447
+        },
+        "projectedBounds": [
+          -2500.0,
+          42987.62372638483,
+          2500.0,
+          47987.62372638483
+        ],
+        "sha256": "3da10672bc5013d9bf3648122b0230c34e8abf9c73df846e637d880beecf97bd",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 59149.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 28.97617530822754,
+        "p99": 44.8882619857787
+      }
+    },
+    "earthQuality": {
+      "numClassesAtPreparedCenters": {
+        "2": 99,
+        "3": 1
+      },
+      "swbClassesAtPreparedCenters": {
+        "0": 100
+      },
+      "interpretation": "Nearest source classification samples at prepared-cell centers; not counts of independent ground observations. Class decoding/independent source audit remains pending."
+    }
+  },
+  {
+    "name": "nearest",
+    "kernel": "nearest",
+    "offsetM": [
+      0,
+      0
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-atacama",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 8.131963122313456,
+        "p90SlopeDeg": 10.880174626022285,
+        "roughnessM": 5.033766927655991,
+        "reliefM": 746.0,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "s25w070.hgt",
+            "name": "NASADEM HGT V001",
+            "url": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+            "version": "V001 supplied archive; independent verification pending",
+            "nativeResolutionM": 31.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=4f65be78457de5ec360ffeb657012cc2872d8537034e74c9fdee445989fcaadc; raster bounds (472171.3864, 7287891.7743, 477171.3864, 7292891.7743); resampling=nearest; input SHA256=23c81aeedf2bdb8e537a28a002722ddbe377da698bad1f372e61d1b12b81ff27,e0524a7bf07c54f947648cf320009161156834fe7e4636c7af55efd6e89d280f,a5566df5920e147ae1f50a45ceca1f0b86333b4cc9c62dcfedd65b7a13a9036f",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 12.634647692896893,
+        "p90SlopeDeg": 18.694580757401557,
+        "roughnessM": 12.003212723171664,
+        "reliefM": 1219.6035461425781,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=dc8ff8ef4c9a3f784d854a378c0c5d13d2a6f257234eed692fd972e48f159ce0; raster bounds (-2500.0, 42987.6237, 2500.0, 47987.6237); resampling=nearest; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32719",
+        "bounds": {
+          "west": -69.27472452332029,
+          "south": -24.522617867131668,
+          "east": -69.2252842903501,
+          "north": -24.47737811784723
+        },
+        "projectedBounds": [
+          472171.38644368434,
+          7287891.774321514,
+          477171.38644368434,
+          7292891.774321514
+        ],
+        "sha256": "4f65be78457de5ec360ffeb657012cc2872d8537034e74c9fdee445989fcaadc",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -3.32836005861209,
+          "south": -88.58243135168352,
+          "east": 3.32836005861209,
+          "north": -88.41542451420447
+        },
+        "projectedBounds": [
+          -2500.0,
+          42987.62372638483,
+          2500.0,
+          47987.62372638483
+        ],
+        "sha256": "dc8ff8ef4c9a3f784d854a378c0c5d13d2a6f257234eed692fd972e48f159ce0",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 59149.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 28.97617530822754,
+        "p99": 44.8882619857787
+      }
+    },
+    "earthQuality": {
+      "numClassesAtPreparedCenters": {
+        "2": 99,
+        "3": 1
+      },
+      "swbClassesAtPreparedCenters": {
+        "0": 100
+      },
+      "interpretation": "Nearest source classification samples at prepared-cell centers; not counts of independent ground observations. Class decoding/independent source audit remains pending."
+    }
+  },
+  {
+    "name": "shift-northeast",
+    "kernel": "average",
+    "offsetM": [
+      250,
+      250
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-atacama",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 8.816097952629697,
+        "p90SlopeDeg": 12.298493882401377,
+        "roughnessM": 3.7707411875473245,
+        "reliefM": 780.462890625,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "s25w070.hgt",
+            "name": "NASADEM HGT V001",
+            "url": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+            "version": "V001 supplied archive; independent verification pending",
+            "nativeResolutionM": 31.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=55485989bfc818c5f873c26347c73a78d34e4a4759b7f15bfda163ea4e0b9779; raster bounds (472421.3864, 7288141.7743, 477421.3864, 7293141.7743); resampling=average; input SHA256=23c81aeedf2bdb8e537a28a002722ddbe377da698bad1f372e61d1b12b81ff27,e0524a7bf07c54f947648cf320009161156834fe7e4636c7af55efd6e89d280f,a5566df5920e147ae1f50a45ceca1f0b86333b4cc9c62dcfedd65b7a13a9036f",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 13.344095989123675,
+        "p90SlopeDeg": 20.325977105702197,
+        "roughnessM": 10.234793535951914,
+        "reliefM": 1236.2383422851562,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=076c048346db973aa60dad03fa8c3e29e51cda15735ee8de7f8aca99e9281c87; raster bounds (-2250.0, 43237.6237, 2750.0, 48237.6237); resampling=average; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32719",
+        "bounds": {
+          "west": -69.2722516740686,
+          "south": -24.520363632991355,
+          "east": -69.22281320372565,
+          "north": -24.47512467663666
+        },
+        "projectedBounds": [
+          472421.38644368434,
+          7288141.774321514,
+          477421.38644368434,
+          7293141.774321514
+        ],
+        "sha256": "55485989bfc818c5f873c26347c73a78d34e4a4759b7f15bfda163ea4e0b9779",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -2.978871541124375,
+          "south": -88.57418795213393,
+          "east": 3.63922516880085,
+          "north": -88.40674483504355
+        },
+        "projectedBounds": [
+          -2250.0,
+          43237.62372638483,
+          2750.0,
+          48237.62372638483
+        ],
+        "sha256": "076c048346db973aa60dad03fa8c3e29e51cda15735ee8de7f8aca99e9281c87",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 58815.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 29.182199478149414,
+        "p99": 45.35157928466794
+      }
+    },
+    "earthQuality": {
+      "numClassesAtPreparedCenters": {
+        "1": 2,
+        "2": 97,
+        "3": 1
+      },
+      "swbClassesAtPreparedCenters": {
+        "0": 100
+      },
+      "interpretation": "Nearest source classification samples at prepared-cell centers; not counts of independent ground observations. Class decoding/independent source audit remains pending."
+    }
+  },
+  {
+    "name": "shift-southwest",
+    "kernel": "average",
+    "offsetM": [
+      -250,
+      -250
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-atacama",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 7.5619918012345,
+        "p90SlopeDeg": 10.030377972012456,
+        "roughnessM": 3.1504444373343,
+        "reliefM": 675.347412109375,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "s25w070.hgt",
+            "name": "NASADEM HGT V001",
+            "url": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+            "version": "V001 supplied archive; independent verification pending",
+            "nativeResolutionM": 31.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=2d034b13e7edeb3cbbed5e5a03661387b3e3445940fb219def9fb023ccdf9b7a; raster bounds (471921.3864, 7287641.7743, 476921.3864, 7292641.7743); resampling=average; input SHA256=23c81aeedf2bdb8e537a28a002722ddbe377da698bad1f372e61d1b12b81ff27,e0524a7bf07c54f947648cf320009161156834fe7e4636c7af55efd6e89d280f,a5566df5920e147ae1f50a45ceca1f0b86333b4cc9c62dcfedd65b7a13a9036f",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 11.875693480276711,
+        "p90SlopeDeg": 18.65332670115616,
+        "roughnessM": 10.091161578932965,
+        "reliefM": 1173.782470703125,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=cdfad11c60039dfe1cfe8ccfad613ef847a35555567aec61b733da01b7a7bb5d; raster bounds (-2750.0, 42737.6237, 2250.0, 47737.6237); resampling=average; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32719",
+        "bounds": {
+          "west": -69.2771974608155,
+          "south": -24.524872059462663,
+          "east": -69.2277554650044,
+          "north": -24.479631517166496
+        },
+        "projectedBounds": [
+          471921.38644368434,
+          7287641.774321514,
+          476921.38644368434,
+          7292641.774321514
+        ],
+        "sha256": "2d034b13e7edeb3cbbed5e5a03661387b3e3445940fb219def9fb023ccdf9b7a",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -3.68168510337727,
+          "south": -88.59067436969775,
+          "east": 3.013658361182136,
+          "north": -88.42320361947378
+        },
+        "projectedBounds": [
+          -2750.0,
+          42737.62372638483,
+          2250.0,
+          47737.62372638483
+        ],
+        "sha256": "cdfad11c60039dfe1cfe8ccfad613ef847a35555567aec61b733da01b7a7bb5d",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 59035.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 29.03152370452881,
+        "p99": 44.8882619857787
+      }
+    },
+    "earthQuality": {
+      "numClassesAtPreparedCenters": {
+        "2": 98,
+        "3": 2
+      },
+      "swbClassesAtPreparedCenters": {
+        "0": 100
+      },
+      "interpretation": "Nearest source classification samples at prepared-cell centers; not counts of independent ground observations. Class decoding/independent source audit remains pending."
+    }
+  }
+]

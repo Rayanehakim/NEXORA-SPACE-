@@ -1,0 +1,320 @@
+{
+  "version": "local-catalog-qa-v1",
+  "status": "PROVISIONAL_QA",
+  "scorePublicationApproved": false,
+  "selection": {
+    "earthSiteId": "earth-haughton",
+    "targetId": "moon-south-pole"
+  },
+  "earthName": "Haughton",
+  "targetName": "Moon / south pole",
+  "targetBody": "moon",
+  "study": {
+    "cellSizeM": 500,
+    "pixels": 10,
+    "footprintWidthM": 5000,
+    "roughnessWindowM": 1500,
+    "earthCenter": {
+      "latitude": 75.38,
+      "longitude": -89.67
+    },
+    "targetCenter": {
+      "latitude": -88.5,
+      "longitude": 0
+    },
+    "earthCrs": "EPSG:3413",
+    "targetCrs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs"
+  },
+  "bounds": {
+    "earth": {
+      "west": -89.79723870526885,
+      "south": 75.34787172145998,
+      "east": -89.54276454957483,
+      "north": 75.41213049747648
+    },
+    "target": {
+      "west": -3.32836005861209,
+      "south": -88.58243135168352,
+      "east": 3.32836005861209,
+      "north": -88.41542451420447
+    }
+  },
+  "metrics": [
+    {
+      "id": "meanSlopeDeg",
+      "label": "Mean slope",
+      "unit": "deg",
+      "earthBaseline": 1.411693313303004,
+      "targetBaseline": 12.605634750840563,
+      "earthRange": [
+        1.2401326219247177,
+        1.7013710435694083
+      ],
+      "targetRange": [
+        11.875693480276711,
+        13.344095989123675
+      ]
+    },
+    {
+      "id": "p90SlopeDeg",
+      "label": "P90 slope",
+      "unit": "deg",
+      "earthBaseline": 2.3746733447724444,
+      "targetBaseline": 18.679266872562017,
+      "earthRange": [
+        2.072780870289511,
+        2.9904880268360157
+      ],
+      "targetRange": [
+        18.65332670115616,
+        20.325977105702197
+      ]
+    },
+    {
+      "id": "roughnessM",
+      "label": "Residual roughness",
+      "unit": "m",
+      "earthBaseline": 7.19913880679969,
+      "targetBaseline": 10.247467762283465,
+      "earthRange": [
+        5.605779748681776,
+        10.177199578235356
+      ],
+      "targetRange": [
+        9.473361638931895,
+        12.003212723171664
+      ]
+    },
+    {
+      "id": "reliefM",
+      "label": "Relief",
+      "unit": "m",
+      "earthBaseline": 101.2856216430664,
+      "targetBaseline": 1206.6634216308594,
+      "earthRange": [
+        93.33733367919922,
+        114.765625
+      ],
+      "targetRange": [
+        1173.782470703125,
+        1236.2383422851562
+      ]
+    }
+  ],
+  "targetQuality": {
+    "kind": "LOLA",
+    "supported": true,
+    "nativeBinCount": 3906,
+    "validCountFraction": 1.0,
+    "positiveCountBins": 3901,
+    "positiveCountFraction": 0.9987199180747568,
+    "countWeightSum": 59149.0,
+    "effectiveResolutionValidFraction": 1.0,
+    "effectiveResolutionM": {
+      "min": 10.555647850036621,
+      "max": 80.88604736328125,
+      "p90": 28.97617530822754,
+      "p99": 44.8882619857787
+    }
+  },
+  "earthQuality": {
+    "earthCount": {
+      "validFraction": 1.0,
+      "min": 12.0,
+      "median": 15.0,
+      "max": 21.0
+    },
+    "earthMad": {
+      "validFraction": 1.0,
+      "min": 0.0625,
+      "median": 0.1171875,
+      "max": 0.8515625
+    }
+  },
+  "earthValidFraction": 1.0,
+  "targetValidFraction": 1.0,
+  "allScenariosSupported": true,
+  "sources": [
+    {
+      "role": "earthElevation",
+      "filename": "29_29_32m_v4.1_dem.tif",
+      "sha256": "3cdffa35db2ef7dcf55e127d110e1ae3bb734c275d81a79e7846a2e475b9f9e7",
+      "sizeBytes": 28511743,
+      "width": 3131,
+      "height": 3131,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / NSIDC Sea Ice Polar Stereographic North\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",70],PARAMETER[\"central_meridian\",-45],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",SOUTH],AXIS[\"Northing\",SOUTH],AUTHORITY[\"EPSG\",\"3413\"]]",
+      "bounds": [
+        -1200096.0,
+        -1200096.0,
+        -1099904.0,
+        -1099904.0
+      ],
+      "transform": [
+        32.0,
+        0.0,
+        -1200096.0,
+        0.0,
+        -32.0,
+        -1099904.0
+      ],
+      "nodata": -9999.0,
+      "embeddedUnits": null,
+      "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/",
+      "releaseVersionVerified": false
+    },
+    {
+      "role": "earthCount",
+      "filename": "29_29_32m_v4.1_count.tif",
+      "sha256": "a5b63053cae834e8de5b4eb503f0c49da7f9986b7564759ccc8878fe6ce27739",
+      "sizeBytes": 1389191,
+      "width": 3131,
+      "height": 3131,
+      "dtype": "uint8",
+      "crs": "PROJCS[\"WGS 84 / NSIDC Sea Ice Polar Stereographic North\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",70],PARAMETER[\"central_meridian\",-45],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",SOUTH],AXIS[\"Northing\",SOUTH],AUTHORITY[\"EPSG\",\"3413\"]]",
+      "bounds": [
+        -1200096.0,
+        -1200096.0,
+        -1099904.0,
+        -1099904.0
+      ],
+      "transform": [
+        32.0,
+        0.0,
+        -1200096.0,
+        0.0,
+        -32.0,
+        -1099904.0
+      ],
+      "nodata": 0.0,
+      "embeddedUnits": null,
+      "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/",
+      "releaseVersionVerified": false
+    },
+    {
+      "role": "earthMad",
+      "filename": "29_29_32m_v4.1_mad.tif",
+      "sha256": "b1d8833bebb9c01d1f09c0f59d57ef08eec9f7fa0d39b05aca5e67a3b38d3082",
+      "sizeBytes": 21389455,
+      "width": 3131,
+      "height": 3131,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / NSIDC Sea Ice Polar Stereographic North\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",70],PARAMETER[\"central_meridian\",-45],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",SOUTH],AXIS[\"Northing\",SOUTH],AUTHORITY[\"EPSG\",\"3413\"]]",
+      "bounds": [
+        -1200096.0,
+        -1200096.0,
+        -1099904.0,
+        -1099904.0
+      ],
+      "transform": [
+        32.0,
+        0.0,
+        -1200096.0,
+        0.0,
+        -32.0,
+        -1099904.0
+      ],
+      "nodata": -9999.0,
+      "embeddedUnits": null,
+      "sourceUrl": "https://www.pgc.umn.edu/data/arcticdem/",
+      "releaseVersionVerified": false
+    },
+    {
+      "role": "moonElevation",
+      "filename": "LDEM_80S_80MPP_ADJ.tiff",
+      "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+      "sizeBytes": 189158392,
+      "width": 7600,
+      "height": 7600,
+      "dtype": "float32",
+      "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+      "bounds": [
+        -304000.0,
+        -304000.0,
+        304000.0,
+        304000.0
+      ],
+      "transform": [
+        80.0,
+        0.0,
+        -304000.0,
+        0.0,
+        -80.0,
+        304000.0
+      ],
+      "nodata": "NaN",
+      "embeddedUnits": null,
+      "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+      "releaseVersionVerified": false
+    },
+    {
+      "role": "moonCounts",
+      "filename": "LDEC_80S_80MPP_ADJ.tiff",
+      "sha256": "7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8",
+      "sizeBytes": 115657642,
+      "width": 7600,
+      "height": 7600,
+      "dtype": "float32",
+      "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+      "bounds": [
+        -304000.0,
+        -304000.0,
+        304000.0,
+        304000.0
+      ],
+      "transform": [
+        80.0,
+        0.0,
+        -304000.0,
+        0.0,
+        -80.0,
+        304000.0
+      ],
+      "nodata": "NaN",
+      "embeddedUnits": null,
+      "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+      "releaseVersionVerified": false
+    },
+    {
+      "role": "moonEffectiveResolution",
+      "filename": "LDEM_80S_80MPP_ADJ_EFFRES.tiff",
+      "sha256": "7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+      "sizeBytes": 250228467,
+      "width": 7600,
+      "height": 7600,
+      "dtype": "float32",
+      "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+      "bounds": [
+        -304000.0,
+        -304000.0,
+        304000.0,
+        304000.0
+      ],
+      "transform": [
+        80.0,
+        0.0,
+        -304000.0,
+        0.0,
+        -80.0,
+        304000.0
+      ],
+      "nodata": "NaN",
+      "embeddedUnits": null,
+      "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+      "releaseVersionVerified": false
+    }
+  ],
+  "earthAttribution": "ArcticDEM DEMs, Polar Geospatial Center, University of Minnesota, NGA/NSF; CC BY 4.0. Modified by reprojection, resampling and terrain-descriptor extraction. https://www.pgc.umn.edu/data/arcticdem/",
+  "targetAttribution": "NASA GSFC PGDA, Barker et al. (2023), https://doi.org/10.3847/psj/acf3e1",
+  "limitations": [
+    "Locally reproduced from supplied files; original archive authenticity and independent scientific review remain pending.",
+    "All trials use fixed catalog-centered 5 km squares, 500 m cells and 1500 m roughness windows; these are proposed settings, not validated analog or landing sites.",
+    "MOLA elevation interpolates unobserved bins; a complete DEM is not complete direct-shot coverage. LOLA counts can be fractional tile-blending weights.",
+    "Native count coverage is not measurement accuracy. Lunar effective resolution describes sampling support, not an error bar.",
+    "Surface models may include snow, ice, vegetation or processing artifacts. NASADEM companion classes remain classification evidence, not independent shot counts.",
+    "Only within-window slope, roughness and relief are compared; absolute elevations use different vertical datums.",
+    "Five processing-scenario ranges are sensitivity summaries, not statistical confidence intervals.",
+    "A 10 by 10 grid captures broad terrain only; no drone-scale obstacles, operational suitability or automatic best candidate are established.",
+    "No compatibility score is published before review; ECHO remains an Earth-based procedural demonstration."
+  ]
+}

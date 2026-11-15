@@ -10,12 +10,12 @@ test('five Earth sites and both planetary bodies have source discovery plans',()
     assert.ok(src.dataset && src.searchHint && /^https:\/\//.test(src.collectionUrl));
   }
 });
-test('both reviewed Mars pairs are provisional and never scored',()=>{
-  assert.equal(plan.processedPairs.length,2);
+test('all ten local trials are provisional and never scored',()=>{
+  assert.equal(plan.processedPairs.length,10);
   const pairKeys=plan.processedPairs.map(x=>`${x.earthSiteId}:${x.targetId}`).sort();
-  assert.deepEqual(pairKeys,['earth-atacama:mars-jezero','earth-erfoud:mars-jezero']);
+  assert.deepEqual(pairKeys,Object.keys(plan.earthSources).flatMap(site=>Object.keys(plan.targetSources).map(target=>`${site}:${target}`)).sort());
   for(const row of plan.processedPairs){
     assert.equal(row.status,'PROVISIONAL_QA');
-    assert.equal(row.scorePublished,false);
+    assert.equal(row.scorePublished,false);assert.equal(row.locallyReproduced,true);
   }
 });

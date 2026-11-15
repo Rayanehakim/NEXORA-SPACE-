@@ -1,0 +1,23 @@
+{
+  "regionId": "earth-askja",
+  "body": "earth",
+  "algorithmVersion": "terrain-descriptors-v1-grid-1",
+  "scaleM": 320.0,
+  "meanSlopeDeg": 5.878734483481402,
+  "p90SlopeDeg": 14.916998219406745,
+  "roughnessM": 10.277842955621612,
+  "reliefM": 726.619873046875,
+  "validFraction": 1.0,
+  "dataStatus": "READY",
+  "provenance": [
+    {
+      "sourceId": "COPERNICUS-ASKJA-N64-N65",
+      "name": "Copernicus GLO-30 surface model",
+      "url": "https://doi.org/10.5270/ESA-c5d3d65",
+      "version": "user-provided GeoTIFF; original release version unverified",
+      "nativeResolutionM": 30.96048340943445,
+      "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 960m local least-squares plane detrending; complete windows; GeoTIFF SHA256=6ca8235a5446deb843ddb786ca8b071db3161f22a55b32a16293009f157a79bc; raster bounds (412456.6537, 7207819.2326, 422696.6537, 7218059.2326); resampling=average; raw source SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+      "evidenceType": "MEASURED"
+    }
+  ]
+}

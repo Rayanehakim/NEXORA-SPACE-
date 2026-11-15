@@ -1,0 +1,23 @@
+{
+  "regionId": "earth-haughton",
+  "body": "earth",
+  "algorithmVersion": "terrain-descriptors-v1-grid-1",
+  "scaleM": 500.0,
+  "meanSlopeDeg": 1.411693313303004,
+  "p90SlopeDeg": 2.3746733447724444,
+  "roughnessM": 7.19913880679969,
+  "reliefM": 101.2856216430664,
+  "validFraction": 1.0,
+  "dataStatus": "READY",
+  "provenance": [
+    {
+      "sourceId": "29_29_32m_v4.1_dem.tif",
+      "name": "ArcticDEM surface mosaic",
+      "url": "https://www.pgc.umn.edu/data/arcticdem/",
+      "version": "Metadata-reported 4.1; original archive unverified",
+      "nativeResolutionM": 32.0,
+      "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=3e5dba1c0ceb881987447c453364cbc981fc37ab94be06646eefcbfbfe6ca286; raster bounds (-1121745.1426, -1134712.7526, -1116745.1426, -1129712.7526); resampling=average; input SHA256=3cdffa35db2ef7dcf55e127d110e1ae3bb734c275d81a79e7846a2e475b9f9e7,a5b63053cae834e8de5b4eb503f0c49da7f9986b7564759ccc8878fe6ce27739,b1d8833bebb9c01d1f09c0f59d57ef08eec9f7fa0d39b05aca5e67a3b38d3082",
+      "evidenceType": "MEASURED"
+    }
+  ]
+}

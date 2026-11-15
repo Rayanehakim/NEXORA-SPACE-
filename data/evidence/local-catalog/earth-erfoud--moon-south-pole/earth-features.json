@@ -1,0 +1,23 @@
+{
+  "regionId": "earth-erfoud",
+  "body": "earth",
+  "algorithmVersion": "terrain-descriptors-v1-grid-1",
+  "scaleM": 500.0,
+  "meanSlopeDeg": 0.8985188611831255,
+  "p90SlopeDeg": 2.8218386004413833,
+  "roughnessM": 4.3090862401777885,
+  "reliefM": 128.359619140625,
+  "validFraction": 1.0,
+  "dataStatus": "READY",
+  "provenance": [
+    {
+      "sourceId": "n31w005.hgt",
+      "name": "NASADEM HGT V001",
+      "url": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "version": "V001 supplied archive; independent verification pending",
+      "nativeResolutionM": 31.0,
+      "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=0b22348a9f7fe07e66b2b94e804ef08cb0733461b11bfb51d1d2fcaeffe1ff82; raster bounds (380602.8215, 3475412.6852, 385602.8215, 3480412.6852); resampling=average; input SHA256=4ab73847aec15250194d3db11855b5bc0f11b8b07ec31bc1b6dd855b300adab9,10304da5e2ebe06e658ae257a8d721c36a378cea810afa06f886fe711f2a3e03,d5fd1560bb919d5d26c3c802a5b252aa1c7a364998885d3459e72dfe8dee2796",
+      "evidenceType": "MEASURED"
+    }
+  ]
+}

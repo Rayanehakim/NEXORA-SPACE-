@@ -1,0 +1,142 @@
+[
+  {
+    "role": "earthSouth",
+    "filename": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+    "sha256": "ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4",
+    "sizeBytes": 19059689,
+    "width": 1800,
+    "height": 3600,
+    "dtype": "float32",
+    "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+    "bounds": [
+      -17.00027777777778,
+      64.00013888888888,
+      -16.00027777777778,
+      65.00013888888888
+    ],
+    "transform": [
+      0.0005555555555555556,
+      0.0,
+      -17.00027777777778,
+      0.0,
+      -0.0002777777777777778,
+      65.00013888888888
+    ],
+    "nodata": null,
+    "embeddedUnits": null,
+    "sourceUrl": "https://doi.org/10.5270/ESA-c5d3d65",
+    "releaseVersionVerified": false
+  },
+  {
+    "role": "earthNorth",
+    "filename": "Copernicus_DSM_COG_10_N65_00_W017_00_DEM.tif",
+    "sha256": "1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+    "sizeBytes": 20729649,
+    "width": 1800,
+    "height": 3600,
+    "dtype": "float32",
+    "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+    "bounds": [
+      -17.00027777777778,
+      65.00013888888888,
+      -16.00027777777778,
+      66.00013888888888
+    ],
+    "transform": [
+      0.0005555555555555556,
+      0.0,
+      -17.00027777777778,
+      0.0,
+      -0.0002777777777777778,
+      66.00013888888888
+    ],
+    "nodata": null,
+    "embeddedUnits": null,
+    "sourceUrl": "https://doi.org/10.5270/ESA-c5d3d65",
+    "releaseVersionVerified": false
+  },
+  {
+    "role": "moonElevation",
+    "filename": "LDEM_80S_80MPP_ADJ.tiff",
+    "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+    "sizeBytes": 189158392,
+    "width": 7600,
+    "height": 7600,
+    "dtype": "float32",
+    "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "bounds": [
+      -304000.0,
+      -304000.0,
+      304000.0,
+      304000.0
+    ],
+    "transform": [
+      80.0,
+      0.0,
+      -304000.0,
+      0.0,
+      -80.0,
+      304000.0
+    ],
+    "nodata": "NaN",
+    "embeddedUnits": null,
+    "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+    "releaseVersionVerified": false
+  },
+  {
+    "role": "moonCounts",
+    "filename": "LDEC_80S_80MPP_ADJ.tiff",
+    "sha256": "7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8",
+    "sizeBytes": 115657642,
+    "width": 7600,
+    "height": 7600,
+    "dtype": "float32",
+    "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "bounds": [
+      -304000.0,
+      -304000.0,
+      304000.0,
+      304000.0
+    ],
+    "transform": [
+      80.0,
+      0.0,
+      -304000.0,
+      0.0,
+      -80.0,
+      304000.0
+    ],
+    "nodata": "NaN",
+    "embeddedUnits": null,
+    "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+    "releaseVersionVerified": false
+  },
+  {
+    "role": "moonEffectiveResolution",
+    "filename": "LDEM_80S_80MPP_ADJ_EFFRES.tiff",
+    "sha256": "7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+    "sizeBytes": 250228467,
+    "width": 7600,
+    "height": 7600,
+    "dtype": "float32",
+    "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "bounds": [
+      -304000.0,
+      -304000.0,
+      304000.0,
+      304000.0
+    ],
+    "transform": [
+      80.0,
+      0.0,
+      -304000.0,
+      0.0,
+      -80.0,
+      304000.0
+    ],
+    "nodata": "NaN",
+    "embeddedUnits": null,
+    "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+    "releaseVersionVerified": false
+  }
+]

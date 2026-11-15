@@ -1,0 +1,10 @@
+{
+  "version": "askja-moon-study-v1",
+  "earthCenter": {"latitude": 65.03, "longitude": -16.75},
+  "moonCenter": {"latitude": -88.5, "longitude": 0},
+  "earthCrs": "EPSG:32628",
+  "cellSizeM": 320,
+  "pixels": 32,
+  "roughnessCells": 3,
+  "purpose": "Proposed catalog-centered Askja patch and explicit lunar south-polar reference window. Fixed trial settings, not an optimized candidate or validated landing region."
+}

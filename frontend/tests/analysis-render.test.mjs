@@ -24,7 +24,7 @@ test('analysis renders ready and incomplete states without showing null as zero,
   const view=await mount(React.createElement(AnalysisDashboard,{target,site,comparison:null}));
   try{
     assert.equal(view.host.querySelector('.index-readout strong').textContent,'—');
-    assert.match(view.host.textContent,/Source verification and reproduction pending/);
+    assert.match(view.host.textContent,/Locally reproduced/);
     assert.equal(view.host.querySelector('.terrain-evidence-qa').open,false);
     await view.render(React.createElement(AnalysisDashboard,{target,site,comparison:ready()}));
     assert.equal(view.host.querySelector('.index-readout strong').textContent,'90.0');
@@ -46,7 +46,7 @@ test('report renders survey observations, rejects objective mismatches, and down
     const download=[...view.host.querySelectorAll('button')].find(button=>button.textContent.includes('Download'));
     await act(async()=>download.click());assert.equal(clicked,true);
     const exported=JSON.parse(await saved.text());assert.equal(exported.comparison.score,90);assert.equal(exported.simulation.observations.length,1);
-    assert.equal(exported.terrainEvidenceQA.status,'PROVISIONAL_QA');
+    assert.equal(exported.terrainEvidenceQA,null);assert.equal(exported.importedTerrainQA.status,'PROVISIONAL_QA');
     const details=view.host.querySelector('.terrain-evidence-qa');assert.equal(details.open,false);
     window.dispatchEvent(new window.Event('beforeprint'));assert.equal(details.open,true);
     window.dispatchEvent(new window.Event('beforeprint'));window.dispatchEvent(new window.Event('afterprint'));assert.equal(details.open,false);
@@ -79,4 +79,41 @@ test('a stale comparison response cannot leak into another mission selection',as
     await act(async()=>requests[1].resolve(new Response('',{status:404})));assert.match(view.host.textContent,/missing:none/);
   }finally{globalThis.fetch=originalFetch;await view.close()}
 });
+
+test('imported QA follows Askja target changes and is retained in the report without a score',async()=>{
+  const askja=sites.find(site=>site.id==='earth-askja'),moon=targets.find(target=>target.id==='moon-south-pole');
+  const view=await mount(React.createElement(AnalysisDashboard,{site:askja,target:moon,comparison:null}));
+  try{
+    assert.equal(view.host.querySelector('.index-readout strong').textContent,'—');
+    assert.ok(view.host.querySelector('.imported-terrain-qa'));
+    assert.match(view.host.textContent,/Native LOLA bins with nonzero counts/);
+    assert.match(view.host.textContent,/Copernicus WorldDEM-30/);
+    assert.doesNotMatch(view.host.querySelector('.imported-terrain-qa').textContent,/Native MOLA bins with nonzero counts/);
+    const exported=makeMissionExport({site:askja,target:moon,comparison:null,simulation:null},'terrain_mobility');
+    assert.equal(exported.comparison.score,null);assert.equal(exported.importedTerrainQA.sources.length,5);
+    assert.equal(exported.importedTerrainQA.scorePublicationApproved,false);
+    await view.render(React.createElement(AnalysisDashboard,{site:askja,target,comparison:null}));
+    assert.ok(view.host.querySelector('.imported-terrain-qa'));
+    assert.equal(makeMissionExport({site:askja,target,comparison:null,simulation:null},'terrain_mobility').importedTerrainQA.selection.targetId,target.id);
+  }finally{await view.close()}
+});
+test('all ten selections keep evidence and JSON export scoped to their exact Earth and target IDs',async()=>{
+  const view=await mount(React.createElement(AnalysisDashboard,{site:sites[0],target:targets[0],comparison:null}));
+  try{
+    for(const site of sites)for(const selectedTarget of targets){
+      await view.render(React.createElement(AnalysisDashboard,{site,target:selectedTarget,comparison:null}));
+      const expected=true;
+      assert.equal(!!view.host.querySelector('.imported-terrain-qa'),expected,`${site.id}/${selectedTarget.id}`);
+      const exported=makeMissionExport({site,target:selectedTarget,comparison:null,simulation:null},'terrain_mobility');
+      assert.equal(exported.comparison.score,null);assert.equal(exported.terrainEvidenceQA,null);
+      assert.equal(!!exported.importedTerrainQA,expected);
+      if(expected){
+        assert.equal(exported.importedTerrainQA.selection.earthSiteId,site.id);
+        assert.equal(exported.importedTerrainQA.selection.targetId,selectedTarget.id);
+        assert.match(view.host.querySelector('.imported-terrain-qa summary strong').textContent,new RegExp(exported.importedTerrainQA.earthName));
+      }
+    }
+  }finally{await view.close()}
+});
+
 after(()=>dom.window.close());

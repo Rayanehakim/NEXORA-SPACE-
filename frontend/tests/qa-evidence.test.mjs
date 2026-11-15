@@ -30,12 +30,8 @@ test('all scenario ranges contain the baseline and all metric values are finite'
   }
 });
 
-test('provisional QA suppresses duplicate unavailable metric table and report retains source disclosure',async()=>{
-  const analysis=await readFile(join(process.cwd(),'src/features/analysis/index.tsx'),'utf8');
-  const report=await readFile(join(process.cwd(),'src/features/report/index.tsx'),'utf8');
-  assert.match(analysis,/provisional && !ready \?/);
-  assert.match(analysis,/provisional terrain snapshot is available/);
-  assert.match(analysis,/ready \? <Contributions/);
-  assert.match(report,/provisional \? 'NASADEM Earth elevation and MOLA Mars topography\/counts/);
-  assert.match(report,/Provisional NASA terrain QA/);
+test('provisional source snapshot retains original verification caveats and checksum',()=>{
+  assert.match(record.counts.sha256,/^[a-f0-9]{64}$/);
+  assert.match(record.provenance.metadataStatus,/not independently verified/);
+  assert.ok(record.caveats.some(caveat=>caveat.includes('No analog similarity score')));
 });

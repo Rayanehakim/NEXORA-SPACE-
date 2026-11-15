@@ -8,7 +8,7 @@ export function coverageForSelection(earthSiteId: string | null | undefined, tar
   const target = (plan.targetSources as Record<string, typeof plan.targetSources['mars-jezero']>)[targetId];
   if (!earth || !target) return null;
   const processed = plan.processedPairs.find(row => row.earthSiteId === earthSiteId && row.targetId === targetId);
-  return { earth, target, status: (processed?.status ?? 'NOT_ACQUIRED') as CoverageStatus, measured: !!processed };
+  return { earth, target, status: (processed?.status ?? 'NOT_ACQUIRED') as CoverageStatus, measured: !!processed, locallyReproduced: processed?.locallyReproduced ?? false };
 }
 
 export function EvidenceCoverage({earthSiteId,targetId,compact=false}: {
@@ -24,7 +24,7 @@ export function EvidenceCoverage({earthSiteId,targetId,compact=false}: {
       <span className="data-chip">{plan.processedPairs.length} / {Object.keys(plan.earthSources).length * Object.keys(plan.targetSources).length} PAIRS WITH PROVISIONAL QA</span>
     </div>
     <p>{current.measured
-      ? 'This pair has provisional NASA terrain measurements shown above. No validated similarity score is published.'
+      ? current.locallyReproduced ? 'This pair has locally reproduced provisional terrain QA. Independent source and scientific review remain pending; no approved score is published.' : 'This pair has a prior provisional snapshot. Original rasters are absent from this checkout and reproduction remains pending; no approved score is published.'
       : 'This selected pair has no measured, matched terrain comparison yet. The sources below are a research acquisition plan—not evidence that measurements have been downloaded.'}</p>
     <div className="coverage-sources">
       <div><strong>Earth source to evaluate</strong><span>{current.earth.dataset}</span><small>{current.earth.searchHint}</small>
@@ -33,5 +33,6 @@ export function EvidenceCoverage({earthSiteId,targetId,compact=false}: {
         <a href={current.target.collectionUrl} target="_blank" rel="noopener noreferrer">Find planetary data ↗</a></div>
     </div>
     {!compact && <p className="panel-caption">{current.earth.note} {current.target.note} Candidate pins are approximate, not validated study boundaries.</p>}
+    {!compact && <details className="model-details"><summary>All ten combinations · {plan.processedPairs.filter(pair=>pair.locallyReproduced).length} reproduced trials</summary><div className="qa-metric-wrap"><table className="qa-metrics"><thead><tr><th scope="col">Earth candidate</th><th scope="col">Mars · Jezero</th><th scope="col">Moon · south pole</th></tr></thead><tbody>{Object.keys(plan.earthSources).map(site=><tr key={site}><th scope="row">{site.slice(6).replace('mcmurdo','McMurdo').replace(/^./,letter=>letter.toUpperCase())}</th>{['mars-jezero','moon-south-pole'].map(target=>{const pair=coverageForSelection(site,target);return <td key={target}>{pair?.locallyReproduced?'Reproduced · review pending':pair?.measured?'Prior snapshot · not reproduced':'Missing source rasters'}</td>})}</tr>)}</tbody></table></div><p className="panel-caption">All current trials use matched 5 km squares, 500 m cells and 1500 m roughness windows. Source QA and descriptor extraction are locally reproduced; independent scientific review still gates publication of a compatibility index.</p></details>}
   </section>;
 }

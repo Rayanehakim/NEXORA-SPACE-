@@ -1,0 +1,36 @@
+{
+  "version": "analysis-plan-v1",
+  "definitionsVersion": "terrain-descriptors-v1",
+  "regions": [
+    {
+      "regionId": "earth-askja",
+      "body": "earth",
+      "bounds": {
+        "west": -16.861841432030747,
+        "south": 64.98277218957318,
+        "east": -16.638531737939346,
+        "north": 65.07715383708667
+      },
+      "crs": "EPSG:32628",
+      "horizontalUnit": "m",
+      "footprintWidthM": 10240.0,
+      "footprintHeightM": 10240.0,
+      "roughnessWindowM": 960
+    },
+    {
+      "regionId": "moon-south-pole",
+      "body": "moon",
+      "bounds": {
+        "west": -7.22847462199135,
+        "south": -88.66882098129099,
+        "east": 7.22847462199135,
+        "north": -88.32266793186923
+      },
+      "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+      "horizontalUnit": "m",
+      "footprintWidthM": 10240.0,
+      "footprintHeightM": 10240.0,
+      "roughnessWindowM": 960
+    }
+  ]
+}

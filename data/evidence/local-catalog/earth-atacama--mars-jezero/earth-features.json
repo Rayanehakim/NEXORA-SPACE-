@@ -1,0 +1,23 @@
+{
+  "regionId": "earth-atacama",
+  "body": "earth",
+  "algorithmVersion": "terrain-descriptors-v1-grid-1",
+  "scaleM": 500.0,
+  "meanSlopeDeg": 8.14878516355822,
+  "p90SlopeDeg": 11.06208057708606,
+  "roughnessM": 3.6208550126390264,
+  "reliefM": 728.078125,
+  "validFraction": 1.0,
+  "dataStatus": "READY",
+  "provenance": [
+    {
+      "sourceId": "s25w070.hgt",
+      "name": "NASADEM HGT V001",
+      "url": "https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001",
+      "version": "V001 supplied archive; independent verification pending",
+      "nativeResolutionM": 31.0,
+      "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=7be4270e4806f25d4026ec8b38cee1b05050d63af4fff71e35bfdb26719480e7; raster bounds (472171.3864, 7287891.7743, 477171.3864, 7292891.7743); resampling=average; input SHA256=23c81aeedf2bdb8e537a28a002722ddbe377da698bad1f372e61d1b12b81ff27,e0524a7bf07c54f947648cf320009161156834fe7e4636c7af55efd6e89d280f,a5566df5920e147ae1f50a45ceca1f0b86333b4cc9c62dcfedd65b7a13a9036f",
+      "evidenceType": "MEASURED"
+    }
+  ]
+}

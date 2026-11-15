@@ -1,0 +1,23 @@
+{
+  "regionId": "earth-mcmurdo",
+  "body": "earth",
+  "algorithmVersion": "terrain-descriptors-v1-grid-1",
+  "scaleM": 500.0,
+  "meanSlopeDeg": 15.867219334054067,
+  "p90SlopeDeg": 23.993211971561145,
+  "roughnessM": 26.286380131817943,
+  "reliefM": 1341.6715621948242,
+  "validFraction": 1.0,
+  "dataStatus": "READY",
+  "provenance": [
+    {
+      "sourceId": "18_35_32m_v2.0_dem.tif",
+      "name": "REMA surface mosaic",
+      "url": "https://www.pgc.umn.edu/data/rema/",
+      "version": "Metadata-reported 2.0; original archive unverified",
+      "nativeResolutionM": 32.0,
+      "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=eaf5bdf2a46f63e78b23070e30670b917d4916b3324ad0409e8b555fa49bc091; raster bounds (418798.4617, -1299123.3398, 423798.4617, -1294123.3398); resampling=average; input SHA256=b54c3fec2e5dc056ce2bd2614e758ccd89dac7bffdd36d07e3c5aa996f900b4b,1fa7d5be8efb3a21307c743ee8e6628573c34cd173dcc418bb4ad983ddcd2c8b,f29b50e225a39bb5d784b6fd261b594fda5dad5c6cb70a8120bce1272bea3428",
+      "evidenceType": "MEASURED"
+    }
+  ]
+}

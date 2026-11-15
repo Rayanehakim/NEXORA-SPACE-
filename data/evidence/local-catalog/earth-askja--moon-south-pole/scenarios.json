@@ -1,0 +1,547 @@
+[
+  {
+    "name": "average",
+    "kernel": "average",
+    "offsetM": [
+      0,
+      0
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.60590674187026,
+        "p90SlopeDeg": 15.282709459781039,
+        "roughnessM": 15.418512302099852,
+        "reliefM": 334.3079833984375,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=66aeb9fed1dd9ad9418cb143ac4083f008b2e19b0a4556de31afefa971c8e5ae; raster bounds (415076.6537, 7210439.2326, 420076.6537, 7215439.2326); resampling=average; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 12.605634750840563,
+        "p90SlopeDeg": 18.679266872562017,
+        "roughnessM": 10.247467762283465,
+        "reliefM": 1206.6634216308594,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=f0049878d850f6f36846d9767e7401cd6e01dcbaf2c4f04a67a1c21c2e315648; raster bounds (-2500.0, 42987.6237, 2500.0, 47987.6237); resampling=average; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.804563373434796,
+          "south": 65.00694875747972,
+          "east": -16.695525597247254,
+          "north": 65.0530336059402
+        },
+        "projectedBounds": [
+          415076.6537433248,
+          7210439.232584029,
+          420076.6537433248,
+          7215439.232584029
+        ],
+        "sha256": "66aeb9fed1dd9ad9418cb143ac4083f008b2e19b0a4556de31afefa971c8e5ae",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -3.32836005861209,
+          "south": -88.58243135168352,
+          "east": 3.32836005861209,
+          "north": -88.41542451420447
+        },
+        "projectedBounds": [
+          -2500.0,
+          42987.62372638483,
+          2500.0,
+          47987.62372638483
+        ],
+        "sha256": "f0049878d850f6f36846d9767e7401cd6e01dcbaf2c4f04a67a1c21c2e315648",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 59149.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 28.97617530822754,
+        "p99": 44.8882619857787
+      }
+    },
+    "earthQuality": null
+  },
+  {
+    "name": "bilinear",
+    "kernel": "bilinear",
+    "offsetM": [
+      0,
+      0
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.458543944720253,
+        "p90SlopeDeg": 14.11582345138324,
+        "roughnessM": 13.239001080493857,
+        "reliefM": 298.88037109375,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=e87cbc9d1a8ca2fcf4346740ceba18931afe7da4e49bf813fed16083b45642fc; raster bounds (415076.6537, 7210439.2326, 420076.6537, 7215439.2326); resampling=bilinear; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 12.592086621874914,
+        "p90SlopeDeg": 18.674591504273863,
+        "roughnessM": 9.473361638931895,
+        "reliefM": 1203.7123718261719,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=3da10672bc5013d9bf3648122b0230c34e8abf9c73df846e637d880beecf97bd; raster bounds (-2500.0, 42987.6237, 2500.0, 47987.6237); resampling=bilinear; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.804563373434796,
+          "south": 65.00694875747972,
+          "east": -16.695525597247254,
+          "north": 65.0530336059402
+        },
+        "projectedBounds": [
+          415076.6537433248,
+          7210439.232584029,
+          420076.6537433248,
+          7215439.232584029
+        ],
+        "sha256": "e87cbc9d1a8ca2fcf4346740ceba18931afe7da4e49bf813fed16083b45642fc",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -3.32836005861209,
+          "south": -88.58243135168352,
+          "east": 3.32836005861209,
+          "north": -88.41542451420447
+        },
+        "projectedBounds": [
+          -2500.0,
+          42987.62372638483,
+          2500.0,
+          47987.62372638483
+        ],
+        "sha256": "3da10672bc5013d9bf3648122b0230c34e8abf9c73df846e637d880beecf97bd",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 59149.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 28.97617530822754,
+        "p99": 44.8882619857787
+      }
+    },
+    "earthQuality": null
+  },
+  {
+    "name": "nearest",
+    "kernel": "nearest",
+    "offsetM": [
+      0,
+      0
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.782197296022561,
+        "p90SlopeDeg": 16.54582078539436,
+        "roughnessM": 18.34597818746689,
+        "reliefM": 367.297607421875,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=5d3f2abf26e3d5668e58298e15d361a03b724d810020cd955f6aa1c223943f55; raster bounds (415076.6537, 7210439.2326, 420076.6537, 7215439.2326); resampling=nearest; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 12.634647692896893,
+        "p90SlopeDeg": 18.694580757401557,
+        "roughnessM": 12.003212723171664,
+        "reliefM": 1219.6035461425781,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=dc8ff8ef4c9a3f784d854a378c0c5d13d2a6f257234eed692fd972e48f159ce0; raster bounds (-2500.0, 42987.6237, 2500.0, 47987.6237); resampling=nearest; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.804563373434796,
+          "south": 65.00694875747972,
+          "east": -16.695525597247254,
+          "north": 65.0530336059402
+        },
+        "projectedBounds": [
+          415076.6537433248,
+          7210439.232584029,
+          420076.6537433248,
+          7215439.232584029
+        ],
+        "sha256": "5d3f2abf26e3d5668e58298e15d361a03b724d810020cd955f6aa1c223943f55",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -3.32836005861209,
+          "south": -88.58243135168352,
+          "east": 3.32836005861209,
+          "north": -88.41542451420447
+        },
+        "projectedBounds": [
+          -2500.0,
+          42987.62372638483,
+          2500.0,
+          47987.62372638483
+        ],
+        "sha256": "dc8ff8ef4c9a3f784d854a378c0c5d13d2a6f257234eed692fd972e48f159ce0",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 59149.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 28.97617530822754,
+        "p99": 44.8882619857787
+      }
+    },
+    "earthQuality": null
+  },
+  {
+    "name": "shift-northeast",
+    "kernel": "average",
+    "offsetM": [
+      250,
+      250
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.292016384639757,
+        "p90SlopeDeg": 12.248145550045507,
+        "roughnessM": 15.11345275150461,
+        "reliefM": 347.8013916015625,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=0c38bc2294d8ed89ca635c09d244f90d5301dd1c1ea0e6ff9345cc876e76c308; raster bounds (415326.6537, 7210689.2326, 420326.6537, 7215689.2326); resampling=average; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 13.344095989123675,
+        "p90SlopeDeg": 20.325977105702197,
+        "roughnessM": 10.234793535951914,
+        "reliefM": 1236.2383422851562,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=076c048346db973aa60dad03fa8c3e29e51cda15735ee8de7f8aca99e9281c87; raster bounds (-2250.0, 43237.6237, 2750.0, 48237.6237); resampling=average; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.79940545972978,
+          "south": 65.00925467378254,
+          "east": -16.690366591310205,
+          "north": 65.05533599436447
+        },
+        "projectedBounds": [
+          415326.6537433248,
+          7210689.232584029,
+          420326.6537433248,
+          7215689.232584029
+        ],
+        "sha256": "0c38bc2294d8ed89ca635c09d244f90d5301dd1c1ea0e6ff9345cc876e76c308",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -2.978871541124375,
+          "south": -88.57418795213393,
+          "east": 3.63922516880085,
+          "north": -88.40674483504355
+        },
+        "projectedBounds": [
+          -2250.0,
+          43237.62372638483,
+          2750.0,
+          48237.62372638483
+        ],
+        "sha256": "076c048346db973aa60dad03fa8c3e29e51cda15735ee8de7f8aca99e9281c87",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 58815.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 29.182199478149414,
+        "p99": 45.35157928466794
+      }
+    },
+    "earthQuality": null
+  },
+  {
+    "name": "shift-southwest",
+    "kernel": "average",
+    "offsetM": [
+      -250,
+      -250
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.706564171173323,
+        "p90SlopeDeg": 13.987126276457845,
+        "roughnessM": 20.743412911876717,
+        "reliefM": 347.802978515625,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=160d285267f8325ff4c37f0e3cd4294b8ed7f59b32fe5fefcc8cdc575c0b3934; raster bounds (414826.6537, 7210189.2326, 419826.6537, 7215189.2326); resampling=average; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "moon-south-pole",
+        "body": "moon",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 11.875693480276711,
+        "p90SlopeDeg": 18.65332670115616,
+        "roughnessM": 10.091161578932965,
+        "reliefM": 1173.782470703125,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+            "name": "LOLA adjusted polar elevation",
+            "url": "https://pgda.gsfc.nasa.gov/products/90",
+            "version": "Supplied files; original release unverified",
+            "nativeResolutionM": 80.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=cdfad11c60039dfe1cfe8ccfad613ef847a35555567aec61b733da01b7a7bb5d; raster bounds (-2750.0, 42737.6237, 2250.0, 47737.6237); resampling=average; input SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a,7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8,7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.809720395927172,
+          "south": 65.00464266537057,
+          "east": -16.700683714984173,
+          "north": 65.05073104058945
+        },
+        "projectedBounds": [
+          414826.6537433248,
+          7210189.232584029,
+          419826.6537433248,
+          7215189.232584029
+        ],
+        "sha256": "160d285267f8325ff4c37f0e3cd4294b8ed7f59b32fe5fefcc8cdc575c0b3934",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +R=1737400 +units=m +no_defs",
+        "bounds": {
+          "west": -3.68168510337727,
+          "south": -88.59067436969775,
+          "east": 3.013658361182136,
+          "north": -88.42320361947378
+        },
+        "projectedBounds": [
+          -2750.0,
+          42737.62372638483,
+          2250.0,
+          47737.62372638483
+        ],
+        "sha256": "cdfad11c60039dfe1cfe8ccfad613ef847a35555567aec61b733da01b7a7bb5d",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "kind": "LOLA",
+      "supported": true,
+      "nativeBinCount": 3906,
+      "validCountFraction": 1.0,
+      "positiveCountBins": 3901,
+      "positiveCountFraction": 0.9987199180747568,
+      "countWeightSum": 59035.0,
+      "effectiveResolutionValidFraction": 1.0,
+      "effectiveResolutionM": {
+        "min": 10.555647850036621,
+        "max": 80.88604736328125,
+        "p90": 29.03152370452881,
+        "p99": 44.8882619857787
+      }
+    },
+    "earthQuality": null
+  }
+]

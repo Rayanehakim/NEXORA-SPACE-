@@ -1,0 +1,16 @@
+{
+  "version": "polar-moon-study-v1",
+  "earthCenter": {
+    "latitude": -77.5,
+    "longitude": 162
+  },
+  "moonCenter": {
+    "latitude": -88.5,
+    "longitude": 0
+  },
+  "earthCrs": "EPSG:3031",
+  "cellSizeM": 320,
+  "pixels": 16,
+  "roughnessCells": 3,
+  "purpose": "Explicit catalog-centered 5.12 km trial; not an optimized or validated analog site."
+}

@@ -34,3 +34,10 @@ data/processed/
 *.hgt
 *.img
 *.zip
+
+# Original polar DEM archives remain local.
+*.tar.gz
+
+# Supplied detached PDS labels are archived with evidence.
+/megt44n000hb.txt
+/megc44n000hb.txt

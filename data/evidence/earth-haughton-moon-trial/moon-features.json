@@ -1,0 +1,23 @@
+{
+  "regionId": "moon-south-pole",
+  "body": "moon",
+  "algorithmVersion": "terrain-descriptors-v1-grid-1",
+  "scaleM": 320.0,
+  "meanSlopeDeg": 12.821921942465163,
+  "p90SlopeDeg": 20.776214938748694,
+  "roughnessM": 5.366995027111694,
+  "reliefM": 1300.5011596679688,
+  "validFraction": 1.0,
+  "dataStatus": "READY",
+  "provenance": [
+    {
+      "sourceId": "LDEM_80S_80MPP_ADJ.tiff",
+      "name": "LOLA adjusted polar elevation",
+      "url": "https://pgda.gsfc.nasa.gov/products/90",
+      "version": "supplied file; original release unverified",
+      "nativeResolutionM": 80.0,
+      "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 960m local least-squares plane detrending; complete windows; GeoTIFF SHA256=7380c8136563ac410c74e5a09dfab9d9a7f93075de9d7ec2cfb582b63a460386; raster bounds (-2560.0, 42927.6237, 2560.0, 48047.6237); resampling=average; raw source SHA256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+      "evidenceType": "MEASURED"
+    }
+  ]
+}

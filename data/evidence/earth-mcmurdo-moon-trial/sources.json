@@ -1,0 +1,173 @@
+[
+  {
+    "role": "earthElevation",
+    "filename": "18_35_32m_v2.0_dem.tif",
+    "sha256": "b54c3fec2e5dc056ce2bd2614e758ccd89dac7bffdd36d07e3c5aa996f900b4b",
+    "sizeBytes": 33726199,
+    "width": 3131,
+    "height": 3131,
+    "dtype": "float32",
+    "crs": "PROJCS[\"WGS 84 / Antarctic Polar Stereographic\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-71],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"3031\"]]",
+    "bounds": [
+      399904.0,
+      -1300096.0,
+      500096.0,
+      -1199904.0
+    ],
+    "transform": [
+      32.0,
+      0.0,
+      399904.0,
+      0.0,
+      -32.0,
+      -1199904.0
+    ],
+    "nodata": -9999.0,
+    "embeddedUnits": null,
+    "sourceUrl": "https://www.pgc.umn.edu/data/rema/",
+    "releaseVersionVerified": false,
+    "reportedVersion": "2.0"
+  },
+  {
+    "role": "earthCount",
+    "filename": "18_35_32m_v2.0_count.tif",
+    "sha256": "1fa7d5be8efb3a21307c743ee8e6628573c34cd173dcc418bb4ad983ddcd2c8b",
+    "sizeBytes": 2304507,
+    "width": 3131,
+    "height": 3131,
+    "dtype": "uint8",
+    "crs": "PROJCS[\"WGS 84 / Antarctic Polar Stereographic\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-71],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"3031\"]]",
+    "bounds": [
+      399904.0,
+      -1300096.0,
+      500096.0,
+      -1199904.0
+    ],
+    "transform": [
+      32.0,
+      0.0,
+      399904.0,
+      0.0,
+      -32.0,
+      -1199904.0
+    ],
+    "nodata": 0.0,
+    "embeddedUnits": null,
+    "sourceUrl": "https://www.pgc.umn.edu/data/rema/",
+    "releaseVersionVerified": false,
+    "reportedVersion": "2.0"
+  },
+  {
+    "role": "earthMad",
+    "filename": "18_35_32m_v2.0_mad.tif",
+    "sha256": "f29b50e225a39bb5d784b6fd261b594fda5dad5c6cb70a8120bce1272bea3428",
+    "sizeBytes": 54132032,
+    "width": 3131,
+    "height": 3131,
+    "dtype": "float32",
+    "crs": "PROJCS[\"WGS 84 / Antarctic Polar Stereographic\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-71],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"3031\"]]",
+    "bounds": [
+      399904.0,
+      -1300096.0,
+      500096.0,
+      -1199904.0
+    ],
+    "transform": [
+      32.0,
+      0.0,
+      399904.0,
+      0.0,
+      -32.0,
+      -1199904.0
+    ],
+    "nodata": -9999.0,
+    "embeddedUnits": null,
+    "sourceUrl": "https://www.pgc.umn.edu/data/rema/",
+    "releaseVersionVerified": false,
+    "reportedVersion": "2.0"
+  },
+  {
+    "role": "moonElevation",
+    "filename": "LDEM_80S_80MPP_ADJ.tiff",
+    "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+    "sizeBytes": 189158392,
+    "width": 7600,
+    "height": 7600,
+    "dtype": "float32",
+    "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "bounds": [
+      -304000.0,
+      -304000.0,
+      304000.0,
+      304000.0
+    ],
+    "transform": [
+      80.0,
+      0.0,
+      -304000.0,
+      0.0,
+      -80.0,
+      304000.0
+    ],
+    "nodata": "NaN",
+    "embeddedUnits": null,
+    "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+    "releaseVersionVerified": false
+  },
+  {
+    "role": "moonCounts",
+    "filename": "LDEC_80S_80MPP_ADJ.tiff",
+    "sha256": "7ce73ea46243e7119076cf7bb4ed1d5536328431607fc1f7988d63ef7607cdd8",
+    "sizeBytes": 115657642,
+    "width": 7600,
+    "height": 7600,
+    "dtype": "float32",
+    "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "bounds": [
+      -304000.0,
+      -304000.0,
+      304000.0,
+      304000.0
+    ],
+    "transform": [
+      80.0,
+      0.0,
+      -304000.0,
+      0.0,
+      -80.0,
+      304000.0
+    ],
+    "nodata": "NaN",
+    "embeddedUnits": null,
+    "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+    "releaseVersionVerified": false
+  },
+  {
+    "role": "moonEffectiveResolution",
+    "filename": "LDEM_80S_80MPP_ADJ_EFFRES.tiff",
+    "sha256": "7e973835104343f7c10e868e73ca1b0a506879d3eabe8c17c56ed6774a493400",
+    "sizeBytes": 250228467,
+    "width": 7600,
+    "height": 7600,
+    "dtype": "float32",
+    "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "bounds": [
+      -304000.0,
+      -304000.0,
+      304000.0,
+      304000.0
+    ],
+    "transform": [
+      80.0,
+      0.0,
+      -304000.0,
+      0.0,
+      -80.0,
+      304000.0
+    ],
+    "nodata": "NaN",
+    "embeddedUnits": null,
+    "sourceUrl": "https://pgda.gsfc.nasa.gov/products/90",
+    "releaseVersionVerified": false
+  }
+]

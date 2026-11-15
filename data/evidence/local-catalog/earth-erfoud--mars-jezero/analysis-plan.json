@@ -1,0 +1,36 @@
+{
+  "version": "analysis-plan-v1",
+  "definitionsVersion": "terrain-descriptors-v1",
+  "regions": [
+    {
+      "regionId": "earth-erfoud",
+      "body": "earth",
+      "bounds": {
+        "west": -4.256600767403358,
+        "south": 31.40719366003939,
+        "east": -4.203411817151742,
+        "north": 31.452801306248986
+      },
+      "crs": "EPSG:32630",
+      "horizontalUnit": "m",
+      "footprintWidthM": 5000.0,
+      "footprintHeightM": 5000.0,
+      "roughnessWindowM": 1500
+    },
+    {
+      "regionId": "mars-jezero",
+      "body": "mars",
+      "bounds": {
+        "west": 77.53555375338146,
+        "south": 18.337821128155856,
+        "east": 77.62444624661853,
+        "north": 18.422178871844142
+      },
+      "crs": "+proj=eqc +lat_ts=18.38 +lon_0=77.58 +R=3396000 +units=m +no_defs",
+      "horizontalUnit": "m",
+      "footprintWidthM": 5000.0,
+      "footprintHeightM": 5000.0,
+      "roughnessWindowM": 1500
+    }
+  ]
+}

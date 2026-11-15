@@ -1,0 +1,577 @@
+[
+  {
+    "name": "average",
+    "kernel": "average",
+    "offsetM": [
+      0,
+      0
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.60590674187026,
+        "p90SlopeDeg": 15.282709459781039,
+        "roughnessM": 15.418512302099852,
+        "reliefM": 334.3079833984375,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=66aeb9fed1dd9ad9418cb143ac4083f008b2e19b0a4556de31afefa971c8e5ae; raster bounds (415076.6537, 7210439.2326, 420076.6537, 7215439.2326); resampling=average; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "mars-jezero",
+        "body": "mars",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 0.6139340175134248,
+        "p90SlopeDeg": 1.0562247565635547,
+        "roughnessM": 1.349857414457492,
+        "reliefM": 47.230224609375,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "megt44n000hb.img",
+            "name": "MOLA MEGDR topography",
+            "url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+            "version": "PDS3 label-reported 2.0; independent verification pending",
+            "nativeResolutionM": 463.05766716974557,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=3c2bcb39d43e8969fb179fb79123ee80c68efd02c616e509d286c96aeff6b823; raster bounds (-2500.0, 1086907.9901, 2500.0, 1091907.9901); resampling=average; input SHA256=14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36,cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.804563373434796,
+          "south": 65.00694875747972,
+          "east": -16.695525597247254,
+          "north": 65.0530336059402
+        },
+        "projectedBounds": [
+          415076.6537433248,
+          7210439.232584029,
+          420076.6537433248,
+          7215439.232584029
+        ],
+        "sha256": "66aeb9fed1dd9ad9418cb143ac4083f008b2e19b0a4556de31afefa971c8e5ae",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=eqc +lat_ts=18.38 +lon_0=77.58 +R=3396000 +units=m +no_defs",
+        "bounds": {
+          "west": 77.53555375338146,
+          "south": 18.337821128155856,
+          "east": 77.62444624661853,
+          "north": 18.422178871844142
+        },
+        "projectedBounds": [
+          -2500.0,
+          1086907.99009023,
+          2500.0,
+          1091907.99009023
+        ],
+        "sha256": "3c2bcb39d43e8969fb179fb79123ee80c68efd02c616e509d286c96aeff6b823",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "status": "COUNTS_EVIDENCE_AVAILABLE",
+      "interpretation": "Fraction of native MOLA count-grid cell centers inside the prepared analysis footprint with >=1 recorded shot; not direct 1 km cell coverage",
+      "nativeCellCentersInsideWindow": 121,
+      "nativeCellsWithAtLeastOneShot": 41,
+      "nativeCellsWithZeroShots": 80,
+      "nativeObservedCellFraction": 0.33884297520661155,
+      "sumShotCounts": 63,
+      "minShotsPerCell": 0,
+      "maxShotsPerCell": 2,
+      "countsSource": {
+        "sourceSha256": "cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+        "labelSha256": "e7bde6960c05e9fc48ff6417ee3e2b12ed271af16ea85294a775a6948d890a1e",
+        "productId": "MEGC44N000HB.IMG",
+        "sourceSampleBits": 8,
+        "sourceSampleType": "UNSIGNED_INTEGER",
+        "sourceGridPixelsPerDegree": 128.0
+      },
+      "disclosure": "Nonzero MOLA bins do not eliminate along-track gaps or ensure drone-scale terrain; DEM interpolates empty bins",
+      "kind": "MOLA",
+      "supported": true
+    },
+    "earthQuality": null
+  },
+  {
+    "name": "bilinear",
+    "kernel": "bilinear",
+    "offsetM": [
+      0,
+      0
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.458543944720253,
+        "p90SlopeDeg": 14.11582345138324,
+        "roughnessM": 13.239001080493857,
+        "reliefM": 298.88037109375,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=e87cbc9d1a8ca2fcf4346740ceba18931afe7da4e49bf813fed16083b45642fc; raster bounds (415076.6537, 7210439.2326, 420076.6537, 7215439.2326); resampling=bilinear; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "mars-jezero",
+        "body": "mars",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 0.6113664828805128,
+        "p90SlopeDeg": 1.0475522875693883,
+        "roughnessM": 1.3275721357993837,
+        "reliefM": 47.108154296875,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "megt44n000hb.img",
+            "name": "MOLA MEGDR topography",
+            "url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+            "version": "PDS3 label-reported 2.0; independent verification pending",
+            "nativeResolutionM": 463.05766716974557,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=18428ec47c7f3c408044457c82db52a50a3932a99ff685d00c6407f78e856eca; raster bounds (-2500.0, 1086907.9901, 2500.0, 1091907.9901); resampling=bilinear; input SHA256=14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36,cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.804563373434796,
+          "south": 65.00694875747972,
+          "east": -16.695525597247254,
+          "north": 65.0530336059402
+        },
+        "projectedBounds": [
+          415076.6537433248,
+          7210439.232584029,
+          420076.6537433248,
+          7215439.232584029
+        ],
+        "sha256": "e87cbc9d1a8ca2fcf4346740ceba18931afe7da4e49bf813fed16083b45642fc",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=eqc +lat_ts=18.38 +lon_0=77.58 +R=3396000 +units=m +no_defs",
+        "bounds": {
+          "west": 77.53555375338146,
+          "south": 18.337821128155856,
+          "east": 77.62444624661853,
+          "north": 18.422178871844142
+        },
+        "projectedBounds": [
+          -2500.0,
+          1086907.99009023,
+          2500.0,
+          1091907.99009023
+        ],
+        "sha256": "18428ec47c7f3c408044457c82db52a50a3932a99ff685d00c6407f78e856eca",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "status": "COUNTS_EVIDENCE_AVAILABLE",
+      "interpretation": "Fraction of native MOLA count-grid cell centers inside the prepared analysis footprint with >=1 recorded shot; not direct 1 km cell coverage",
+      "nativeCellCentersInsideWindow": 121,
+      "nativeCellsWithAtLeastOneShot": 41,
+      "nativeCellsWithZeroShots": 80,
+      "nativeObservedCellFraction": 0.33884297520661155,
+      "sumShotCounts": 63,
+      "minShotsPerCell": 0,
+      "maxShotsPerCell": 2,
+      "countsSource": {
+        "sourceSha256": "cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+        "labelSha256": "e7bde6960c05e9fc48ff6417ee3e2b12ed271af16ea85294a775a6948d890a1e",
+        "productId": "MEGC44N000HB.IMG",
+        "sourceSampleBits": 8,
+        "sourceSampleType": "UNSIGNED_INTEGER",
+        "sourceGridPixelsPerDegree": 128.0
+      },
+      "disclosure": "Nonzero MOLA bins do not eliminate along-track gaps or ensure drone-scale terrain; DEM interpolates empty bins",
+      "kind": "MOLA",
+      "supported": true
+    },
+    "earthQuality": null
+  },
+  {
+    "name": "nearest",
+    "kernel": "nearest",
+    "offsetM": [
+      0,
+      0
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.782197296022561,
+        "p90SlopeDeg": 16.54582078539436,
+        "roughnessM": 18.34597818746689,
+        "reliefM": 367.297607421875,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=5d3f2abf26e3d5668e58298e15d361a03b724d810020cd955f6aa1c223943f55; raster bounds (415076.6537, 7210439.2326, 420076.6537, 7215439.2326); resampling=nearest; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "mars-jezero",
+        "body": "mars",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 0.6423586203136689,
+        "p90SlopeDeg": 1.0763633233532077,
+        "roughnessM": 1.8714643346456423,
+        "reliefM": 51.0,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "megt44n000hb.img",
+            "name": "MOLA MEGDR topography",
+            "url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+            "version": "PDS3 label-reported 2.0; independent verification pending",
+            "nativeResolutionM": 463.05766716974557,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=090cf370c0a534a221aa65b90371d6b553cbc4486a9383217d91d8092b4e8073; raster bounds (-2500.0, 1086907.9901, 2500.0, 1091907.9901); resampling=nearest; input SHA256=14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36,cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.804563373434796,
+          "south": 65.00694875747972,
+          "east": -16.695525597247254,
+          "north": 65.0530336059402
+        },
+        "projectedBounds": [
+          415076.6537433248,
+          7210439.232584029,
+          420076.6537433248,
+          7215439.232584029
+        ],
+        "sha256": "5d3f2abf26e3d5668e58298e15d361a03b724d810020cd955f6aa1c223943f55",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=eqc +lat_ts=18.38 +lon_0=77.58 +R=3396000 +units=m +no_defs",
+        "bounds": {
+          "west": 77.53555375338146,
+          "south": 18.337821128155856,
+          "east": 77.62444624661853,
+          "north": 18.422178871844142
+        },
+        "projectedBounds": [
+          -2500.0,
+          1086907.99009023,
+          2500.0,
+          1091907.99009023
+        ],
+        "sha256": "090cf370c0a534a221aa65b90371d6b553cbc4486a9383217d91d8092b4e8073",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "status": "COUNTS_EVIDENCE_AVAILABLE",
+      "interpretation": "Fraction of native MOLA count-grid cell centers inside the prepared analysis footprint with >=1 recorded shot; not direct 1 km cell coverage",
+      "nativeCellCentersInsideWindow": 121,
+      "nativeCellsWithAtLeastOneShot": 41,
+      "nativeCellsWithZeroShots": 80,
+      "nativeObservedCellFraction": 0.33884297520661155,
+      "sumShotCounts": 63,
+      "minShotsPerCell": 0,
+      "maxShotsPerCell": 2,
+      "countsSource": {
+        "sourceSha256": "cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+        "labelSha256": "e7bde6960c05e9fc48ff6417ee3e2b12ed271af16ea85294a775a6948d890a1e",
+        "productId": "MEGC44N000HB.IMG",
+        "sourceSampleBits": 8,
+        "sourceSampleType": "UNSIGNED_INTEGER",
+        "sourceGridPixelsPerDegree": 128.0
+      },
+      "disclosure": "Nonzero MOLA bins do not eliminate along-track gaps or ensure drone-scale terrain; DEM interpolates empty bins",
+      "kind": "MOLA",
+      "supported": true
+    },
+    "earthQuality": null
+  },
+  {
+    "name": "shift-northeast",
+    "kernel": "average",
+    "offsetM": [
+      250,
+      250
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.292016384639757,
+        "p90SlopeDeg": 12.248145550045507,
+        "roughnessM": 15.11345275150461,
+        "reliefM": 347.8013916015625,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=0c38bc2294d8ed89ca635c09d244f90d5301dd1c1ea0e6ff9345cc876e76c308; raster bounds (415326.6537, 7210689.2326, 420326.6537, 7215689.2326); resampling=average; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "mars-jezero",
+        "body": "mars",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 0.6140255554770465,
+        "p90SlopeDeg": 1.01641839424144,
+        "roughnessM": 1.4461973045075212,
+        "reliefM": 45.817138671875,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "megt44n000hb.img",
+            "name": "MOLA MEGDR topography",
+            "url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+            "version": "PDS3 label-reported 2.0; independent verification pending",
+            "nativeResolutionM": 463.05766716974557,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=1a34609cb3105f68132ce86e4de2dfba48ba5ccda2323c024b1e57cbbdf9bc9f; raster bounds (-2250.0, 1087157.9901, 2750.0, 1092157.9901); resampling=average; input SHA256=14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36,cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.79940545972978,
+          "south": 65.00925467378254,
+          "east": -16.690366591310205,
+          "north": 65.05533599436447
+        },
+        "projectedBounds": [
+          415326.6537433248,
+          7210689.232584029,
+          420326.6537433248,
+          7215689.232584029
+        ],
+        "sha256": "0c38bc2294d8ed89ca635c09d244f90d5301dd1c1ea0e6ff9345cc876e76c308",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=eqc +lat_ts=18.38 +lon_0=77.58 +R=3396000 +units=m +no_defs",
+        "bounds": {
+          "west": 77.53999837804331,
+          "south": 18.34203901534027,
+          "east": 77.62889087128039,
+          "north": 18.426396759028556
+        },
+        "projectedBounds": [
+          -2250.0,
+          1087157.99009023,
+          2750.0,
+          1092157.99009023
+        ],
+        "sha256": "1a34609cb3105f68132ce86e4de2dfba48ba5ccda2323c024b1e57cbbdf9bc9f",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "status": "COUNTS_EVIDENCE_AVAILABLE",
+      "interpretation": "Fraction of native MOLA count-grid cell centers inside the prepared analysis footprint with >=1 recorded shot; not direct 1 km cell coverage",
+      "nativeCellCentersInsideWindow": 121,
+      "nativeCellsWithAtLeastOneShot": 42,
+      "nativeCellsWithZeroShots": 79,
+      "nativeObservedCellFraction": 0.34710743801652894,
+      "sumShotCounts": 65,
+      "minShotsPerCell": 0,
+      "maxShotsPerCell": 2,
+      "countsSource": {
+        "sourceSha256": "cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+        "labelSha256": "e7bde6960c05e9fc48ff6417ee3e2b12ed271af16ea85294a775a6948d890a1e",
+        "productId": "MEGC44N000HB.IMG",
+        "sourceSampleBits": 8,
+        "sourceSampleType": "UNSIGNED_INTEGER",
+        "sourceGridPixelsPerDegree": 128.0
+      },
+      "disclosure": "Nonzero MOLA bins do not eliminate along-track gaps or ensure drone-scale terrain; DEM interpolates empty bins",
+      "kind": "MOLA",
+      "supported": true
+    },
+    "earthQuality": null
+  },
+  {
+    "name": "shift-southwest",
+    "kernel": "average",
+    "offsetM": [
+      -250,
+      -250
+    ],
+    "features": {
+      "earth": {
+        "regionId": "earth-askja",
+        "body": "earth",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 4.706564171173323,
+        "p90SlopeDeg": 13.987126276457845,
+        "roughnessM": 20.743412911876717,
+        "reliefM": 347.802978515625,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "Copernicus_DSM_COG_10_N64_00_W017_00_DEM.tif",
+            "name": "Copernicus GLO-30 surface model",
+            "url": "https://doi.org/10.5270/ESA-c5d3d65",
+            "version": "Supplied tiles; original release unverified",
+            "nativeResolutionM": 32.0,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=160d285267f8325ff4c37f0e3cd4294b8ed7f59b32fe5fefcc8cdc575c0b3934; raster bounds (414826.6537, 7210189.2326, 419826.6537, 7215189.2326); resampling=average; input SHA256=ef1caf534b843ebb0bc3226c99f29f23bd08e8d2aa6d7096ab9c02a4bf1544b4,1c663c1b6c3263c763ee40e5e20b85dfacdfeddaf3c41acb6b60cac8581cd56e",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      },
+      "target": {
+        "regionId": "mars-jezero",
+        "body": "mars",
+        "algorithmVersion": "terrain-descriptors-v1-grid-1",
+        "scaleM": 500.0,
+        "meanSlopeDeg": 0.6150521453893447,
+        "p90SlopeDeg": 1.0631696528044559,
+        "roughnessM": 1.4188055587014021,
+        "reliefM": 47.994384765625,
+        "validFraction": 1.0,
+        "dataStatus": "READY",
+        "provenance": [
+          {
+            "sourceId": "megt44n000hb.img",
+            "name": "MOLA MEGDR topography",
+            "url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+            "version": "PDS3 label-reported 2.0; independent verification pending",
+            "nativeResolutionM": 463.05766716974557,
+            "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=d9c4aaf6f279391eec841e92b91f9e89e27864781ee46842492003cf98de98b9; raster bounds (-2750.0, 1086657.9901, 2250.0, 1091657.9901); resampling=average; input SHA256=14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36,cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+            "evidenceType": "MEASURED"
+          }
+        ]
+      }
+    },
+    "prepared": {
+      "earth": {
+        "crs": "EPSG:32628",
+        "bounds": {
+          "west": -16.809720395927172,
+          "south": 65.00464266537057,
+          "east": -16.700683714984173,
+          "north": 65.05073104058945
+        },
+        "projectedBounds": [
+          414826.6537433248,
+          7210189.232584029,
+          419826.6537433248,
+          7215189.232584029
+        ],
+        "sha256": "160d285267f8325ff4c37f0e3cd4294b8ed7f59b32fe5fefcc8cdc575c0b3934",
+        "validFraction": 1.0
+      },
+      "target": {
+        "crs": "+proj=eqc +lat_ts=18.38 +lon_0=77.58 +R=3396000 +units=m +no_defs",
+        "bounds": {
+          "west": 77.5311091287196,
+          "south": 18.333603240971442,
+          "east": 77.62000162195669,
+          "north": 18.417960984659725
+        },
+        "projectedBounds": [
+          -2750.0,
+          1086657.99009023,
+          2250.0,
+          1091657.99009023
+        ],
+        "sha256": "d9c4aaf6f279391eec841e92b91f9e89e27864781ee46842492003cf98de98b9",
+        "validFraction": 1.0
+      }
+    },
+    "targetQuality": {
+      "status": "COUNTS_EVIDENCE_AVAILABLE",
+      "interpretation": "Fraction of native MOLA count-grid cell centers inside the prepared analysis footprint with >=1 recorded shot; not direct 1 km cell coverage",
+      "nativeCellCentersInsideWindow": 110,
+      "nativeCellsWithAtLeastOneShot": 40,
+      "nativeCellsWithZeroShots": 70,
+      "nativeObservedCellFraction": 0.36363636363636365,
+      "sumShotCounts": 63,
+      "minShotsPerCell": 0,
+      "maxShotsPerCell": 3,
+      "countsSource": {
+        "sourceSha256": "cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+        "labelSha256": "e7bde6960c05e9fc48ff6417ee3e2b12ed271af16ea85294a775a6948d890a1e",
+        "productId": "MEGC44N000HB.IMG",
+        "sourceSampleBits": 8,
+        "sourceSampleType": "UNSIGNED_INTEGER",
+        "sourceGridPixelsPerDegree": 128.0
+      },
+      "disclosure": "Nonzero MOLA bins do not eliminate along-track gaps or ensure drone-scale terrain; DEM interpolates empty bins",
+      "kind": "MOLA",
+      "supported": true
+    },
+    "earthQuality": null
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "regionId": "mars-jezero",
+  "body": "mars",
+  "algorithmVersion": "terrain-descriptors-v1-grid-1",
+  "scaleM": 500.0,
+  "meanSlopeDeg": 0.6139340175134248,
+  "p90SlopeDeg": 1.0562247565635547,
+  "roughnessM": 1.349857414457492,
+  "reliefM": 47.230224609375,
+  "validFraction": 1.0,
+  "dataStatus": "READY",
+  "provenance": [
+    {
+      "sourceId": "megt44n000hb.img",
+      "name": "MOLA MEGDR topography",
+      "url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "version": "PDS3 label-reported 2.0; independent verification pending",
+      "nativeResolutionM": 463.05766716974557,
+      "processingMethod": "terrain-descriptors-v1-grid-1; central-difference interior gradients; nearest-rank P90; 1500m local least-squares plane detrending; complete windows; GeoTIFF SHA256=3c2bcb39d43e8969fb179fb79123ee80c68efd02c616e509d286c96aeff6b823; raster bounds (-2500.0, 1086907.9901, 2500.0, 1091907.9901); resampling=average; input SHA256=14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36,cfb4d7e3626106ef4ed2a466eb03a538feed9c163be99e860b7ae8700a8ecab5",
+      "evidenceType": "MEASURED"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ class CoveragePlanTests(unittest.TestCase):
         self.assertEqual(len(rows), len(SITE_IDS) * len(TARGET_IDS))
         self.assertEqual(len({(r["earthSiteId"],r["targetId"]) for r in rows}), 10)
         self.assertTrue(all(r["score"] is None for r in rows))
-        self.assertEqual(sum(r["status"] == "PROVISIONAL_QA" for r in rows), 2)
+        self.assertEqual(sum(r["status"] == "PROVISIONAL_QA" for r in rows), 10)
 
     def test_plan_rejects_missing_sources(self):
         data = load_plan()
@@ -17,7 +17,8 @@ class CoveragePlanTests(unittest.TestCase):
 
     def test_moon_plan_separate_from_mars_with_caveats(self):
         plan = load_plan()
-        self.assertIn("Diviner", plan["targetSources"]["moon-south-pole"]["dataset"])
+        self.assertIn("Diviner", plan["targetSources"]["moon-south-pole"]["note"])
+        self.assertIn('LOLA',plan['targetSources']['moon-south-pole']['dataset'])
         self.assertIn("MOLA", plan["targetSources"]["mars-jezero"]["dataset"])
         self.assertIn("Polar", plan["earthSources"]["earth-haughton"]["dataset"])
 
